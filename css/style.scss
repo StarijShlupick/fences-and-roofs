@@ -1,3 +1,10 @@
+$black-color: #1F1F1F; //all text
+$elloy-color: #FFE600; //active buttons bg
+$gray-color: #E1E1E1; //inactive buttons bg
+$dark-gray-color: #BDBDBD; // input border
+$inactive-gray-color:#5F5F5F; //inactive buttons text
+$card-gray-color: #E0E0E0;
+
 html {
   box-sizing: border-box;
 }
@@ -10,7 +17,7 @@ html {
 body {
   font-family: "Open Sans", sans-serif;
   font-weight: 400;
-  color: #000;
+  color: $black-color;
 }
 
 .container{
@@ -27,7 +34,7 @@ ul {
 
 a {
   text-decoration: none;
-  color: #000;
+  color: $black-color;
   margin: 0;
   padding: 0;
 }
@@ -35,7 +42,7 @@ a {
 strong {
   font-family: "Open Sans", sans-serif;
   font-weight: 700;
-  color: #000;
+  color: $black-color;
 }
 
 h3 {

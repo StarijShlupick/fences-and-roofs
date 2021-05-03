@@ -13,7 +13,7 @@ html {
 body {
   font-family: "Open Sans", sans-serif;
   font-weight: 400;
-  color: #000;
+  color: #1F1F1F;
 }
 
 .container {
@@ -30,7 +30,7 @@ ul {
 
 a {
   text-decoration: none;
-  color: #000;
+  color: #1F1F1F;
   margin: 0;
   padding: 0;
 }
@@ -38,7 +38,7 @@ a {
 strong {
   font-family: "Open Sans", sans-serif;
   font-weight: 700;
-  color: #000;
+  color: #1F1F1F;
 }
 
 h3 {
