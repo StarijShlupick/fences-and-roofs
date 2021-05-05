@@ -8,12 +8,12 @@
   <title>ПрофСтальМонтаж</title>
   <link rel="stylesheet" href="css/normalize.css">
   <link rel="preconnect" href="https://fonts.gstatic.com">
-  <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="css/style.css">
 </head>
 
 <body>
-  <header>
+  <header class="header">
     <div class="container">
       <div class="header-top">
         <div class="header-top__logo">
@@ -84,10 +84,13 @@
         <p class="header-content__text">
           Подберем забор под ваш бюджет
         </p>
-        <button class="header-content__button">
+        <a class="header-content__button" href="/">
           Подобрать проект
-        </button>
-      </div> 
+        </a>
+      </div>
+      <div class="about__img-wrapper">
+        <img class="about__img" src="./assets/images/start-bg.png" alt="house">
+      </div>
     </div>
   </section>
 
@@ -116,7 +119,7 @@
             <img src="./assets/images/Ellipse-3.png" alt="специалисты" class="promotion-card__img">
           </div>
           <p class="promotion-card__text">
-            В бригадах работают <strong>высококвалифицированные специалисты</strong>
+            В бригадах работают <strong>высококвалифици-<br>рованные специалисты</strong>
           </p>
         </div>
         <div class="promotion-card">
@@ -195,7 +198,7 @@
       <div class="connection__content">
         <form action="" class="connection__form">
           <label class="connection__lable" for="name">Имя</label>
-          <input class="connection__input" type="text" id="name" name="name" placeholder="Введите ваше имя">
+          <input class="connection__input" type="text" id="name" name="name" placeholder="Введите имя">
           <label class="connection__lable " for="phone">Телефон</label>
           <input class="connection__input" type="text" id="phone" name="phone" placeholder="+_ (___) ___-____">
           <button class="connection__button" type="submit" value="Submit">Записаться на консультацию</button>
@@ -208,6 +211,74 @@
   </section>
 
   <footer class="footer">
+    <div class="container">
+      <div class="logo-container">
+        <img src="./assets/images/logo.png" alt="ПрофСтальМонтаж" class="logo">
+        <div class="logo-container__contacts">
+          <a href="" class="adress">Адрес</a>
+          <a href="" class="email">почта</a>
+        </div>
+      </div>
+      <div class="navigation-conteiner">
+        <nav class="navigation-conteiner__nav">
+          <ul class="nav__list">
+            <li class="nav__li">
+              <a href="" class="nav__link">
+                Заборы
+              </a>
+            </li>
+            <li class="nav__li">
+              <a href="" class="nav__link">
+                Крыши
+              </a>
+            </li>
+          </ul>
+        </nav>
+        <nav class="navigation-conteiner__nav">
+          <ul class="nav__list">
+            <li class="nav__li">
+              <a href="" class="nav__link">
+                Наши работы
+              </a>
+            </li>
+            <li class="nav__li">
+              <a href="" class="nav__link">
+                О нас
+              </a>
+            </li>
+            <li class="nav__li">
+              <a href="" class="nav__link">
+                Контакты
+              </a>
+            </li>
+          </ul>
+        </nav>
+      </div>
+      <div class="contacts">
+        <div class="phone">
+          <a class="phone__call" href="tel:+375292987964">+ 375 (29) 298-79-64</a>
+          <a class="phone__recall" href="">Заказать звонок</a>
+          <div class="messengers">
+            <div class="messenger">
+              <a href="" class="messenger__link">
+                <img src="./assets/icons/telegram.svg" alt="telegram" class="messenger__img">
+              </a>
+            </div>
+            <div class="messenger">
+              <a href="" class="messenger__link">
+                <img src="./assets/icons/whatsapp.svg" alt="whatsapp" class="messenger__img">
+              </a>
+            </div>
+            <div class="messenger">
+              <a href="" class="messenger__link">
+                <img src="./assets/icons/viber.svg" alt="viber" class="messenger__img">
+              </a>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
   </footer>
 
   <script src="js/main.js"></script>

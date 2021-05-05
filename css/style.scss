@@ -1,9 +1,38 @@
-$black-color: #1F1F1F; //all text
-$elloy-color: #FFE600; //active buttons bg
-$gray-color: #E1E1E1; //inactive buttons bg
-$dark-gray-color: #BDBDBD; // input border
-$inactive-gray-color:#5F5F5F; //inactive buttons text
-$card-gray-color: #E0E0E0;
+$black-color: #1f1f1f; //all text
+$ellow-color: #ffe600; //active buttons bg
+$ellow: #f2e464;
+$gray-color: #e1e1e1; //inactive buttons bg
+$dark-gray-color: #bdbdbd; // input border
+$unactive-gray-color: #5f5f5f; //inactive buttons text
+$card-gray-color: #e0e0e0;
+
+@mixin image-wrapper {
+  display: block;
+}
+@mixin animation {
+  transition: ease-in-out 0.1s;
+}
+@mixin active-button {
+  color: $black-color;
+  font-weight: 600;
+  background-color: $ellow-color;
+  box-shadow: 5px -2px 25px rgba(255, 255, 255, 0.5);
+  border: none;
+  border-radius: 100px;
+  transition: box-shadow 0.3s;
+  &:hover {
+    box-shadow: -2.09231px 46.0308px 70.0923px -29.2923px rgba(255, 230, 0, 0.89),
+      inset 1.04615px -9.41538px 12.5538px rgba(0, 0, 0, 0.13),
+      inset 5.23077px -2.09231px 26.1538px rgba(255, 255, 255, 0.5);
+  }
+}
+@mixin unactive-button {
+  color: $unactive-gray-color;
+  font-weight: 600;
+  background-color: $gray-color;
+  border: none;
+  border-radius: 100px;
+}
 
 html {
   box-sizing: border-box;
@@ -16,13 +45,14 @@ html {
 
 body {
   font-family: "Open Sans", sans-serif;
+  font-size: 30px;
   font-weight: 400;
   color: $black-color;
 }
 
-.container{
-  max-width: 1740px;
-  padding: 0 10px;
+.container {
+  max-width: 1760px;
+  padding: 0 20px;
   margin: 0 auto;
 }
 
@@ -39,10 +69,28 @@ a {
   padding: 0;
 }
 
+p {
+  margin: 0;
+  padding: 0;
+}
+
+img {
+  display: block;
+}
+
 strong {
   font-family: "Open Sans", sans-serif;
   font-weight: 700;
   color: $black-color;
+}
+
+h1 {
+  margin: 0;
+  padding: 0;
+  font-family: "Open Sans", sans-serif;
+  font-weight: 700;
+  font-size: 60px;
+  line-height: 118.68%;
 }
 
 h3 {
@@ -55,11 +103,326 @@ h3 {
   line-height: 118.68%;
 }
 
-input[type=text] {
-  border: 2.15385px solid #BDBDBD;
+input {
+  outline: none;
+  @include animation();
+}
+
+input[type="text"] {
+  border: 2.15385px solid #bdbdbd;
   border-radius: 12.9231px;
 }
 
-input[type=text]:focus {
-  background-color: lightblue;
+input[type="text"]:focus {
+  background-color: $ellow-color;
+  border: 2.15385px solid $ellow-color;
+}
+
+input[type="text"]:focus input[type="text"]::placeholder {
+  color: white;
+}
+
+button {
+  cursor: pointer;
+}
+
+.header {
+  display: block;
+  .container {
+    display: flex;
+    flex-direction: column;
+    height: 178px;
+    margin-top: 40px;
+    position: absolute;
+    top: 0;
+    right: 0;
+    left: 0;
+    bottom: 0;
+  }
+}
+.header-top {
+  display: flex;
+  justify-content: space-between;
+  border-bottom: 2px solid $ellow;
+  &__logo {
+    img {
+      height: 76px;
+      margin-bottom: 8px;
+      @include image-wrapper();
+    }
+  }
+}
+.messengers {
+  display: flex;
+  align-items: center;
+  margin-right: 127px;
+  .messenger + .messenger {
+    margin-left: 20px;
+  }
+  .messenger {
+    @include animation();
+    &__img {
+      height: 41px;
+      width: 41px;
+      @include image-wrapper();
+    }
+  }
+  .messenger:hover {
+    transform: translateY(-2px) scale(1.1);
+  }
+}
+.header-bottom {
+  margin-top: 18px;
+  display: flex;
+  justify-content: space-between;
+  .nav__list {
+    display: flex;
+  }
+  .nav__li + .nav__li {
+    margin-left: 50px;
+  }
+  .nav__link {
+    font-size: 23.9404px;
+    line-height: 33px;
+    @include animation();
+  }
+  .nav__link:hover {
+    color: $ellow;
+  }
+}
+.phone {
+  a {
+    display: block;
+  }
+  .phone__call {
+    margin-right: 27px;
+    margin-bottom: 16px;
+    font-weight: bold;
+    font-size: 27px;
+    line-height: 37px;
+  }
+  .phone__recall {
+    font-size: 20px;
+    line-height: 27px;
+    text-decoration-line: underline;
+    @include animation();
+    &:hover {
+      color: $ellow;
+    }
+  }
+}
+
+.about {
+  .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    .header-content {
+      max-width: 698px;
+      .header-content__text {
+        margin-top: 55px;
+        margin-bottom: 226px;
+        font-size: 36px;
+        line-height: 49px;
+      }
+      .header-content__button {
+        @include active-button();
+        display: inline-block;
+        font-size: 30px;
+        line-height: 41px;
+        padding: 44px 52px;
+      }
+    }
+    .about__img {
+      width: 938px;
+      height: 1062px;
+      @include image-wrapper();
+    }
+  }
+}
+
+.promotion {
+  margin-top: 208px;
+  &__header {
+    text-align: center;
+  }
+  .promotion__content {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    .promotion-card {
+      margin-top: 120px;
+      width: 390px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      &:hover .promotion-card__img {
+        transform: scale(1.2);
+      }
+      &__img-wrapper {
+        display: flex;
+        max-width: 262px;
+        max-height: 262px;
+        border-radius: 100%;
+        overflow: hidden;
+        border: 2px solid $card-gray-color;
+      }
+      &__img {
+        @include image-wrapper();
+        margin: auto;
+        transform: scale(1.05);
+        object-fit: cover;
+        object-position: center;
+        transition: ease-in-out 1s;
+      }
+      &__text {
+        margin-top: 38.8px;
+        text-align: center;
+        strong {
+          word-wrap: break-word;
+        }
+      }
+    }
+  }
+}
+
+.principles {
+  margin-top: 208px;
+  &__header {
+    text-align: center;
+  }
+  .principles__content {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    .principles-card {
+      margin-top: 120px;
+      width: 279px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      &:hover .principles-card__img {
+        transform: translateY(-5px);
+      }
+      &__img-wrapper {
+        display: flex;
+        align-items: flex-end;
+        height: 146px;
+      }
+      &__img {
+        @include image-wrapper();
+        transition: ease-in-out 0.5s;
+      }
+      &__text {
+        margin-top: 38.8px;
+        text-align: center;
+        font-size: 36px;
+        line-height: 118.68%;
+      }
+    }
+  }
+}
+
+.connection {
+  margin-top: 208px;
+  &__header {
+    margin: 0 auto;
+    max-width: 853px;
+    text-align: center;
+  }
+  .connection__content {
+    margin-top: 111px;
+    display: flex;
+    justify-content: space-between;
+    .connection__form {
+      display: flex;
+      flex-direction: column;
+      width: 588px;
+      .connection__lable,
+      .connection__input,
+      .connection__button {
+        display: inline-block;
+      }
+      .connection__lable {
+        font-size: 30.1538px;
+        line-height: 41px;
+        margin-bottom: 12px;
+      }
+      .connection__input {
+        padding: 20px 26px;
+        font-size: 30.1538px;
+        line-height: 35px;
+        margin-bottom: 30px;
+        &::placeholder {
+          color: $unactive-gray-color;
+          font-size: 30.1538px;
+          line-height: 35px;
+        }
+      }
+      .connection__button {
+        margin-top: 120px;
+        @include active-button();
+        font-size: 31.3846px;
+        line-height: 43px;
+        padding: 46px 54px 47px 54px;
+      }
+    }
+    .connection__image-wrapper {
+      width: 844px;
+      min-width: 844px;
+      height: 584px;
+      min-height: 584px;
+      border-radius: 30px;
+      overflow: hidden;
+      border: 1px solid $card-gray-color;
+    }
+    .connection__image {
+      @include image-wrapper();
+      margin: auto;
+      object-fit: cover;
+      object-position: center;
+    }
+  }
+}
+
+.footer {
+  margin-top: 208px;
+  padding: 81px 0 103px;
+  background-color: $gray-color;
+  font-size: 27px;
+  line-height: 37px;
+  .container,
+  .navigation-conteiner {
+    display: flex;
+    justify-content: space-between;
+  }
+  .navigation-conteiner{
+    max-width: 587px;
+    width: 100%;
+  }
+  .logo{
+    @include image-wrapper();
+    padding-bottom: 35px;
+  }
+  .nav__li {
+    margin-bottom: 8px;
+  }
+  .nav__link{
+    @include animation();
+    &:hover{
+      color: $unactive-gray-color;
+    }
+  }
+  .navigation-conteiner__nav + .navigation-conteiner__nav {
+    margin-left: 30px;
+  }
+  .phone__call{
+    margin-bottom: 8px;
+  }
+  .phone__recall{
+    margin-bottom: 20px;
+    &:hover{
+      color: $unactive-gray-color;
+    }
+  }
 }
