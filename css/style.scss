@@ -1,4 +1,5 @@
 $black-color: #1f1f1f; //all text
+$true-black: #000000;
 $ellow-color: #ffe600; //active buttons bg
 $ellow: #f2e464;
 $gray-color: #e1e1e1; //inactive buttons bg
@@ -396,32 +397,78 @@ button {
     display: flex;
     justify-content: space-between;
   }
-  .navigation-conteiner{
+  .navigation-conteiner {
     max-width: 587px;
     width: 100%;
   }
-  .logo{
+  .logo-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    max-width: 358px;
+    width: 100%;
+  }
+  .logo {
+    width: 257px;
+    height: 83px;
     @include image-wrapper();
-    padding-bottom: 35px;
+    margin-bottom: 35px;
+  }
+  .logo-container__contacts {
+    display: flex;
+    justify-content: space-between;
+    .logo-container__link {
+      position: relative;
+      padding-left: 45px;
+      color: $true-black;
+      @include animation();
+      &:hover {
+        color: $unactive-gray-color;
+      }
+    }
+    .logo-container__link + .logo-container__link {
+      text-decoration-line: underline;
+    }
+    .logo-container__link:first-child::before {
+      content: "";
+      position: absolute;
+      width: 29px;
+      height: 29px;
+      background-image: url(../assets/icons/adress.svg);
+      left: 0;
+      top: 5px;
+    }
+    .logo-container__link:last-child::before {
+      content: "";
+      position: absolute;
+      width: 31px;
+      height: 31px;
+      background-image: url(../assets/icons/email.svg);
+      left: 0;
+      top: 5px;
+    }
   }
   .nav__li {
     margin-bottom: 8px;
   }
-  .nav__link{
+  .nav__link {
+    color: $true-black;
     @include animation();
-    &:hover{
+    &:hover {
       color: $unactive-gray-color;
     }
   }
   .navigation-conteiner__nav + .navigation-conteiner__nav {
     margin-left: 30px;
   }
-  .phone__call{
+  .phone__call {
     margin-bottom: 8px;
+    color: $true-black;
   }
-  .phone__recall{
+  .phone__recall {
     margin-bottom: 20px;
-    &:hover{
+    color: $true-black;
+    &:hover {
       color: $unactive-gray-color;
     }
   }
