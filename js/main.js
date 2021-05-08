@@ -1,6 +1,18 @@
+const bulletButtons = ['Заборы', 'Крыши']
+
 const ourServicesSlider = new Swiper('.our-services-slider', {
   slidesPerView: 1,
-  
+  simulateTouch: false,
+  hashNavigation: {
+    watchState: true
+  },
+  pagination: {
+    el: '.swiper-pagination',
+    clickable: true,
+      renderBullet: function (index, className) {
+        return '<span class="' + className + '">' + (bulletButtons[index]) + '</span>';
+      },
+  }
 })
 
 const feedbackSwiper = new Swiper('.feedback-slider', {

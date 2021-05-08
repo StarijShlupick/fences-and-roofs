@@ -34,6 +34,20 @@ $card-gray-color: #e0e0e0;
   border: none;
   border-radius: 100px;
 }
+@mixin pagination-button {
+  @include unactive-button();
+}
+@mixin pagination-button-active {
+  color: $black-color;
+  font-weight: 600;
+  background-color: $ellow-color;
+  box-shadow: 5px -2px 25px rgba(255, 255, 255, 0.5);
+  border: none;
+  border-radius: 100px;
+  &:hover {
+    box-shadow: none;
+  }
+}
 @mixin limited-text($lines-count) {
   overflow: hidden;
   text-overflow: ellipsis;
@@ -262,6 +276,47 @@ button {
       @include image-wrapper();
     }
   }
+}
+.our-services {
+  &__header {
+    text-align: center;
+    margin: 89px 0 66px;
+  }
+}
+.our-services-slider {
+  width: 100%;
+  position: relative;
+  &__wrapper {
+    width: 100%;
+    min-height: 500px;
+    padding-top: 203px;
+  }
+}
+.swiper-pagination {
+  display: flex;
+  justify-content: space-between;
+  margin: 0 auto;
+  align-items: start;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  max-width: 635px !important;
+}
+.swiper-pagination-bullet {
+  @include pagination-button();
+  display: inline-block;
+  margin: 0 !important;
+  padding: 32px 95px 28px 95px;
+  width: auto;
+  height: auto;
+  text-align: center;
+  font-size: 30px;
+  line-height: 41px;
+  opacity: 1;
+}
+.swiper-pagination-bullet-active {
+  @include pagination-button-active();
 }
 
 .promotion {
