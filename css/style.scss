@@ -59,6 +59,15 @@ $card-gray-color: #e0e0e0;
   line-clamp: $lines-count;
   box-orient: vertical;
 }
+@mixin slider-card($width, $height) {
+  position: relative;
+  height: $height;
+  width: $width;
+  border-radius: 20px;
+  background: #ffffff;
+  overflow: hidden;
+  box-shadow: 1.37613px 4.12838px 34.4032px rgba(0, 0, 0, 0.14);
+}
 
 html {
   box-sizing: border-box;
@@ -278,6 +287,11 @@ button {
   }
 }
 .our-services {
+  .container {
+    max-width: 1920px;
+    padding: 0 20px;
+    margin: 0 auto;
+  }
   &__header {
     text-align: center;
     margin: 89px 0 66px;
@@ -289,7 +303,7 @@ button {
   &__wrapper {
     width: 100%;
     min-height: 500px;
-    padding-top: 203px;
+    padding-top: 103px;
   }
 }
 .swiper-pagination {
@@ -318,9 +332,76 @@ button {
 .swiper-pagination-bullet-active {
   @include pagination-button-active();
 }
+.our-services__fences-slider,
+.our-services__roofs-slider {
+  padding: 100px 80px;
+  .slider-button {
+    top: 45%;
+    display: none;
+  }
+}
+.our-services__roofs-slider__wrapper,
+.our-services__fences-slider__wrapper {
+  width: 100%;
+}
+.our-services__card {
+  @include slider-card(380px, 500px);
+  &::before {
+    content: "";
+    position: absolute;
+    top: 1.92%;
+    left: 3.26%;
+    bottom: 2.88%;
+    right: 3.26%;
+    border: 2px solid $card-gray-color;
+    box-sizing: border-box;
+    border-radius: 11.7905px;
+  }
+  .card__img-wrapper {
+    width: 100%;
+    height: 51%;
+    overflow: hidden;
+    .card__img {
+      @include image-wrapper();
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: top;
+      border-bottom: 1px solid $card-gray-color;
+    }
+  }
+  .card__content {
+    padding: 23px 34px 0 37px;
+    color: $true-black;
+    .card__header {
+      font-size: 24.7703px;
+      line-height: 118.68%;
+      margin-bottom: 10px;
+      text-transform: uppercase;
+    }
+    .card__text {
+      @include limited-text(6);
+      width: 100%;
+      font-size: 13.7613px;
+      line-height: 19px;
+      letter-spacing: -0.04em;
+    }
+    .card__price {
+      position: absolute;
+      width: 82%;
+      font-weight: 600;
+      font-size: 20.6419px;
+      line-height: 28px;
+      text-align: right;
+      right: 34px;
+      bottom: 29px;
+      border-top: 1px solid $card-gray-color;
+    }
+  }
+}
 
 .promotion {
-  margin-top: 208px;
+  margin-top: 108px;
   &__header {
     text-align: center;
   }
