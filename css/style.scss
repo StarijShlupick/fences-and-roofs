@@ -321,7 +321,7 @@ button {
   @include pagination-button();
   display: inline-block;
   margin: 0 !important;
-  padding: 32px 95px 28px 95px;
+  padding: 30px 82px;
   width: auto;
   height: auto;
   text-align: center;
@@ -400,6 +400,103 @@ button {
   }
 }
 
+.work-cases {
+  .container {
+    max-width: 1920px;
+    padding: 0 20px;
+    margin: 0 auto;
+  }
+  &__header {
+    text-align: center;
+    margin: 89px 0 76px;
+  }
+}
+.work-cases-slider {
+  width: 100%;
+  position: relative;
+  &__wrapper {
+    width: 100%;
+    min-height: 416px;
+    padding-top: 83px;
+  }
+  .swiper-pagination {
+    max-width: 520px !important;
+  }
+  .swiper-pagination-bullet {
+    padding: 25px 67px;
+    font-size: 24.5626px;
+    line-height: 33px;
+  }
+}
+.work-cases__card {
+  @include slider-card(315px, 416px);
+  box-shadow: 1.14298px 3.42894px 28.5745px rgba(0, 0, 0, 0.14);
+  border-radius: 17.1447px;
+  &::before {
+    content: "";
+    position: absolute;
+    top: 1.92%;
+    left: 3.26%;
+    bottom: 2.88%;
+    right: 3.26%;
+    border: 2px solid $card-gray-color;
+    box-sizing: border-box;
+    border-radius: 17.1447px;
+  }
+  .card__img-wrapper {
+    width: 100%;
+    height: 51%;
+    overflow: hidden;
+    .card__img {
+      @include image-wrapper();
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: top;
+      border-bottom: 1px solid $card-gray-color;
+    }
+  }
+  .card__content {
+    padding: 18px 28px 0 30px;
+    color: $true-black;
+    .card__header {
+      font-size: 20.5736px;
+      line-height: 118.68%;
+      margin-bottom: 8px;
+      text-transform: uppercase;
+    }
+    .card__text {
+      @include limited-text(6);
+      width: 100%;
+      font-size: 11.4298px;
+      line-height: 16px;
+      letter-spacing: -0.04em;
+    }
+    .card__price {
+      position: absolute;
+      width: 82%;
+      font-weight: 600;
+      font-size: 17.1447px;
+      line-height: 23px;
+      text-align: right;
+      right: 27px;
+      bottom: 24px;
+      border-top: 1px solid $card-gray-color;
+    }
+  }
+}
+.work-cases__fences-slider,
+.work-cases__roofs-slider {
+  padding: 100px 80px;
+  .slider-button {
+    top: 45%;
+    display: none;
+  }
+}
+.work-cases__roofs-slider__wrapper,
+.work-cases__fences-slider__wrapper {
+  width: 100%;
+}
 .promotion {
   margin-top: 108px;
   &__header {
