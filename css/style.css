@@ -81,13 +81,13 @@ h5 {
   text-transform: uppercase;
 }
 
-input {
+input, textarea {
   outline: none;
   -webkit-transition: ease-in-out 0.1s;
   transition: ease-in-out 0.1s;
 }
 
-input[type="text"] {
+input[type="text"], textarea {
   border: 2.15385px solid #bdbdbd;
   border-radius: 12.9231px;
 }
@@ -961,7 +961,8 @@ button {
 
 .connection .connection__content .connection__form .connection__lable,
 .connection .connection__content .connection__form .connection__input,
-.connection .connection__content .connection__form .connection__button {
+.connection .connection__content .connection__form .connection__button,
+.connection .connection__content .connection__form .connection__textarea {
   display: inline-block;
 }
 
@@ -1002,8 +1003,45 @@ button {
   line-height: 35px;
 }
 
+.connection .connection__content .connection__form .connection__textarea {
+  overflow: auto;
+  resize: none;
+  padding: 20px 26px;
+  font-size: 30.1538px;
+  line-height: 35px;
+  margin-bottom: 30px;
+}
+
+.connection .connection__content .connection__form .connection__textarea::-webkit-input-placeholder {
+  color: #5f5f5f;
+  font-size: 30.1538px;
+  line-height: 35px;
+}
+
+.connection .connection__content .connection__form .connection__textarea:-ms-input-placeholder {
+  color: #5f5f5f;
+  font-size: 30.1538px;
+  line-height: 35px;
+}
+
+.connection .connection__content .connection__form .connection__textarea::-ms-input-placeholder {
+  color: #5f5f5f;
+  font-size: 30.1538px;
+  line-height: 35px;
+}
+
+.connection .connection__content .connection__form .connection__textarea::placeholder {
+  color: #5f5f5f;
+  font-size: 30.1538px;
+  line-height: 35px;
+}
+
+.connection .connection__content .connection__form .connection__textarea:focus {
+  border-radius: 0px;
+}
+
 .connection .connection__content .connection__form .connection__button {
-  margin-top: 120px;
+  margin-top: 50px;
   color: #1f1f1f;
   font-weight: 600;
   background-color: #ffe600;
