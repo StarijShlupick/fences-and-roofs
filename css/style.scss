@@ -149,12 +149,12 @@ h5 {
   text-transform: uppercase;
 }
 
-input {
+input, textarea {
   outline: none;
   @include animation();
 }
 
-input[type="text"] {
+input[type="text"], textarea {
   border: 2.15385px solid #bdbdbd;
   border-radius: 12.9231px;
 }
@@ -744,7 +744,8 @@ button {
       width: 588px;
       .connection__lable,
       .connection__input,
-      .connection__button {
+      .connection__button,
+      .connection__textarea {
         display: inline-block;
       }
       .connection__lable {
@@ -763,8 +764,25 @@ button {
           line-height: 35px;
         }
       }
+      .connection__textarea{
+        overflow: auto;
+        resize: none;
+        padding: 20px 26px;
+        font-size: 30.1538px;
+        line-height: 35px;
+        margin-bottom: 30px;
+        &::placeholder {
+          color: $unactive-gray-color;
+          font-size: 30.1538px;
+          line-height: 35px;
+        }
+        &:focus{
+          border-radius: 0px;
+        }
+      }
       .connection__button {
-        margin-top: 120px;
+        // margin-top: 120px;
+        margin-top: 50px;
         @include active-button();
         font-size: 31.3846px;
         line-height: 43px;
