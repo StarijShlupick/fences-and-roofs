@@ -11,7 +11,7 @@ $card-gray-color: #e0e0e0;
   display: block;
 }
 @mixin animation {
-  transition: ease-in-out 0.1s;
+  transition: all 0.1s ease-in-out;
 }
 @mixin active-button {
   color: $black-color;
@@ -149,12 +149,14 @@ h5 {
   text-transform: uppercase;
 }
 
-input, textarea {
+input,
+textarea {
   outline: none;
   @include animation();
 }
 
-input[type="text"], textarea {
+input[type="text"],
+textarea {
   border: 2.15385px solid #bdbdbd;
   border-radius: 12.9231px;
 }
@@ -287,33 +289,6 @@ button {
   }
 }
 
-.swiper-pagination {
-  display: flex;
-  justify-content: space-between;
-  margin: 0 auto;
-  align-items: start;
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  max-width: 635px !important;
-}
-.swiper-pagination-bullet {
-  @include pagination-button();
-  display: inline-block;
-  margin: 0 !important;
-  padding: 30px 82px;
-  width: auto;
-  height: auto;
-  text-align: center;
-  font-size: 30px;
-  line-height: 41px;
-  opacity: 1;
-}
-.swiper-pagination-bullet-active {
-  @include pagination-button-active();
-}
-
 .work-cases {
   .container {
     max-width: 1920px;
@@ -324,28 +299,36 @@ button {
     text-align: center;
     margin: 108px 0 76px;
   }
-}
-.work-cases-slider {
-  width: 100%;
-  position: relative;
-  &__wrapper {
-    width: 100%;
-    min-height: 416px;
-    padding-top: 83px;
+  .tabs__nav {
+    display: flex;
+    justify-content: space-between;
+    margin: 0 auto;
+    max-width: 635px;
   }
-  .swiper-pagination {
-    max-width: 600px !important;
-  }
-  .swiper-pagination-bullet {
+  .nav__item {
+    @include pagination-button();
+    text-align: center;
     padding: 25px 67px;
     font-size: 24.5626px;
     line-height: 33px;
+    cursor: pointer;
+  }
+  .nav__item.--active {
+    @include pagination-button-active();
+  }
+  .tab{
+    display: none;
+    &.--active{
+      display: block;
+    }
   }
 }
 .work-cases__card {
   @include slider-card(315px, 416px);
   box-shadow: 1.14298px 3.42894px 28.5745px rgba(0, 0, 0, 0.14);
   border-radius: 17.1447px;
+  cursor: pointer;
+  transition: transform 0.3s;
   &::before {
     content: "";
     position: absolute;
@@ -356,6 +339,9 @@ button {
     border: 2px solid $card-gray-color;
     box-sizing: border-box;
     border-radius: 17.1447px;
+  }
+  &:hover {
+    transform: translateY(-10px);
   }
   .card__img-wrapper {
     width: 100%;
@@ -400,17 +386,14 @@ button {
   }
 }
 .work-cases__fences-slider,
-.work-cases__roofs-slider {
+.work-cases__gates-slider {
   padding: 100px 80px;
   .slider-button {
     top: 45%;
     display: none;
   }
 }
-.work-cases__roofs-slider__wrapper,
-.work-cases__fences-slider__wrapper {
-  width: 100%;
-}
+
 .promotion {
   margin-top: 108px;
   &__header {
@@ -641,7 +624,7 @@ button {
   }
 }
 
-.our-work{
+.our-work {
   margin-top: 78px;
 }
 
@@ -682,7 +665,7 @@ button {
           line-height: 35px;
         }
       }
-      .connection__textarea{
+      .connection__textarea {
         overflow: auto;
         resize: none;
         padding: 20px 26px;
@@ -694,7 +677,7 @@ button {
           font-size: 30.1538px;
           line-height: 35px;
         }
-        &:focus{
+        &:focus {
           border-radius: 0px;
         }
       }
@@ -810,5 +793,54 @@ button {
     &:hover {
       color: $unactive-gray-color;
     }
+  }
+}
+
+.modal {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) scale(0);
+  max-width: 1200px;
+  width: 95%;
+  max-height: 900px;
+  height: 95%;
+  z-index: 10;
+  background-color: #fff;
+  border-radius: 100px;
+  transition: transform .3s;
+  &.--active {
+    transform: translate(-50%, -50%) scale(1);
+  }
+  .close-button {
+    display: inline-block;
+    padding: 0;
+    background: none;
+    border: none;
+    @include animation();
+    &:hover {
+      transform: scale(1.05);
+    }
+    .close-button__img {
+      @include image-wrapper();
+      width: 35px;
+      height: 35px;
+    }
+  }
+}
+.modal-overlay {
+  position: fixed;
+  opacity: 0;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.14);
+  z-index: 9;
+  pointer-events: none;
+  transition: opacity .5s;
+  &.--active {
+    opacity: 1;
+    pointer-events: all;
   }
 }

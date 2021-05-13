@@ -76,449 +76,462 @@
     </div>
   </header>
 
-  <section class="about">
-    <div class="container">
-      <div class="header-content">
-        <h1 class="header-content__header">
-          Современные заборы и крыши для защиты вашего дома
-        </h1>
-        <p class="header-content__text">
-          Подберем забор под ваш бюджет
-        </p>
-        <a class="header-content__button" href="#connection">
-          Подобрать проект
-        </a>
+  <main>
+    <section class="about">
+      <div class="container">
+        <div class="header-content">
+          <h1 class="header-content__header">
+            Современные заборы и крыши для защиты вашего дома
+          </h1>
+          <p class="header-content__text">
+            Подберем забор под ваш бюджет
+          </p>
+          <a class="header-content__button" href="#connection">
+            Подобрать проект
+          </a>
+        </div>
+        <div class="about__img-wrapper">
+          <img class="about__img" src="./assets/images/start-bg.png" alt="house">
+        </div>
       </div>
-      <div class="about__img-wrapper">
-        <img class="about__img" src="./assets/images/start-bg.png" alt="house">
-      </div>
-    </div>
-  </section>
+    </section>
 
-  <section id='work-cases' class="work-cases">
-    <div class="container">
-      <h3 class="work-cases__header">
-        наши услуги
-      </h3>
-      <div class="work-cases-slider swiper-container">
-        <div class="work-cases-slider__wrapper swiper-wrapper">
-          <div class="work-cases-slide swiper-slide" data-hash="fences">
-            <div class="work-cases__fences-slider swiper-container">
-              <div class="work-cases__fences-slider__wrapper swiper-wrapper">
-                <div class="work-cases__fences-slide swiper-slide">
-                  <div class="work-cases__card">
-                    <div class="card__img-wrapper">
-                      <img src="./assets/work-cases-slider/fences/1.jpg" alt="fence" class="card__img">
+    <section id='work-cases' class="work-cases">
+      <div class="container">
+        <h3 class="work-cases__header">
+          наши услуги
+        </h3>
+        <div class="tabs">
+          <nav class="tabs__nav">
+            <div class="nav__item --active" data-tab-name="fences">Заборы</div>
+            <div class="nav__item" data-tab-name="gates">Ворота и калитки</div>
+          </nav>
+          <div class="tabs__content">
+            <div class="tab --active fences">
+              <div class="work-cases__fences-slider swiper-container">
+                <div class="work-cases__fences-slider__wrapper swiper-wrapper">
+                  <div class="work-cases__fences-slide swiper-slide">
+                    <div data-modal-target="#modal-econom" class="work-cases__card">
+                      <div class="card__img-wrapper">
+                        <img src="./assets/work-cases-slider/fences/1.jpg" alt="fence" class="card__img">
+                      </div>
+                      <div class="card__content">
+                        <h6 class="card__header">
+                          эконом
+                        </h6>
+                        <p class="card__text">
+                          Забор из металлопрофиля пользуется огромным спросом уже много лет. Листы металлопрофиля стоят
+                          совсем недорого, но при этом они очень прочные и функциональные. Эти качества и прекрасный
+                          внешний
+                          вид делают ограждения из металлопрофиля выгодным вариантом.
+                        </p>
+                        <div class="card__price">от 10 р. за кв/м</div>
+                      </div>
                     </div>
-                    <div class="card__content">
-                      <h6 class="card__header">
-                        эконом
-                      </h6>
-                      <p class="card__text">
-                        Забор из металлопрофиля пользуется огромным спросом уже много лет. Листы металлопрофиля стоят
-                        совсем недорого, но при этом они очень прочные и функциональные. Эти качества и прекрасный
-                        внешний
-                        вид делают ограждения из металлопрофиля выгодным вариантом.
-                      </p>
-                      <div class="card__price">от 10 р. за кв/м</div>
+                  </div>
+                  <div class="work-cases__fences-slide swiper-slide">
+                    <div data-modal-target="#modal-econom-plus" class="work-cases__card">
+                      <div class="card__img-wrapper">
+                        <img src="./assets/work-cases-slider/fences/2.jpg" alt="fence" class="card__img">
+                      </div>
+                      <div class="card__content">
+                        <h6 class="card__header">
+                          Эконом +
+                        </h6>
+                        <p class="card__text">
+                          Забор из металлопрофиля пользуется огромным спросом уже много лет. Листы металлопрофиля стоят
+                          совсем недорого, но при этом они очень прочные и функциональные. Эти качества и прекрасный
+                          внешний
+                          вид делают ограждения из металлопрофиля выгодным вариантом.
+                        </p>
+                        <div class="card__price">от 15 р. за кв/м</div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="work-cases__fences-slide swiper-slide">
+                    <div data-modal-target="#modal-standart" class="work-cases__card">
+                      <div class="card__img-wrapper">
+                        <img src="./assets/work-cases-slider/fences/3.jpg" alt="fence" class="card__img">
+                      </div>
+                      <div class="card__content">
+                        <h6 class="card__header">
+                          Стандарт
+                        </h6>
+                        <p class="card__text">
+                          Забор из металлопрофиля пользуется огромным спросом уже много лет. Листы металлопрофиля стоят
+                          совсем недорого, но при этом они очень прочные и функциональные. Эти качества и прекрасный
+                          внешний
+                          вид делают ограждения из металлопрофиля выгодным вариантом.
+                        </p>
+                        <div class="card__price">от 12 р. за кв/м</div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="work-cases__fences-slide swiper-slide">
+                    <div data-modal-target="#modal-premium" class="work-cases__card">
+                      <div class="card__img-wrapper">
+                        <img src="./assets/work-cases-slider/fences/4.jpg" alt="fence" class="card__img">
+                      </div>
+                      <div class="card__content">
+                        <h6 class="card__header">
+                          премиум
+                        </h6>
+                        <p class="card__text">
+                          Забор из металлопрофиля пользуется огромным спросом уже много лет. Листы металлопрофиля стоят
+                          совсем недорого, но при этом они очень прочные и функциональные. Эти качества и прекрасный
+                          внешний
+                          вид делают ограждения из металлопрофиля выгодным вариантом.
+                        </p>
+                        <div class="card__price">от 17 р. за кв/м</div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="work-cases__fences-slide swiper-slide">
+                    <div data-modal-target="#modal-own-version" class="work-cases__card">
+                      <div class="card__img-wrapper">
+                        <img src="./assets/work-cases-slider/fences/5.jpg" alt="fence" class="card__img">
+                      </div>
+                      <div class="card__content">
+                        <h6 class="card__header">
+                          Свой вариант
+                        </h6>
+                        <p class="card__text">
+                          Забор из металлопрофиля пользуется огромным спросом уже много лет. Листы металлопрофиля стоят
+                          совсем недорого, но при этом они очень прочные и функциональные. Эти качества и прекрасный
+                          внешний
+                          вид делают ограждения из металлопрофиля выгодным вариантом.
+                        </p>
+                        <div class="card__price">от 17 р. за кв/м</div>
+                      </div>
                     </div>
                   </div>
                 </div>
-                <div class="work-cases__fences-slide swiper-slide">
-                  <div class="work-cases__card">
-                    <div class="card__img-wrapper">
-                      <img src="./assets/work-cases-slider/fences/2.jpg" alt="fence" class="card__img">
-                    </div>
-                    <div class="card__content">
-                      <h6 class="card__header">
-                        Эконом +
-                      </h6>
-                      <p class="card__text">
-                        Забор из металлопрофиля пользуется огромным спросом уже много лет. Листы металлопрофиля стоят
-                        совсем недорого, но при этом они очень прочные и функциональные. Эти качества и прекрасный
-                        внешний
-                        вид делают ограждения из металлопрофиля выгодным вариантом.
-                      </p>
-                      <div class="card__price">от 15 р. за кв/м</div>
-                    </div>
-                  </div>
+                <div class="slider-button swiper-button-prev">
                 </div>
-                <div class="work-cases__fences-slide swiper-slide">
-                  <div class="work-cases__card">
-                    <div class="card__img-wrapper">
-                      <img src="./assets/work-cases-slider/fences/3.jpg" alt="fence" class="card__img">
-                    </div>
-                    <div class="card__content">
-                      <h6 class="card__header">
-                        Стандарт
-                      </h6>
-                      <p class="card__text">
-                        Забор из металлопрофиля пользуется огромным спросом уже много лет. Листы металлопрофиля стоят
-                        совсем недорого, но при этом они очень прочные и функциональные. Эти качества и прекрасный
-                        внешний
-                        вид делают ограждения из металлопрофиля выгодным вариантом.
-                      </p>
-                      <div class="card__price">от 12 р. за кв/м</div>
-                    </div>
-                  </div>
-                </div>
-                <div class="work-cases__fences-slide swiper-slide">
-                  <div class="work-cases__card">
-                    <div class="card__img-wrapper">
-                      <img src="./assets/work-cases-slider/fences/4.jpg" alt="fence" class="card__img">
-                    </div>
-                    <div class="card__content">
-                      <h6 class="card__header">
-                        премиум
-                      </h6>
-                      <p class="card__text">
-                        Забор из металлопрофиля пользуется огромным спросом уже много лет. Листы металлопрофиля стоят
-                        совсем недорого, но при этом они очень прочные и функциональные. Эти качества и прекрасный
-                        внешний
-                        вид делают ограждения из металлопрофиля выгодным вариантом.
-                      </p>
-                      <div class="card__price">от 17 р. за кв/м</div>
-                    </div>
-                  </div>
-                </div>
-                <div class="work-cases__fences-slide swiper-slide">
-                  <div class="work-cases__card">
-                    <div class="card__img-wrapper">
-                      <img src="./assets/work-cases-slider/fences/5.jpg" alt="fence" class="card__img">
-                    </div>
-                    <div class="card__content">
-                      <h6 class="card__header">
-                        Свой вариант
-                      </h6>
-                      <p class="card__text">
-                        Забор из металлопрофиля пользуется огромным спросом уже много лет. Листы металлопрофиля стоят
-                        совсем недорого, но при этом они очень прочные и функциональные. Эти качества и прекрасный
-                        внешний
-                        вид делают ограждения из металлопрофиля выгодным вариантом.
-                      </p>
-                      <div class="card__price">от 17 р. за кв/м</div>
-                    </div>
-                  </div>
+                <div class="slider-button swiper-button-next">
                 </div>
               </div>
-              <div class="slider-button swiper-button-prev">
-              </div>
-              <div class="slider-button swiper-button-next">
+            </div>
+            <div class="tab gates">
+              <div class="work-cases__gates-slider swiper-container">
+                <div class="work-cases__gates-slider__wrapper swiper-wrapper">
+                  <div class="work-cases__gates-slide swiper-slide">
+                    <div class="work-cases__card">
+                      <div class="card__img-wrapper">
+                        <img src="./assets/work-cases-slider/gates/1.jpg" alt="roof" class="card__img">
+                      </div>
+                      <div class="card__content">
+                        <h6 class="card__header">
+                          константа 90 мм
+                        </h6>
+                        <p class="card__text">
+                          Забор из металлического штакетника сочетает в себе долговечность и надежность забора из
+                          профнастила с красотой и воздушностью заборов из деревянного штакетника.
+                        </p>
+                        <div class="card__price">от 10 р. за кв/м</div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="work-cases__gates-slide swiper-slide">
+                    <div class="work-cases__card">
+                      <div class="card__img-wrapper">
+                        <img src="./assets/work-cases-slider/gates/2.jpg" alt="roof" class="card__img">
+                      </div>
+                      <div class="card__content">
+                        <h6 class="card__header">
+                          трапеция 118 мм
+                        </h6>
+                        <p class="card__text">
+                          Забор из металлического штакетника сочетает в себе долговечность и надежность забора из
+                          профнастила с красотой и воздушностью заборов из деревянного штакетника.
+                        </p>
+                        <div class="card__price">от 15 р. за кв/м</div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="work-cases__gates-slide swiper-slide">
+                    <div class="work-cases__card">
+                      <div class="card__img-wrapper">
+                        <img src="./assets/work-cases-slider/gates/3.jpg" alt="roof" class="card__img">
+                      </div>
+                      <div class="card__content">
+                        <h6 class="card__header">
+                          европланка 130 мм
+                        </h6>
+                        <p class="card__text">
+                          Забор из металлического штакетника сочетает в себе долговечность и надежность забора из
+                          профнастила с красотой и воздушностью заборов из деревянного штакетника.
+                        </p>
+                        <div class="card__price">от 20 р. за кв/м</div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="slider-button swiper-button-prev">
+                </div>
+                <div class="slider-button swiper-button-next">
+                </div>
               </div>
             </div>
           </div>
-          <div class="work-cases-slide swiper-slide" data-hash="roofs">
-            <div class="work-cases__roofs-slider swiper-container">
-              <div class="work-cases__roofs-slider__wrapper swiper-wrapper">
-                <div class="work-cases__roofs-slide swiper-slide">
-                  <div class="work-cases__card">
-                    <div class="card__img-wrapper">
-                      <img src="./assets/work-cases-slider/roofs/1.jpg" alt="roof" class="card__img">
-                    </div>
-                    <div class="card__content">
-                      <h6 class="card__header">
-                        константа 90 мм 
-                      </h6>
-                      <p class="card__text">
-                        Забор из металлического штакетника  сочетает в себе долговечность и надежность забора из профнастила с красотой и воздушностью заборов из деревянного штакетника.
-                      </p>
-                      <div class="card__price">от 10 р. за кв/м</div>
-                    </div>
-                  </div>
-                </div>
-                <div class="work-cases__roofs-slide swiper-slide">
-                  <div class="work-cases__card">
-                    <div class="card__img-wrapper">
-                      <img src="./assets/work-cases-slider/roofs/2.jpg" alt="roof" class="card__img">
-                    </div>
-                    <div class="card__content">
-                      <h6 class="card__header">
-                        трапеция 118 мм
-                      </h6>
-                      <p class="card__text">
-                        Забор из металлического штакетника  сочетает в себе долговечность и надежность забора из профнастила с красотой и воздушностью заборов из деревянного штакетника.
-                      </p>
-                      <div class="card__price">от 15 р. за кв/м</div>
-                    </div>
-                  </div>
-                </div>
-                <div class="work-cases__roofs-slide swiper-slide">
-                  <div class="work-cases__card">
-                    <div class="card__img-wrapper">
-                      <img src="./assets/work-cases-slider/roofs/3.jpg" alt="roof" class="card__img">
-                    </div>
-                    <div class="card__content">
-                      <h6 class="card__header">
-                        европланка 130 мм
-                      </h6>
-                      <p class="card__text">
-                        Забор из металлического штакетника  сочетает в себе долговечность и надежность забора из профнастила с красотой и воздушностью заборов из деревянного штакетника.
-                      </p>
-                      <div class="card__price">от 20 р. за кв/м</div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <div class="slider-button swiper-button-prev">
-              </div>
-              <div class="slider-button swiper-button-next">
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="swiper-pagination"></div>
-      </div>
-    </div>
-  </section>
-
-  <section id="our-work" class="our-work">
-    <div class="container">
-      <h3 class="our-work__header">примеры работ</h3>
-    </div>
-    <div class="our-work-slider swiper-container">
-      <div class="our-work-slider__wrapper swiper-wrapper">
-        <div class="slide-card swiper-slide">
-          <img src="./assets/our-work-slider/1.jpg" alt="slide" class="slide-card__img">
-        </div>
-        <div class="slide-card swiper-slide">
-          <img src="./assets/our-work-slider/2.jpg" alt="slide" class="slide-card__img">
-        </div>
-        <div class="slide-card swiper-slide">
-          <img src="./assets/our-work-slider/3.jpg" alt="slide" class="slide-card__img">
         </div>
       </div>
-      <div class="slider-button swiper-button-prev"></div>
-      <div class="slider-button swiper-button-next"></div>
-    </div>
-  </section>
+    </section>
 
-  <section id="promotion" class="promotion">
-    <div class="container">
-      <h3 class="promotion__header">Почему работать с нами выгодно?</h3>
-      <div class="promotion__content">
-        <div class="promotion-card">
-          <div class="promotion-card__img-wrapper">
-            <img src="./assets/images/Ellipse-1.png" alt="доступные цены" class="promotion-card__img">
-          </div>
-          <p class="promotion-card__text">
-            Качественный материал по <strong>доступным ценам</strong>
-          </p>
-        </div>
-        <div class="promotion-card">
-          <div class="promotion-card__img-wrapper">
-            <img src="./assets/images/Ellipse-2.png" alt="под ключ" class="promotion-card__img">
-          </div>
-          <p class="promotion-card__text">
-            Работаем <strong>под ключ</strong>
-          </p>
-        </div>
-        <div class="promotion-card">
-          <div class="promotion-card__img-wrapper">
-            <img src="./assets/images/Ellipse-3.png" alt="специалисты" class="promotion-card__img">
-          </div>
-          <p class="promotion-card__text">
-            В бригадах работают <strong>высококвалифици-<br>рованные специалисты</strong>
-          </p>
-        </div>
-        <div class="promotion-card">
-          <div class="promotion-card__img-wrapper">
-            <img src="./assets/images/Ellipse-4.png" alt="сроки" class="promotion-card__img">
-          </div>
-          <p class="promotion-card__text">
-            Соблюдаем <strong>заявленные сроки</strong>
-          </p>
-        </div>
+    <section id="our-work" class="our-work">
+      <div class="container">
+        <h3 class="our-work__header">примеры работ</h3>
       </div>
-    </div>
-  </section>
-
-  <section class="principles">
-    <div class="container">
-      <h3 class="principles__header">принцип работы</h3>
-      <div class="principles__content">
-        <div class="principles-card">
-          <div class="principles-card__img-wrapper">
-            <img src="./assets/icons/phone-call.svg" alt="" class="principles-card__img">
+      <div class="our-work-slider swiper-container">
+        <div class="our-work-slider__wrapper swiper-wrapper">
+          <div class="slide-card swiper-slide">
+            <img src="./assets/our-work-slider/1.jpg" alt="slide" class="slide-card__img">
           </div>
-          <p class="principles-card__text">
-            Обращение клиента
-          </p>
-        </div>
-        <div class="principles-card">
-          <div class="principles-card__img-wrapper">
-            <img src="./assets/icons/person.svg" alt="" class="principles-card__img">
+          <div class="slide-card swiper-slide">
+            <img src="./assets/our-work-slider/2.jpg" alt="slide" class="slide-card__img">
           </div>
-          <p class="principles-card__text">
-            Расчет
-          </p>
-        </div>
-        <div class="principles-card">
-          <div class="principles-card__img-wrapper">
-            <img src="./assets/icons/machine.svg" alt="" class="principles-card__img">
+          <div class="slide-card swiper-slide">
+            <img src="./assets/our-work-slider/3.jpg" alt="slide" class="slide-card__img">
           </div>
-          <p class="principles-card__text">
-            Выезд на объект
-          </p>
         </div>
-        <div class="principles-card">
-          <div class="principles-card__img-wrapper">
-            <img src="./assets/icons/paper.svg" alt="" class="principles-card__img">
-          </div>
-          <p class="principles-card__text">
-            Заключение договора
-          </p>
-        </div>
-        <div class="principles-card">
-          <div class="principles-card__img-wrapper">
-            <img src="./assets/icons/materials.svg" alt="" class="principles-card__img">
-          </div>
-          <p class="principles-card__text">
-            Изготовление и установка материала
-          </p>
-        </div>
-        <div class="principles-card">
-          <div class="principles-card__img-wrapper">
-            <img src="./assets/icons/worker.svg" alt="" class="principles-card__img">
-          </div>
-          <p class="principles-card__text">
-            Довольный клиент
-          </p>
-        </div>
+        <div class="slider-button swiper-button-prev"></div>
+        <div class="slider-button swiper-button-next"></div>
       </div>
-    </div>
-  </section>
+    </section>
 
-  <section class="feedback">
-    <div class="container">
-      <h3 class="feedback__header">отзывы клиентов</h3>
-    </div>
-    <div class="feedback-slider swiper-container">
-      <div class="feedback-slider__wrapper swiper-wrapper">
-        <div class="slide-card swiper-slide">
-          <div class="feed-back__slide">
-            <div class="slide__top">
-              <div class="person">
-                <div class="person__photo-wrapper">
-                  <img src="./assets/images/person1.jpg" alt="photo" class="person__photo">
-                </div>
-                <div class="person__info">
-                  <h5 class="name">Алексей</h5>
-                  <div class="status">бизнесмен</div>
-                </div>
-              </div>
-              <div class="stars">
-                <img src="./assets/icons/Star.svg" alt="star" class="star">
-                <img src="./assets/icons/Star.svg" alt="star" class="star">
-                <img src="./assets/icons/Star.svg" alt="star" class="star">
-                <img src="./assets/icons/Star.svg" alt="star" class="star">
-                <img src="./assets/icons/Star.svg" alt="star" class="star">
-              </div>
+    <section id="promotion" class="promotion">
+      <div class="container">
+        <h3 class="promotion__header">Почему работать с нами выгодно?</h3>
+        <div class="promotion__content">
+          <div class="promotion-card">
+            <div class="promotion-card__img-wrapper">
+              <img src="./assets/images/Ellipse-1.png" alt="доступные цены" class="promotion-card__img">
             </div>
-            <div class="slide__bottom">
-              <div class="quote-wrapper">
-                <img src="./assets/icons/quotes.svg" alt="quote" class="quote">
-              </div>
-              <p class="quote-text">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Eu donec mauris, amet, et sit amet ullamcorper.
-                Ut ultricies vitae aliquam semper dui pretium amet duis adipiscing. Cursus ut eget aliquet nibh lobortis
-                hendrerit blandit.
-              </p>
-            </div>
+            <p class="promotion-card__text">
+              Качественный материал по <strong>доступным ценам</strong>
+            </p>
           </div>
-        </div>
-        <div class="slide-card swiper-slide">
-          <div class="feed-back__slide">
-            <div class="slide__top">
-              <div class="person">
-                <div class="person__photo-wrapper">
-                  <img src="./assets/images/person2.jpg" alt="photo" class="person__photo">
-                </div>
-                <div class="person__info">
-                  <h5 class="name">Валентина</h5>
-                  <div class="status">директор</div>
-                </div>
-              </div>
-              <div class="stars">
-                <img src="./assets/icons/Star.svg" alt="star" class="star">
-                <img src="./assets/icons/Star.svg" alt="star" class="star">
-                <img src="./assets/icons/Star.svg" alt="star" class="star">
-                <img src="./assets/icons/Star.svg" alt="star" class="star">
-                <img src="./assets/icons/Star.svg" alt="star" class="star">
-              </div>
+          <div class="promotion-card">
+            <div class="promotion-card__img-wrapper">
+              <img src="./assets/images/Ellipse-2.png" alt="под ключ" class="promotion-card__img">
             </div>
-            <div class="slide__bottom">
-              <div class="quote-wrapper">
-                <img src="./assets/icons/quotes.svg" alt="quote" class="quote">
-              </div>
-              <p class="quote-text">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Eu donec mauris, amet, et sit amet ullamcorper.
-                Ut ultricies vitae aliquam semper dui pretium amet duis adipiscing. Cursus ut eget aliquet nibh lobortis
-                hendrerit blandit.
-              </p>
-            </div>
+            <p class="promotion-card__text">
+              Работаем <strong>под ключ</strong>
+            </p>
           </div>
-        </div>
-        <div class="slide-card swiper-slide">
-          <div class="feed-back__slide">
-            <div class="slide__top">
-              <div class="person">
-                <div class="person__photo-wrapper">
-                  <img src="./assets/images/person3.jpg" alt="photo" class="person__photo">
-                </div>
-                <div class="person__info">
-                  <h5 class="name">Виктор</h5>
-                  <div class="status">бизнесмен</div>
-                </div>
-              </div>
-              <div class="stars">
-                <img src="./assets/icons/Star.svg" alt="star" class="star">
-                <img src="./assets/icons/Star.svg" alt="star" class="star">
-                <img src="./assets/icons/Star.svg" alt="star" class="star">
-                <img src="./assets/icons/Star.svg" alt="star" class="star">
-                <img src="./assets/icons/Star.svg" alt="star" class="star">
-              </div>
+          <div class="promotion-card">
+            <div class="promotion-card__img-wrapper">
+              <img src="./assets/images/Ellipse-3.png" alt="специалисты" class="promotion-card__img">
             </div>
+            <p class="promotion-card__text">
+              В бригадах работают <strong>высококвалифици-<br>рованные специалисты</strong>
+            </p>
           </div>
-          <div class="slide__bottom">
-            <div class="quote-wrapper">
-              <img src="./assets/icons/quotes.svg" alt="quote" class="quote">
+          <div class="promotion-card">
+            <div class="promotion-card__img-wrapper">
+              <img src="./assets/images/Ellipse-4.png" alt="сроки" class="promotion-card__img">
             </div>
-            <p class="quote-text">
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Eu donec mauris, amet, et sit amet ullamcorper.
-              Ut ultricies vitae aliquam semper dui pretium amet duis adipiscing. Cursus ut eget aliquet nibh lobortis
-              hendrerit blandit.
+            <p class="promotion-card__text">
+              Соблюдаем <strong>заявленные сроки</strong>
             </p>
           </div>
         </div>
       </div>
-      <div class="slider-button swiper-button-prev">
-      </div>
-      <div class="slider-button swiper-button-next">
-      </div>
-    </div>
-  </section>
+    </section>
 
-  <section id="connection" class="connection">
-    <div class="container">
-      <h3 class="connection__header">
-        наши специалисты ответят на все ваши вопросы
-      </h3>
-      <div class="connection__content">
-        <form action="" class="connection__form">
-          <label class="connection__lable" for="name">Имя</label>
-          <input class="connection__input" type="text" id="name" name="name" placeholder="Введите имя">
-          <label class="connection__lable " for="phone">Телефон</label>
-          <input class="connection__input" type="text" id="phone" name="phone" placeholder="+_ (___) ___-____">
-          <label class="connection__lable " for="description">Описание</label>
-          <textarea name="description" id="description" rows="4" maxlength="200" class="connection__textarea" placeholder="Кратко опишите критерии проекта: виды работ, желаемая стоимость, материалы"></textarea>
-          <button class="connection__button" type="submit" value="Submit">Записаться на консультацию</button>
-        </form>
-        <div class="connection__image-wrapper">
-          <img src="./assets/images/connection.jpg" alt="" class="connection__image">
+    <section class="principles">
+      <div class="container">
+        <h3 class="principles__header">принцип работы</h3>
+        <div class="principles__content">
+          <div class="principles-card">
+            <div class="principles-card__img-wrapper">
+              <img src="./assets/icons/phone-call.svg" alt="" class="principles-card__img">
+            </div>
+            <p class="principles-card__text">
+              Обращение клиента
+            </p>
+          </div>
+          <div class="principles-card">
+            <div class="principles-card__img-wrapper">
+              <img src="./assets/icons/person.svg" alt="" class="principles-card__img">
+            </div>
+            <p class="principles-card__text">
+              Расчет
+            </p>
+          </div>
+          <div class="principles-card">
+            <div class="principles-card__img-wrapper">
+              <img src="./assets/icons/machine.svg" alt="" class="principles-card__img">
+            </div>
+            <p class="principles-card__text">
+              Выезд на объект
+            </p>
+          </div>
+          <div class="principles-card">
+            <div class="principles-card__img-wrapper">
+              <img src="./assets/icons/paper.svg" alt="" class="principles-card__img">
+            </div>
+            <p class="principles-card__text">
+              Заключение договора
+            </p>
+          </div>
+          <div class="principles-card">
+            <div class="principles-card__img-wrapper">
+              <img src="./assets/icons/materials.svg" alt="" class="principles-card__img">
+            </div>
+            <p class="principles-card__text">
+              Изготовление и установка материала
+            </p>
+          </div>
+          <div class="principles-card">
+            <div class="principles-card__img-wrapper">
+              <img src="./assets/icons/worker.svg" alt="" class="principles-card__img">
+            </div>
+            <p class="principles-card__text">
+              Довольный клиент
+            </p>
+          </div>
         </div>
       </div>
-    </div>
-  </section>
+    </section>
+
+    <section class="feedback">
+      <div class="container">
+        <h3 class="feedback__header">отзывы клиентов</h3>
+      </div>
+      <div class="feedback-slider swiper-container">
+        <div class="feedback-slider__wrapper swiper-wrapper">
+          <div class="slide-card swiper-slide">
+            <div class="feed-back__slide">
+              <div class="slide__top">
+                <div class="person">
+                  <div class="person__photo-wrapper">
+                    <img src="./assets/images/person1.jpg" alt="photo" class="person__photo">
+                  </div>
+                  <div class="person__info">
+                    <h5 class="name">Алексей</h5>
+                    <div class="status">бизнесмен</div>
+                  </div>
+                </div>
+                <div class="stars">
+                  <img src="./assets/icons/Star.svg" alt="star" class="star">
+                  <img src="./assets/icons/Star.svg" alt="star" class="star">
+                  <img src="./assets/icons/Star.svg" alt="star" class="star">
+                  <img src="./assets/icons/Star.svg" alt="star" class="star">
+                  <img src="./assets/icons/Star.svg" alt="star" class="star">
+                </div>
+              </div>
+              <div class="slide__bottom">
+                <div class="quote-wrapper">
+                  <img src="./assets/icons/quotes.svg" alt="quote" class="quote">
+                </div>
+                <p class="quote-text">
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Eu donec mauris, amet, et sit amet
+                  ullamcorper.
+                  Ut ultricies vitae aliquam semper dui pretium amet duis adipiscing. Cursus ut eget aliquet nibh
+                  lobortis
+                  hendrerit blandit.
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="slide-card swiper-slide">
+            <div class="feed-back__slide">
+              <div class="slide__top">
+                <div class="person">
+                  <div class="person__photo-wrapper">
+                    <img src="./assets/images/person2.jpg" alt="photo" class="person__photo">
+                  </div>
+                  <div class="person__info">
+                    <h5 class="name">Валентина</h5>
+                    <div class="status">директор</div>
+                  </div>
+                </div>
+                <div class="stars">
+                  <img src="./assets/icons/Star.svg" alt="star" class="star">
+                  <img src="./assets/icons/Star.svg" alt="star" class="star">
+                  <img src="./assets/icons/Star.svg" alt="star" class="star">
+                  <img src="./assets/icons/Star.svg" alt="star" class="star">
+                  <img src="./assets/icons/Star.svg" alt="star" class="star">
+                </div>
+              </div>
+              <div class="slide__bottom">
+                <div class="quote-wrapper">
+                  <img src="./assets/icons/quotes.svg" alt="quote" class="quote">
+                </div>
+                <p class="quote-text">
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Eu donec mauris, amet, et sit amet
+                  ullamcorper.
+                  Ut ultricies vitae aliquam semper dui pretium amet duis adipiscing. Cursus ut eget aliquet nibh
+                  lobortis
+                  hendrerit blandit.
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="slide-card swiper-slide">
+            <div class="feed-back__slide">
+              <div class="slide__top">
+                <div class="person">
+                  <div class="person__photo-wrapper">
+                    <img src="./assets/images/person3.jpg" alt="photo" class="person__photo">
+                  </div>
+                  <div class="person__info">
+                    <h5 class="name">Виктор</h5>
+                    <div class="status">бизнесмен</div>
+                  </div>
+                </div>
+                <div class="stars">
+                  <img src="./assets/icons/Star.svg" alt="star" class="star">
+                  <img src="./assets/icons/Star.svg" alt="star" class="star">
+                  <img src="./assets/icons/Star.svg" alt="star" class="star">
+                  <img src="./assets/icons/Star.svg" alt="star" class="star">
+                  <img src="./assets/icons/Star.svg" alt="star" class="star">
+                </div>
+              </div>
+            </div>
+            <div class="slide__bottom">
+              <div class="quote-wrapper">
+                <img src="./assets/icons/quotes.svg" alt="quote" class="quote">
+              </div>
+              <p class="quote-text">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Eu donec mauris, amet, et sit amet ullamcorper.
+                Ut ultricies vitae aliquam semper dui pretium amet duis adipiscing. Cursus ut eget aliquet nibh lobortis
+                hendrerit blandit.
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="slider-button swiper-button-prev">
+        </div>
+        <div class="slider-button swiper-button-next">
+        </div>
+      </div>
+    </section>
+
+    <section id="connection" class="connection">
+      <div class="container">
+        <h3 class="connection__header">
+          наши специалисты ответят на все ваши вопросы
+        </h3>
+        <div class="connection__content">
+          <form action="" class="connection__form">
+            <label class="connection__lable" for="name">Имя</label>
+            <input class="connection__input" type="text" id="name" name="name" placeholder="Введите имя">
+            <label class="connection__lable " for="phone">Телефон</label>
+            <input class="connection__input" type="text" id="phone" name="phone" placeholder="+_ (___) ___-____">
+            <label class="connection__lable " for="description">Описание</label>
+            <textarea name="description" id="description" rows="4" maxlength="200" class="connection__textarea"
+              placeholder="Кратко опишите критерии проекта: виды работ, желаемая стоимость, материалы"></textarea>
+            <button class="connection__button" type="submit" value="Submit">Записаться на консультацию</button>
+          </form>
+          <div class="connection__image-wrapper">
+            <img src="./assets/images/connection.jpg" alt="" class="connection__image">
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
 
   <footer class="footer">
     <div class="container">
@@ -589,6 +602,33 @@
       </div>
     </div>
   </footer>
+
+  <div class="modal" id="modal-econom">ECONOM
+    <button data-close-button class="close-button">
+      <img src="./assets/icons/close-cross.svg" alt="close" class="close-button__img">
+    </button>
+  </div>
+  <div class="modal" id="modal-econom-plus">ECONOM+
+    <button data-close-button class="close-button">
+      <img src="./assets/icons/close-cross.svg" alt="close" class="close-button__img">
+    </button>
+  </div>
+  <div class="modal" id="modal-standart">STANDART
+    <button data-close-button class="close-button">
+      <img src="./assets/icons/close-cross.svg" alt="close" class="close-button__img">
+    </button>
+  </div>
+  <div class="modal" id="modal-premium">PREMIUM
+    <button data-close-button class="close-button">
+      <img src="./assets/icons/close-cross.svg" alt="close" class="close-button__img">
+    </button>
+  </div>
+  <div class="modal" id="modal-own-version">OWN-VERSION
+    <button data-close-button class="close-button">
+      <img src="./assets/icons/close-cross.svg" alt="close" class="close-button__img">
+    </button>
+  </div>
+  <div class="modal-overlay" id="overlay"></div>
   <script src="js/swiper.js"></script>
   <script src="js/main.js"></script>
 </body>
