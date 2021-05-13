@@ -84,6 +84,9 @@ body {
   font-size: 30px;
   font-weight: 400;
   color: $black-color;
+  &.--scroll-hiden{
+    overflow: hidden;
+  }
 }
 
 .container {

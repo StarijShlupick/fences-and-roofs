@@ -18,6 +18,10 @@ body {
   color: #1f1f1f;
 }
 
+body.--scroll-hiden {
+  overflow: hidden;
+}
+
 .container {
   max-width: 1760px;
   padding: 0 20px;
