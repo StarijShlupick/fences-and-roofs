@@ -1102,6 +1102,235 @@ button {
           transform: translate(-50%, -50%) scale(1);
 }
 
+.modal .modal-tabs {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  padding: 54px 20px;
+}
+
+.modal .modal-tabs__content {
+  height: 100%;
+}
+
+.modal .modal-tabs__nav {
+  position: absolute;
+  right: 150px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.modal .modal-nav__item {
+  text-align: center;
+  font-size: 24.5626px;
+  line-height: 33px;
+  font-weight: 400;
+  text-transform: uppercase;
+  cursor: pointer;
+  -webkit-transition: all 0.1s ease-in-out;
+  transition: all 0.1s ease-in-out;
+}
+
+.modal .modal-nav__item + .modal-nav__item {
+  margin-left: 20px;
+}
+
+.modal .modal-nav__item.--active {
+  font-weight: 700;
+  text-decoration: underline;
+}
+
+.modal .modal-tab {
+  width: 100%;
+  height: 100%;
+  display: none;
+}
+
+.modal .modal-tab.--active {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.modal .modal-tab .tab__images {
+  position: relative;
+  width: 40%;
+  height: 100%;
+  margin: 0 20px;
+  overflow: hidden;
+}
+
+.modal .modal-tab .tab__images .image__wrapper-1 {
+  width: 100%;
+  height: 100%;
+  border-radius: 60px;
+  overflow: hidden;
+}
+
+.modal .modal-tab .tab__images .image__wrapper-1 img {
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  -o-object-position: center;
+     object-position: center;
+}
+
+.modal .modal-tab .tab__images .image__wrapper-2 {
+  width: 100%;
+  position: absolute;
+  bottom: 0;
+  border-radius: 30px;
+  overflow: hidden;
+}
+
+.modal .modal-tab .tab__images .image__wrapper-2 img {
+  width: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  -o-object-position: center;
+     object-position: center;
+}
+
+.modal .modal-tab .tab__content {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  width: 65%;
+  padding: 50px 20px 0 20px;
+}
+
+.modal .modal-tab .tab__content .content__top,
+.modal .modal-tab .tab__content .content__bottom {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  height: 50%;
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 121.68%;
+}
+
+.modal .modal-tab .tab__content .content__top .modal-description {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -moz-box;
+  display: -webkit-box;
+  -webkit-line-clamp: 5;
+  -webkit-box-orient: vertical;
+  line-clamp: 5;
+  box-orient: vertical;
+}
+
+.modal .modal-tab .tab__content .content__top table {
+  width: 100%;
+  font-size: 20px;
+  border-collapse: collapse;
+  border-radius: 30px;
+  border-style: hidden;
+  -webkit-box-shadow: 0 0 0 3px #1f1f1f;
+          box-shadow: 0 0 0 3px #1f1f1f;
+  text-align: center;
+}
+
+.modal .modal-tab .tab__content .content__top th,
+.modal .modal-tab .tab__content .content__top td {
+  padding: 15px 0;
+  border-bottom: 3px solid #1f1f1f;
+}
+
+.modal .modal-tab .tab__content .content__top td {
+  border-left: 3px solid #1f1f1f;
+}
+
+.modal .modal-tab .tab__content .content__bottom .notes .note + .note {
+  margin-top: 9px;
+}
+
+.modal .modal-tab .tab__content .content__bottom .note {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -moz-box;
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  line-clamp: 3;
+  box-orient: vertical;
+}
+
+.modal .modal-tab .tab__content .content__bottom .colors__header {
+  margin: 18px 0;
+  font-weight: 600;
+  font-size: 18px;
+  line-height: 121.68%;
+}
+
+.modal .modal-tab .tab__content .content__bottom .colors__container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 100%;
+  overflow: hidden;
+}
+
+.modal .modal-tab .tab__content .content__bottom .colors__container .color {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.modal .modal-tab .tab__content .content__bottom .colors__container .color + .color {
+  margin-left: 48px;
+}
+
+.modal .modal-tab .tab__content .content__bottom .colors__container .color__immage {
+  max-width: 86px;
+  max-height: 100px;
+  overflow: hidden;
+}
+
+.modal .modal-tab .tab__content .content__bottom .colors__container .color__immage img {
+  width: 86px;
+  height: 100px;
+  -o-object-fit: cover;
+     object-fit: cover;
+  -o-object-position: center;
+     object-position: center;
+}
+
+.modal .modal-tab .tab__content .content__bottom .colors__container .color__name {
+  margin-top: 2px;
+  text-transform: uppercase;
+  font-size: 20px;
+  line-height: 121.68%;
+}
+
 .modal .close-button {
   position: absolute;
   top: 50px;

@@ -48,6 +48,9 @@ const ourWorkSwiper = new Swiper('.our-work-slider', {
 const tabNav = document.querySelectorAll('.nav__item');
 const tabContent = document.querySelectorAll('.tab');
 let tabName;
+const modalTabNav = document.querySelectorAll('.modal-nav__item');
+const modalTabContent = document.querySelectorAll('.modal-tab');
+let modalTabName;
 function selectTabNav() {
   tabNav.forEach(item => {
     item.classList.remove('--active');
@@ -55,6 +58,14 @@ function selectTabNav() {
   this.classList.add('--active');
   tabName = this.getAttribute('data-tab-name');
   selectTabContent(tabName);
+}
+function selectModalTabNav() {
+  modalTabNav.forEach(item => {
+    item.classList.remove('--active');
+  });
+  this.classList.add('--active');
+  modalTabName = this.getAttribute('data-tab-name');
+  selectModalTabContent(modalTabName);
 }
 function selectTabContent(tabName) {
   tabContent.forEach(item => {
@@ -73,8 +84,28 @@ function selectTabContent(tabName) {
     }
   })
 }
+function selectModalTabContent(modalTabName) {
+  modalTabContent.forEach(item => {
+    item.classList.contains(modalTabName) ? 
+    item.classList.add('--active') : 
+    item.classList.remove('--active');
+    // switch (modalTabName){
+    //   case 'fences':{
+    //     workCasesFencesSlider.update();
+    //     break;
+    //   }
+    //   case 'gates':{
+    //     workCasesGatesSlider.update();
+    //     break;
+    //   }
+    // }
+  })
+}
 tabNav.forEach(item => {
   item.addEventListener('click', selectTabNav)
+})
+modalTabNav.forEach(item => {
+  item.addEventListener('click', selectModalTabNav)
 })
 
 const toScroll = (link, tab) => {
