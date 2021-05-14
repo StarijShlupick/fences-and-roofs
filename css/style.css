@@ -14,7 +14,7 @@ html {
 
 body {
   font-family: "Open Sans", sans-serif;
-  font-size: 30px;
+  font-size: 3rem;
   font-weight: 400;
   color: #1f1f1f;
 }
@@ -70,18 +70,18 @@ h6 {
 }
 
 h1 {
-  font-size: 60px;
+  font-size: 6rem;
   line-height: 118.68%;
 }
 
 h3 {
   text-transform: uppercase;
-  font-size: 49.8113px;
+  font-size: 4.98113rem;
   line-height: 118.68%;
 }
 
 h5 {
-  font-size: 36px;
+  font-size: 3.6rem;
   line-height: 118.68%;
   text-transform: uppercase;
 }
@@ -212,8 +212,8 @@ button {
 }
 
 .header-bottom .nav__link {
-  font-size: 23.9404px;
-  line-height: 33px;
+  font-size: 2.39404rem;
+  line-height: 3.3rem;
   -webkit-transition: all 0.1s ease-in-out;
   transition: all 0.1s ease-in-out;
 }
@@ -230,13 +230,13 @@ button {
   margin-right: 27px;
   margin-bottom: 16px;
   font-weight: bold;
-  font-size: 27px;
-  line-height: 37px;
+  font-size: 2.7rem;
+  line-height: 3.7rem;
 }
 
 .phone .phone__recall {
-  font-size: 20px;
-  line-height: 27px;
+  font-size: 2rem;
+  line-height: 2.7rem;
   -webkit-text-decoration-line: underline;
           text-decoration-line: underline;
   -webkit-transition: all 0.1s ease-in-out;
@@ -266,8 +266,8 @@ button {
 .about .container .header-content .header-content__text {
   margin-top: 55px;
   margin-bottom: 226px;
-  font-size: 36px;
-  line-height: 49px;
+  font-size: 3.6rem;
+  line-height: 4.9rem;
 }
 
 .about .container .header-content .header-content__button {
@@ -283,8 +283,8 @@ button {
   transition: box-shadow 0.3s;
   transition: box-shadow 0.3s, -webkit-box-shadow 0.3s;
   display: inline-block;
-  font-size: 30px;
-  line-height: 41px;
+  font-size: 3rem;
+  line-height: 4.1rem;
   padding: 44px 52px;
 }
 
@@ -329,8 +329,8 @@ button {
   border-radius: 100px;
   text-align: center;
   padding: 25px 67px;
-  font-size: 24.5626px;
-  line-height: 33px;
+  font-size: 2.45626rem;
+  line-height: 3.3rem;
   cursor: pointer;
 }
 
@@ -417,7 +417,7 @@ button {
 }
 
 .work-cases__card .card__content .card__header {
-  font-size: 20.5736px;
+  font-size: 2.05736rem;
   line-height: 118.68%;
   margin-bottom: 8px;
   text-transform: uppercase;
@@ -433,8 +433,8 @@ button {
   line-clamp: 6;
   box-orient: vertical;
   width: 100%;
-  font-size: 11.4298px;
-  line-height: 16px;
+  font-size: 1.14298rem;
+  line-height: 1.6rem;
   letter-spacing: -0.04em;
 }
 
@@ -442,8 +442,8 @@ button {
   position: absolute;
   width: 82%;
   font-weight: 600;
-  font-size: 17.1447px;
-  line-height: 23px;
+  font-size: 1.71447rem;
+  line-height: 2.3rem;
   text-align: right;
   right: 27px;
   bottom: 24px;
@@ -592,7 +592,7 @@ button {
 .principles .principles__content .principles-card__text {
   margin-top: 38.8px;
   text-align: center;
-  font-size: 36px;
+  font-size: 3.6rem;
   line-height: 118.68%;
 }
 
@@ -710,7 +710,7 @@ button {
 
 .feedback .slide__top .person__info .status {
   font-weight: 600;
-  font-size: 30px;
+  font-size: 3rem;
   line-height: 118.68%;
   color: #bdbdbd;
   text-transform: lowercase;
@@ -757,7 +757,7 @@ button {
   -webkit-box-orient: vertical;
   line-clamp: 5;
   box-orient: vertical;
-  font-size: 27.2275px;
+  font-size: 2.72275rem;
   line-height: 118.68%;
 }
 
@@ -841,73 +841,73 @@ button {
 }
 
 .connection .connection__content .connection__form .connection__lable {
-  font-size: 30.1538px;
-  line-height: 41px;
+  font-size: 3.01538rem;
+  line-height: 4.1rem;
   margin-bottom: 12px;
 }
 
 .connection .connection__content .connection__form .connection__input {
   padding: 20px 26px;
-  font-size: 30.1538px;
-  line-height: 35px;
+  font-size: 3.01538rem;
+  line-height: 3.5rem;
   margin-bottom: 30px;
 }
 
 .connection .connection__content .connection__form .connection__input::-webkit-input-placeholder {
   color: #5f5f5f;
-  font-size: 30.1538px;
-  line-height: 35px;
+  font-size: 3.01538rem;
+  line-height: 3.5rem;
 }
 
 .connection .connection__content .connection__form .connection__input:-ms-input-placeholder {
   color: #5f5f5f;
-  font-size: 30.1538px;
-  line-height: 35px;
+  font-size: 3.01538rem;
+  line-height: 3.5rem;
 }
 
 .connection .connection__content .connection__form .connection__input::-ms-input-placeholder {
   color: #5f5f5f;
-  font-size: 30.1538px;
-  line-height: 35px;
+  font-size: 3.01538rem;
+  line-height: 3.5rem;
 }
 
 .connection .connection__content .connection__form .connection__input::placeholder {
   color: #5f5f5f;
-  font-size: 30.1538px;
-  line-height: 35px;
+  font-size: 3.01538rem;
+  line-height: 3.5rem;
 }
 
 .connection .connection__content .connection__form .connection__textarea {
   overflow: auto;
   resize: none;
   padding: 20px 26px;
-  font-size: 30.1538px;
-  line-height: 35px;
+  font-size: 3.01538rem;
+  line-height: 3.5rem;
   margin-bottom: 30px;
 }
 
 .connection .connection__content .connection__form .connection__textarea::-webkit-input-placeholder {
   color: #5f5f5f;
-  font-size: 30.1538px;
-  line-height: 35px;
+  font-size: 3.01538rem;
+  line-height: 3.5rem;
 }
 
 .connection .connection__content .connection__form .connection__textarea:-ms-input-placeholder {
   color: #5f5f5f;
-  font-size: 30.1538px;
-  line-height: 35px;
+  font-size: 3.01538rem;
+  line-height: 3.5rem;
 }
 
 .connection .connection__content .connection__form .connection__textarea::-ms-input-placeholder {
   color: #5f5f5f;
-  font-size: 30.1538px;
-  line-height: 35px;
+  font-size: 3.01538rem;
+  line-height: 3.5rem;
 }
 
 .connection .connection__content .connection__form .connection__textarea::placeholder {
   color: #5f5f5f;
-  font-size: 30.1538px;
-  line-height: 35px;
+  font-size: 3.01538rem;
+  line-height: 3.5rem;
 }
 
 .connection .connection__content .connection__form .connection__textarea:focus {
@@ -927,8 +927,8 @@ button {
   transition: -webkit-box-shadow 0.3s;
   transition: box-shadow 0.3s;
   transition: box-shadow 0.3s, -webkit-box-shadow 0.3s;
-  font-size: 31.3846px;
-  line-height: 43px;
+  font-size: 3.13846rem;
+  line-height: 4.3rem;
   padding: 46px 54px 47px 54px;
 }
 
@@ -960,8 +960,8 @@ button {
   margin-top: 208px;
   padding: 81px 0 103px;
   background-color: #e1e1e1;
-  font-size: 27px;
-  line-height: 37px;
+  font-size: 2.7rem;
+  line-height: 3.7rem;
 }
 
 .footer .container,
@@ -1127,8 +1127,8 @@ button {
 
 .modal .modal-nav__item {
   text-align: center;
-  font-size: 24.5626px;
-  line-height: 33px;
+  font-size: 2.45626rem;
+  line-height: 3.3rem;
   font-weight: 400;
   text-transform: uppercase;
   cursor: pointer;
@@ -1224,7 +1224,7 @@ button {
       -ms-flex-direction: column;
           flex-direction: column;
   font-weight: normal;
-  font-size: 16px;
+  font-size: 1.6rem;
   line-height: 121.68%;
 }
 
@@ -1245,7 +1245,7 @@ button {
 
 .modal .modal-tab .tab__content .content__top table {
   width: 100%;
-  font-size: 20px;
+  font-size: 2rem;
   border-collapse: collapse;
   border-radius: 30px;
   border-style: hidden;
@@ -1287,7 +1287,7 @@ button {
 .modal .modal-tab .tab__content .content__bottom .colors__header {
   margin: 18px 0;
   font-weight: 600;
-  font-size: 18px;
+  font-size: 1.8rem;
   line-height: 121.68%;
 }
 
@@ -1337,7 +1337,7 @@ button {
 .modal .modal-tab .tab__content .content__bottom .colors__container .color__name {
   margin-top: 2px;
   text-transform: uppercase;
-  font-size: 20px;
+  font-size: 2rem;
   line-height: 121.68%;
 }
 
@@ -1436,73 +1436,73 @@ button {
 }
 
 #modal-order .modal__content .modal__form .modal__lable {
-  font-size: 25px;
-  line-height: 35px;
+  font-size: 2.5rem;
+  line-height: 3.5rem;
   margin-bottom: 12px;
 }
 
 #modal-order .modal__content .modal__form .modal__input {
   padding: 20px 26px;
-  font-size: 20px;
-  line-height: 25px;
+  font-size: 2rem;
+  line-height: 2.5rem;
   margin-bottom: 30px;
 }
 
 #modal-order .modal__content .modal__form .modal__input::-webkit-input-placeholder {
   color: #5f5f5f;
-  font-size: 20px;
-  line-height: 25px;
+  font-size: 2rem;
+  line-height: 2.5rem;
 }
 
 #modal-order .modal__content .modal__form .modal__input:-ms-input-placeholder {
   color: #5f5f5f;
-  font-size: 20px;
-  line-height: 25px;
+  font-size: 2rem;
+  line-height: 2.5rem;
 }
 
 #modal-order .modal__content .modal__form .modal__input::-ms-input-placeholder {
   color: #5f5f5f;
-  font-size: 20px;
-  line-height: 25px;
+  font-size: 2rem;
+  line-height: 2.5rem;
 }
 
 #modal-order .modal__content .modal__form .modal__input::placeholder {
   color: #5f5f5f;
-  font-size: 20px;
-  line-height: 25px;
+  font-size: 2rem;
+  line-height: 2.5rem;
 }
 
 #modal-order .modal__content .modal__form .modal__textarea {
   overflow: auto;
   resize: none;
   padding: 20px 26px;
-  font-size: 20px;
-  line-height: 25px;
+  font-size: 2rem;
+  line-height: 2.5rem;
   margin-bottom: 30px;
 }
 
 #modal-order .modal__content .modal__form .modal__textarea::-webkit-input-placeholder {
   color: #5f5f5f;
-  font-size: 20px;
-  line-height: 25px;
+  font-size: 2rem;
+  line-height: 2.5rem;
 }
 
 #modal-order .modal__content .modal__form .modal__textarea:-ms-input-placeholder {
   color: #5f5f5f;
-  font-size: 20px;
-  line-height: 25px;
+  font-size: 2rem;
+  line-height: 2.5rem;
 }
 
 #modal-order .modal__content .modal__form .modal__textarea::-ms-input-placeholder {
   color: #5f5f5f;
-  font-size: 20px;
-  line-height: 25px;
+  font-size: 2rem;
+  line-height: 2.5rem;
 }
 
 #modal-order .modal__content .modal__form .modal__textarea::placeholder {
   color: #5f5f5f;
-  font-size: 20px;
-  line-height: 25px;
+  font-size: 2rem;
+  line-height: 2.5rem;
 }
 
 #modal-order .modal__content .modal__form .modal__textarea:focus {
@@ -1522,8 +1522,8 @@ button {
   transition: -webkit-box-shadow 0.3s;
   transition: box-shadow 0.3s;
   transition: box-shadow 0.3s, -webkit-box-shadow 0.3s;
-  font-size: 25px;
-  line-height: 30px;
+  font-size: 2.5rem;
+  line-height: 3rem;
   padding: 46px 54px 47px 54px;
 }
 
@@ -1537,8 +1537,8 @@ button {
   right: 50px;
   bottom: 50px;
   z-index: 3;
-  font-size: 20px;
-  line-height: 20px;
+  font-size: 2rem;
+  line-height: 2rem;
   padding: 15px 15px;
   cursor: pointer;
   color: #1f1f1f;
