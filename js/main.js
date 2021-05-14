@@ -63,8 +63,11 @@ function selectModalTabNav() {
   modalTabNav.forEach(item => {
     item.classList.remove('--active');
   });
-  this.classList.add('--active');
   modalTabName = this.getAttribute('data-tab-name');
+  allActiveTabs = document.querySelectorAll('[data-tab-name="'+modalTabName+'"]');
+  allActiveTabs.forEach(item => {
+    item.classList.add('--active');
+  })
   selectModalTabContent(modalTabName);
 }
 function selectTabContent(tabName) {

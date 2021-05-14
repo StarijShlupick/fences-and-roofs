@@ -1207,7 +1207,7 @@ button {
       -ms-flex-direction: column;
           flex-direction: column;
   width: 65%;
-  padding: 50px 20px 0 20px;
+  padding: 60px 20px 0 20px;
 }
 
 .modal .modal-tab .tab__content .content__top,
@@ -1215,16 +1215,20 @@ button {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -ms-flex-pack: distribute;
-      justify-content: space-around;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  height: 50%;
   font-weight: normal;
   font-size: 16px;
   line-height: 121.68%;
+}
+
+.modal .modal-tab .tab__content .content__top {
+  height: 50%;
 }
 
 .modal .modal-tab .tab__content .content__top .modal-description {
@@ -1247,6 +1251,7 @@ button {
   -webkit-box-shadow: 0 0 0 3px #1f1f1f;
           box-shadow: 0 0 0 3px #1f1f1f;
   text-align: center;
+  margin-bottom: 50px;
 }
 
 .modal .modal-tab .tab__content .content__top th,
@@ -1257,6 +1262,10 @@ button {
 
 .modal .modal-tab .tab__content .content__top td {
   border-left: 3px solid #1f1f1f;
+}
+
+.modal .modal-tab .tab__content .content__bottom {
+  height: 50%;
 }
 
 .modal .modal-tab .tab__content .content__bottom .notes .note + .note {
@@ -1339,6 +1348,7 @@ button {
   padding: 0;
   background: none;
   border: none;
+  z-index: 2;
   -webkit-transition: all 0.1s ease-in-out;
   transition: all 0.1s ease-in-out;
 }
@@ -1541,6 +1551,7 @@ button {
   transition: -webkit-box-shadow 0.3s;
   transition: box-shadow 0.3s;
   transition: box-shadow 0.3s, -webkit-box-shadow 0.3s;
+  background-color: #00ef3c;
 }
 
 .need-help:hover {
@@ -1554,12 +1565,6 @@ button {
   height: 40px;
   -webkit-animation: ring 2s ease-in-out 3;
   animation: ring 2s ease-in-out 3;
-}
-
-#modal-econom {
-  -webkit-transform: translate(-50%, -50%) scale(1);
-          transform: translate(-50%, -50%) scale(1);
-  background-color: #bdbdbd;
 }
 
 @-webkit-keyframes ring {

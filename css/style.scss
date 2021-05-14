@@ -888,18 +888,18 @@ button {
       justify-content: space-between;
       flex-direction: column;
       width: 65%;
-      padding: 50px 20px 0 20px;
+      padding: 60px 20px 0 20px;
       .content__top,
       .content__bottom {
         display: flex;
-        justify-content: space-around;
+        justify-content: space-between;
         flex-direction: column;
-        height: 50%;
         font-weight: normal;
         font-size: 16px;
         line-height: 121.68%;
       }
       .content__top {
+        height: 50%;
         .modal-description {
           @include limited-text(5);
         }
@@ -911,6 +911,7 @@ button {
           border-style: hidden;
           box-shadow: 0 0 0 3px $black-color;
           text-align: center;
+          margin-bottom: 50px;
         }
         th,
         td {
@@ -922,6 +923,7 @@ button {
         }
       }
       .content__bottom {
+        height: 50%;
         .notes {
           .note + .note {
             margin-top: 9px;
@@ -980,6 +982,7 @@ button {
     padding: 0;
     background: none;
     border: none;
+    z-index: 2;
     @include animation();
     &:hover {
       transform: scale(1.05);
@@ -1089,6 +1092,7 @@ button {
   padding: 15px 15px;
   cursor: pointer;
   @include active-button();
+  background-color: #00ef3c;
   &__icon {
     @include image-wrapper();
     width: 40px;
@@ -1099,10 +1103,10 @@ button {
   }
 }
 
-#modal-econom {
-  transform: translate(-50%, -50%) scale(1);
-  background-color: rgb(189, 189, 189);
-}
+// #modal-econom {
+//   transform: translate(-50%, -50%) scale(1);
+//   background-color: rgb(189, 189, 189);
+// }
 
 @keyframes ring {
   0% {
