@@ -6,6 +6,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>ПрофСтальМонтаж</title>
+  <link rel="icon" type="image/x-icon" href="favicon.ico">
   <link rel="stylesheet" href="css/normalize.css">
   <link rel="preconnect" href="https://fonts.gstatic.com">
   <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700&display=swap" rel="stylesheet">
@@ -56,13 +57,13 @@
                 Примеры работ
               </a>
             </li>
-            <li class="nav__li" onclick="toScroll('work-cases')">
+            <li class="nav__li" onclick="toScroll('work-cases', 'fences')">
               <a href="#fences" class="nav__link">
                 Заборы
               </a>
             </li>
-            <li class="nav__li" onclick="toScroll('work-cases')">
-              <a href="#roofs" class="nav__link">
+            <li class="nav__li" onclick="toScroll('work-cases', 'gates')">
+              <a href="#gates" class="nav__link">
                 Ворота и калитки
               </a>
             </li>
@@ -103,8 +104,8 @@
         </h3>
         <div class="tabs">
           <nav class="tabs__nav">
-            <div class="nav__item --active" data-tab-name="fences">Заборы</div>
-            <div class="nav__item" data-tab-name="gates">Ворота и калитки</div>
+            <div class="nav__item --active" data-tab-name="fences" id="fences">Заборы</div>
+            <div class="nav__item" data-tab-name="gates" id="gates">Ворота и калитки</div>
           </nav>
           <div class="tabs__content">
             <div class="tab --active fences">
@@ -216,9 +217,9 @@
               <div class="work-cases__gates-slider swiper-container">
                 <div class="work-cases__gates-slider__wrapper swiper-wrapper">
                   <div class="work-cases__gates-slide swiper-slide">
-                    <div class="work-cases__card">
+                    <div data-modal-target="#modal-order" class="work-cases__card">
                       <div class="card__img-wrapper">
-                        <img src="./assets/work-cases-slider/gates/1.jpg" alt="roof" class="card__img">
+                        <img src="./assets/work-cases-slider/gates/1.jpg" alt="gate" class="card__img">
                       </div>
                       <div class="card__content">
                         <h6 class="card__header">
@@ -233,9 +234,9 @@
                     </div>
                   </div>
                   <div class="work-cases__gates-slide swiper-slide">
-                    <div class="work-cases__card">
+                    <div data-modal-target="#modal-order" class="work-cases__card">
                       <div class="card__img-wrapper">
-                        <img src="./assets/work-cases-slider/gates/2.jpg" alt="roof" class="card__img">
+                        <img src="./assets/work-cases-slider/gates/2.jpg" alt="gate" class="card__img">
                       </div>
                       <div class="card__content">
                         <h6 class="card__header">
@@ -250,9 +251,9 @@
                     </div>
                   </div>
                   <div class="work-cases__gates-slide swiper-slide">
-                    <div class="work-cases__card">
+                    <div data-modal-target="#modal-order" class="work-cases__card">
                       <div class="card__img-wrapper">
-                        <img src="./assets/work-cases-slider/gates/3.jpg" alt="roof" class="card__img">
+                        <img src="./assets/work-cases-slider/gates/3.jpg" alt="gate" class="card__img">
                       </div>
                       <div class="card__content">
                         <h6 class="card__header">
@@ -564,13 +565,13 @@
         </nav>
         <nav class="navigation-conteiner__nav">
           <ul class="nav__list">
-            <li class="nav__li" onclick="toScroll('work-cases')">
+            <li class="nav__li" onclick="toScroll('work-cases', 'fences')">
               <a href="#fences" class="nav__link">
                 Заборы
               </a>
             </li>
-            <li class="nav__li" onclick="toScroll('work-cases')">
-              <a href="#roofs" class="nav__link">
+            <li class="nav__li" onclick="toScroll('work-cases', 'gates')">
+              <a href="#gates" class="nav__link">
                 Ворота и калитки
               </a>
             </li>
@@ -628,7 +629,27 @@
       <img src="./assets/icons/close-cross.svg" alt="close" class="close-button__img">
     </button>
   </div>
+  <div class="modal" id="modal-order">
+    <button data-close-button class="close-button">
+      <img src="./assets/icons/close-cross.svg" alt="close" class="close-button__img">
+    </button>
+    <div class="modal__content">
+      <form action="" class="modal__form">
+        <label class="modal__lable" for="modal-name">Имя</label>
+        <input class="modal__input" type="text" id="modal-name" name="modal-name" placeholder="Введите имя">
+        <label class="modal__lable " for="modal-phone">Телефон</label>
+        <input class="modal__input" type="text" id="modal-phone" name="modal-phone" placeholder="+_ (___) ___-____">
+        <label class="modal__lable " for="modal-description">Описание</label>
+        <textarea name="description" id="modal-description" rows="4" maxlength="200" class="modal__textarea"
+          placeholder="Кратко опишите критерии проекта: виды работ, желаемая стоимость, материалы"></textarea>
+        <button class="modal__button" type="submit" value="Submit">Заказать звонок</button>
+      </form>
+    </div>
+  </div>
   <div class="modal-overlay" id="overlay"></div>
+  <button data-modal-target="#modal-order" class="need-help">
+    <img src="./assets/icons/notifications_black_24dp.svg" alt="bell" class="need-help__icon">
+  </button>
   <script src="js/swiper.js"></script>
   <script src="js/main.js"></script>
 </body>
