@@ -40,6 +40,64 @@
         </div>
       </div>
       <div class="header-bottom">
+        <div class="menu__burger">
+          <img class="menu__burger-img" src="./assets/icons/burger-menu.svg" alt="burger-menu">
+        </div>
+        <nav class="header__menu-burger">
+          <button class="menu__close-button">
+            <img src="./assets/icons/close-cross.svg" alt="close" class="menu__close-button__img">
+          </button>
+          <ul class="header__menu-burger-list">
+            <li class="header__menu-burger-li">
+              <a href="#promotion">
+                О нас
+              </a>
+            </li>
+            <li class="header__menu-burger-li">
+              <a href="#work-cases">
+                Наши услуги
+              </a>
+            </li>
+            <li class="header__menu-burger-li">
+              <a href="#our-work">
+                Примеры работ
+              </a>
+            </li>
+            <li class="header__menu-burger-li" onclick="toScroll('work-cases', 'fences')">
+              <a href="#fences">
+                Заборы
+              </a>
+            </li>
+            <li class="header__menu-burger-li" onclick="toScroll('work-cases', 'gates')">
+              <a href="#gates">
+                Ворота и калитки
+              </a>
+            </li>
+          </ul>
+          <div class="contacts">
+            <div class="phone">
+              <div class="messengers">
+                <div class="messenger">
+                  <a href="" class="messenger__link">
+                    <img src="./assets/icons/telegram.svg" alt="telegram" class="messenger__img">
+                  </a>
+                </div>
+                <div class="messenger">
+                  <a href="" class="messenger__link">
+                    <img src="./assets/icons/whatsapp.svg" alt="whatsapp" class="messenger__img">
+                  </a>
+                </div>
+                <div class="messenger">
+                  <a href="" class="messenger__link">
+                    <img src="./assets/icons/viber.svg" alt="viber" class="messenger__img">
+                  </a>
+                </div>
+              </div>
+              <a class="phone__call" href="tel:+375292987964">+ 375 (29) 298-79-64</a>
+              <a class="burger-phone__recall phone__recall" href="#connection">Заказать звонок</a>
+            </div>
+          </div>
+        </nav>
         <nav class="header__nav">
           <ul class="nav__list">
             <li class="nav__li">

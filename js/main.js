@@ -92,16 +92,6 @@ function selectModalTabContent(modalTabName) {
     item.classList.contains(modalTabName) ? 
     item.classList.add('--active') : 
     item.classList.remove('--active');
-    // switch (modalTabName){
-    //   case 'fences':{
-    //     workCasesFencesSlider.update();
-    //     break;
-    //   }
-    //   case 'gates':{
-    //     workCasesGatesSlider.update();
-    //     break;
-    //   }
-    // }
   })
 }
 tabNav.forEach(item => {
@@ -155,3 +145,19 @@ function closeModal(modal) {
   overlay.classList.remove('--active');
   document.body.classList.remove('--scroll-hiden');
 }
+
+const burgerMenu = document.querySelector('.header__menu-burger');
+const menuLink = document.querySelectorAll('.header__menu-burger-li');
+const phoneRecallLink = document.querySelector('.burger-phone__recall');
+const burgerLogo = document.querySelector('.menu__burger');
+const closeBurgerBtn = document.querySelector('.menu__close-button');
+burgerLogo.addEventListener('click', toggleBurger);
+phoneRecallLink.addEventListener('click', toggleBurger);
+menuLink.forEach(link => {
+  link.addEventListener('click', toggleBurger);
+});
+closeBurgerBtn.addEventListener('click', toggleBurger);
+function toggleBurger() {
+  burgerMenu.classList.toggle('--active');
+  document.body.classList.toggle('--scroll-hiden'); 
+};
