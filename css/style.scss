@@ -72,6 +72,7 @@ $card-gray-color: #e0e0e0;
 html {
   box-sizing: border-box;
   scroll-behavior: smooth;
+  font-size: 10px;
 }
 *,
 *::before,
@@ -1092,7 +1093,7 @@ button {
   padding: 15px 15px;
   cursor: pointer;
   @include active-button();
-  background-color: #00ef3c;
+  background-color: #74f052;
   &__icon {
     @include image-wrapper();
     width: 40px;
@@ -1103,10 +1104,6 @@ button {
   }
 }
 
-// #modal-econom {
-//   transform: translate(-50%, -50%) scale(1);
-//   background-color: rgb(189, 189, 189);
-// }
 
 @keyframes ring {
   0% {
@@ -1119,3 +1116,4 @@ button {
     transform: translateY(0);
   }
 }
+
