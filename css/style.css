@@ -1299,7 +1299,7 @@ button {
   z-index: 3;
   font-size: 20px;
   line-height: 20px;
-  padding: 10px 10px;
+  padding: 15px 15px;
   cursor: pointer;
   color: #1f1f1f;
   font-weight: 600;
@@ -1320,211 +1320,46 @@ button {
 }
 
 .need-help__icon {
-  width: 50px;
-  height: 50px;
-  -webkit-animation: ring 7s 5s ease-in-out 2;
-  -webkit-transform-origin: 50% 4px;
-  -moz-animation: ring 7s 5s ease-in-out 2;
-  -moz-transform-origin: 50% 4px;
-  animation: ring 7s 5s ease-in-out 2;
-  transform-origin: 50% 4px;
+  display: block;
+  width: 40px;
+  height: 40px;
+  -webkit-animation: ring 2s ease-in-out 3;
+  animation: ring 2s ease-in-out 3;
+}
+
+#modal-econom {
+  -webkit-transform: translate(-50%, -50%) scale(1);
+          transform: translate(-50%, -50%) scale(1);
+  background-color: #bdbdbd;
 }
 
 @-webkit-keyframes ring {
   0% {
-    -webkit-transform: rotate(0);
-            transform: rotate(0);
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
   }
-  1% {
-    -webkit-transform: rotate(30deg);
-            transform: rotate(30deg);
-  }
-  3% {
-    -webkit-transform: rotate(-28deg);
-            transform: rotate(-28deg);
-  }
-  5% {
-    -webkit-transform: rotate(34deg);
-            transform: rotate(34deg);
-  }
-  7% {
-    -webkit-transform: rotate(-32deg);
-            transform: rotate(-32deg);
-  }
-  9% {
-    -webkit-transform: rotate(30deg);
-            transform: rotate(30deg);
-  }
-  11% {
-    -webkit-transform: rotate(-28deg);
-            transform: rotate(-28deg);
-  }
-  13% {
-    -webkit-transform: rotate(26deg);
-            transform: rotate(26deg);
-  }
-  15% {
-    -webkit-transform: rotate(-24deg);
-            transform: rotate(-24deg);
-  }
-  17% {
-    -webkit-transform: rotate(22deg);
-            transform: rotate(22deg);
-  }
-  19% {
-    -webkit-transform: rotate(-20deg);
-            transform: rotate(-20deg);
-  }
-  21% {
-    -webkit-transform: rotate(18deg);
-            transform: rotate(18deg);
-  }
-  23% {
-    -webkit-transform: rotate(-16deg);
-            transform: rotate(-16deg);
-  }
-  25% {
-    -webkit-transform: rotate(14deg);
-            transform: rotate(14deg);
-  }
-  27% {
-    -webkit-transform: rotate(-12deg);
-            transform: rotate(-12deg);
-  }
-  29% {
-    -webkit-transform: rotate(10deg);
-            transform: rotate(10deg);
-  }
-  31% {
-    -webkit-transform: rotate(-8deg);
-            transform: rotate(-8deg);
-  }
-  33% {
-    -webkit-transform: rotate(6deg);
-            transform: rotate(6deg);
-  }
-  35% {
-    -webkit-transform: rotate(-4deg);
-            transform: rotate(-4deg);
-  }
-  37% {
-    -webkit-transform: rotate(2deg);
-            transform: rotate(2deg);
-  }
-  39% {
-    -webkit-transform: rotate(-1deg);
-            transform: rotate(-1deg);
-  }
-  41% {
-    -webkit-transform: rotate(1deg);
-            transform: rotate(1deg);
-  }
-  43% {
-    -webkit-transform: rotate(0);
-            transform: rotate(0);
+  50% {
+    -webkit-transform: translateY(-5px);
+            transform: translateY(-5px);
   }
   100% {
-    -webkit-transform: rotate(0);
-            transform: rotate(0);
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
   }
 }
 
 @keyframes ring {
   0% {
-    -webkit-transform: rotate(0);
-            transform: rotate(0);
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
   }
-  1% {
-    -webkit-transform: rotate(30deg);
-            transform: rotate(30deg);
-  }
-  3% {
-    -webkit-transform: rotate(-28deg);
-            transform: rotate(-28deg);
-  }
-  5% {
-    -webkit-transform: rotate(34deg);
-            transform: rotate(34deg);
-  }
-  7% {
-    -webkit-transform: rotate(-32deg);
-            transform: rotate(-32deg);
-  }
-  9% {
-    -webkit-transform: rotate(30deg);
-            transform: rotate(30deg);
-  }
-  11% {
-    -webkit-transform: rotate(-28deg);
-            transform: rotate(-28deg);
-  }
-  13% {
-    -webkit-transform: rotate(26deg);
-            transform: rotate(26deg);
-  }
-  15% {
-    -webkit-transform: rotate(-24deg);
-            transform: rotate(-24deg);
-  }
-  17% {
-    -webkit-transform: rotate(22deg);
-            transform: rotate(22deg);
-  }
-  19% {
-    -webkit-transform: rotate(-20deg);
-            transform: rotate(-20deg);
-  }
-  21% {
-    -webkit-transform: rotate(18deg);
-            transform: rotate(18deg);
-  }
-  23% {
-    -webkit-transform: rotate(-16deg);
-            transform: rotate(-16deg);
-  }
-  25% {
-    -webkit-transform: rotate(14deg);
-            transform: rotate(14deg);
-  }
-  27% {
-    -webkit-transform: rotate(-12deg);
-            transform: rotate(-12deg);
-  }
-  29% {
-    -webkit-transform: rotate(10deg);
-            transform: rotate(10deg);
-  }
-  31% {
-    -webkit-transform: rotate(-8deg);
-            transform: rotate(-8deg);
-  }
-  33% {
-    -webkit-transform: rotate(6deg);
-            transform: rotate(6deg);
-  }
-  35% {
-    -webkit-transform: rotate(-4deg);
-            transform: rotate(-4deg);
-  }
-  37% {
-    -webkit-transform: rotate(2deg);
-            transform: rotate(2deg);
-  }
-  39% {
-    -webkit-transform: rotate(-1deg);
-            transform: rotate(-1deg);
-  }
-  41% {
-    -webkit-transform: rotate(1deg);
-            transform: rotate(1deg);
-  }
-  43% {
-    -webkit-transform: rotate(0);
-            transform: rotate(0);
+  50% {
+    -webkit-transform: translateY(-5px);
+            transform: translateY(-5px);
   }
   100% {
-    -webkit-transform: rotate(0);
-            transform: rotate(0);
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
   }
 }
 /*# sourceMappingURL=style.css.map */
