@@ -104,6 +104,28 @@ const feedbackSwiper = new Swiper('.feedback-slider', {
   navigation: {
     nextEl: '.swiper-button-next',
     prevEl: '.swiper-button-prev',
+  },
+  breakpoints: {
+    1680: {
+      slidesPerView: 2.15,
+      spaceBetween: 99,
+    },
+    1480: {
+      slidesPerView: 2,
+      spaceBetween: 99,
+    },
+    1050: {
+      slidesPerView: 1.5,
+      spaceBetween: 99,
+    },
+    870: {
+      slidesPerView: 1.2,
+      spaceBetween: 99,
+    },
+    320: {
+      slidesPerView: 1.15,
+      spaceBetween: 99,
+    }
   }
 });
 
@@ -117,6 +139,28 @@ const ourWorkSwiper = new Swiper('.our-work-slider', {
   navigation: {
     nextEl: '.swiper-button-next',
     prevEl: '.swiper-button-prev',
+  },
+  breakpoints: {
+    1680: {
+      slidesPerView: 2.15,
+      spaceBetween: 99,
+    },
+    1480: {
+      slidesPerView: 2,
+      spaceBetween: 99,
+    },
+    1050: {
+      slidesPerView: 1.5,
+      spaceBetween: 99,
+    },
+    870: {
+      slidesPerView: 1.2,
+      spaceBetween: 99,
+    },
+    320: {
+      slidesPerView: 1.15,
+      spaceBetween: 99,
+    }
   }
 });
 
