@@ -1,11 +1,48 @@
 const workCasesFencesSlider = new Swiper('.work-cases__fences-slider', {
   slidesPerView: 5,
-  spaceBetween: 36,
   simulateTouch: false,
   slideActiveClass: 'false',
   navigation: {
     nextEl: '.swiper-button-next',
     prevEl: '.swiper-button-prev',
+  },
+  breakpoints: {
+    1880: {
+      slidesPerView: 5,
+    },
+    1670: {
+      slidesPerView: 3.73,
+    },
+    1580: {
+      slidesPerView: 3.7,
+    },
+    1400: {
+      slidesPerView: 3.85,
+    },
+    1280: {
+      slidesPerView: 2.7,
+    },
+    1080: {
+      slidesPerView: 2.85,
+    },
+    1000: {
+      slidesPerView: 2.84,
+    },
+    880: {
+      slidesPerView: 2.5,
+    },
+    800: {
+      slidesPerView: 1.7,
+    },
+    680: {
+      slidesPerView: 1.8,
+    },
+    620: {
+      slidesPerView: 0.93,
+    },
+    320: {
+      slidesPerView: 0.93,
+    }
   }
 })
 const workCasesGatesSlider = new Swiper('.work-cases__gates-slider', {
@@ -16,6 +53,44 @@ const workCasesGatesSlider = new Swiper('.work-cases__gates-slider', {
   navigation: {
     nextEl: '.swiper-button-next',
     prevEl: '.swiper-button-prev',
+  },
+  breakpoints: {
+    1880: {
+      slidesPerView: 5,
+    },
+    1670: {
+      slidesPerView: 3.73,
+    },
+    1580: {
+      slidesPerView: 3.7,
+    },
+    1400: {
+      slidesPerView: 3.85,
+    },
+    1280: {
+      slidesPerView: 2.7,
+    },
+    1080: {
+      slidesPerView: 2.85,
+    },
+    1000: {
+      slidesPerView: 2.84,
+    },
+    880: {
+      slidesPerView: 2.5,
+    },
+    800: {
+      slidesPerView: 1.7,
+    },
+    680: {
+      slidesPerView: 1.8,
+    },
+    620: {
+      slidesPerView: 0.93,
+    },
+    320: {
+      slidesPerView: 0.93,
+    }
   }
 })
 
@@ -64,7 +139,7 @@ function selectModalTabNav() {
     item.classList.remove('--active');
   });
   modalTabName = this.getAttribute('data-tab-name');
-  allActiveTabs = document.querySelectorAll('[data-tab-name="'+modalTabName+'"]');
+  allActiveTabs = document.querySelectorAll('[data-tab-name="' + modalTabName + '"]');
   allActiveTabs.forEach(item => {
     item.classList.add('--active');
   })
@@ -72,15 +147,15 @@ function selectModalTabNav() {
 }
 function selectTabContent(tabName) {
   tabContent.forEach(item => {
-    item.classList.contains(tabName) ? 
-    item.classList.add('--active') : 
-    item.classList.remove('--active');
-    switch (tabName){
-      case 'fences':{
+    item.classList.contains(tabName) ?
+      item.classList.add('--active') :
+      item.classList.remove('--active');
+    switch (tabName) {
+      case 'fences': {
         workCasesFencesSlider.update();
         break;
       }
-      case 'gates':{
+      case 'gates': {
         workCasesGatesSlider.update();
         break;
       }
@@ -89,9 +164,9 @@ function selectTabContent(tabName) {
 }
 function selectModalTabContent(modalTabName) {
   modalTabContent.forEach(item => {
-    item.classList.contains(modalTabName) ? 
-    item.classList.add('--active') : 
-    item.classList.remove('--active');
+    item.classList.contains(modalTabName) ?
+      item.classList.add('--active') :
+      item.classList.remove('--active');
   })
 }
 tabNav.forEach(item => {
@@ -159,5 +234,5 @@ menuLink.forEach(link => {
 closeBurgerBtn.addEventListener('click', toggleBurger);
 function toggleBurger() {
   burgerMenu.classList.toggle('--active');
-  document.body.classList.toggle('--scroll-hiden'); 
+  document.body.classList.toggle('--scroll-hiden');
 };

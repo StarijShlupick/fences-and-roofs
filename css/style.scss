@@ -296,7 +296,7 @@ button {
 .work-cases {
   .container {
     max-width: 1920px;
-    padding: 0 20px;
+    padding: 0 0;
     margin: 0 auto;
   }
   &__header {
@@ -391,7 +391,7 @@ button {
 }
 .work-cases__fences-slider,
 .work-cases__gates-slider {
-  padding: 100px 80px;
+  padding: 100px 100px;
   .slider-button {
     top: 45%;
     display: none;
@@ -1152,13 +1152,13 @@ button {
       .messengers {
         margin: 0 0 10px 0;
       }
-      &__call{
+      &__call {
         font-size: 3.5rem;
         margin: 0 0 12px 0;
       }
-      .phone__recall{
+      .phone__recall {
         font-size: 3rem;
-        &:hover{
+        &:hover {
           color: $true-black;
         }
       }
@@ -1219,17 +1219,25 @@ button {
 @media (max-width: 1580px) {
   .about {
     .container {
-      background-image: url('/assets/images/start-bg.png');
+      background-image: url("/assets/images/start-bg.png");
       background-repeat: no-repeat;
       background-position-x: right;
       background-position-y: bottom;
       background-size: 45%;
-      .header-content{
+      .header-content {
         margin-top: 240px;
       }
       .about__img-wrapper {
         display: none;
       }
+    }
+  }
+  .work-cases__fences-slider,
+  .work-cases__gates-slider {
+    padding: 100px 50px;
+    .slider-button {
+      top: 45%;
+      display: none;
     }
   }
 }
@@ -1258,6 +1266,42 @@ button {
   }
   .header__nav {
     display: none;
+  }
+  .work-cases__card {
+    @include slider-card(290px, 391px);
+  }
+}
+@media (max-width: 680px) {
+  .work-cases__card {
+    @include slider-card(515px, 616px);
+    border-radius: 25px;
+    margin: 0 20px;
+    .card__content {
+      .card__header {
+        font-size: 3.05736rem;
+        line-height: 118.68%;
+      }
+      .card__text {
+        font-size: 2.14298rem;
+        line-height: 2.6rem;
+      }
+      .card__price {
+        font-size: 2.71447rem;
+        line-height: 3.3rem;
+      }
+    }
+  }
+  .work-cases {
+    .tabs__nav {
+      display: flex;
+      justify-content: center;
+      text-align: center;
+    }
+    .nav__item {
+      & + .nav__item {
+        margin-left: 20px;
+      }
+    }
   }
 }
 @media (max-width: 620px) {
@@ -1303,14 +1347,14 @@ button {
     .container {
       background-position: center 80%;
       background-size: 90% 50%;
-      .header-content{
+      .header-content {
         display: flex;
         flex-direction: column;
         justify-content: center;
         align-items: center;
         text-align: center;
         margin-top: 150px;
-        .header-content__text{
+        .header-content__text {
           margin-top: 20px;
           margin-bottom: 320px;
         }
@@ -1320,6 +1364,52 @@ button {
   .menu__burger {
     transform: translateY(-50%);
     margin-right: 70px;
+  }
+  .work-cases {
+    &__header {
+      text-align: center;
+      margin: 68px 0 25px;
+    }
+    .nav__item {
+      padding: 15px 25px;
+    }
+  }
+  .work-cases__card {
+    @include slider-card(440px, 541px);
+  }
+  .work-cases__fences-slider,
+  .work-cases__gates-slider {
+    padding: 50px 50px;
+    .slider-button {
+      top: 45%;
+      display: none;
+    }
+  }
+}
+@media (max-width: 530px) {
+  .work-cases__card {
+    @include slider-card(400px, 501px);
+  }
+  .work-cases__fences-slider,
+  .work-cases__gates-slider {
+    padding: 50px 35px;
+    .slider-button {
+      top: 45%;
+      display: none;
+    }
+  }
+}
+@media (max-width: 480px) {
+  .work-cases__card {
+    @include slider-card(315px, 416px);
+  }
+  .work-cases__fences-slider,
+  .work-cases__gates-slider {
+    padding: 50px 30px;
+    .slider-button {
+      top: 45%;
+      display: none;
+    }
   }
 }
 @media (max-width: 400px) {
@@ -1344,9 +1434,9 @@ button {
     .container {
       background-position: center 70%;
       background-size: 90% 50%;
-      .header-content{
+      .header-content {
         margin-top: 80px;
-        .header-content__text{
+        .header-content__text {
           margin-top: 15px;
           margin-bottom: 300px;
         }
@@ -1362,6 +1452,32 @@ button {
       height: 35px;
     }
   }
+  .work-cases {
+    .nav__item {
+      font-size: 3rem;
+      padding: 15px 15px;
+      & + .nav__item {
+        margin-left: 10px;
+      }
+    }
+  }
+  .work-cases__card {
+    @include slider-card(278px, 348px);
+  }
+  .work-cases__fences-slider,
+  .work-cases__gates-slider {
+    padding: 35px 35px;
+    .slider-button {
+      top: 45%;
+      display: none;
+    }
+  }
+}
+@media (max-width: 360px) {
+  .work-cases__fences-slider,
+  .work-cases__gates-slider {
+    padding: 35px 15px;
+  }
 }
 @media (max-width: 320px) {
   .menu__burger {
@@ -1375,13 +1491,17 @@ button {
     .container {
       background-position: center 80%;
       background-size: 90% 50%;
-      .header-content{
+      .header-content {
         margin-top: 60px;
-        .header-content__text{
+        .header-content__text {
           margin-top: 15px;
           margin-bottom: 170px;
         }
       }
     }
+  }
+  .work-cases__fences-slider,
+  .work-cases__gates-slider {
+    padding: 35px 0px;
   }
 }
