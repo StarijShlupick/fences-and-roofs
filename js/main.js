@@ -1,85 +1,96 @@
-const bulletButtons = ['Заборы', 'Крыши']
-
-const ourServicesSlider = new Swiper('.our-services-slider', {
-  slidesPerView: 1,
-  spaceBetween: 0,
-  simulateTouch: false,
-  effect: 'fade',
-  fadeEffect: {
-    crossFade: true
-  },
-  slideActiveClass: 'false',
-  pagination: {
-    el: '.swiper-pagination',
-    clickable: true,
-      renderBullet: function (index, className) {
-        return '<span class="' + className + '">' + (bulletButtons[index]) + '</span>';
-      },
-  }
-})
-const ourServicesFencesSlider = new Swiper('.our-services__fences-slider', {
-  slidesPerView: 4,
-  spaceBetween: 67,
-  simulateTouch: false,
-  nested: true,
-  slideActiveClass: 'false',
-  navigation: {
-    nextEl: '.swiper-button-next',
-    prevEl: '.swiper-button-prev',
-  }
-})
-const ourServicesRoofsSlider = new Swiper('.our-services__roofs-slider', {
-  slidesPerView: 4,
-  spaceBetween: 67,
-  simulateTouch: false,
-  nested: true,
-  slideActiveClass: 'false',
-  navigation: {
-    nextEl: '.swiper-button-next',
-    prevEl: '.swiper-button-prev',
-  }
-})
-
-const workCasesSlider = new Swiper('.work-cases-slider', {
-  slidesPerView: 1,
-  spaceBetween: 0,
-  simulateTouch: false,
-  hashNavigation: {
-    watchState: true
-  },
-  effect: 'fade',
-  fadeEffect: {
-    crossFade: true
-  },
-  slideActiveClass: 'false',
-  pagination: {
-    el: '.swiper-pagination',
-    clickable: true,
-      renderBullet: function (index, className) {
-        return '<span class="' + className + '">' + (bulletButtons[index]) + '</span>';
-      },
-  }
-})
 const workCasesFencesSlider = new Swiper('.work-cases__fences-slider', {
   slidesPerView: 5,
-  spaceBetween: 36,
   simulateTouch: false,
-  nested: true,
   slideActiveClass: 'false',
   navigation: {
     nextEl: '.swiper-button-next',
     prevEl: '.swiper-button-prev',
+  },
+  breakpoints: {
+    1880: {
+      slidesPerView: 5,
+    },
+    1670: {
+      slidesPerView: 3.73,
+    },
+    1580: {
+      slidesPerView: 3.7,
+    },
+    1400: {
+      slidesPerView: 3.85,
+    },
+    1280: {
+      slidesPerView: 2.7,
+    },
+    1080: {
+      slidesPerView: 2.85,
+    },
+    1000: {
+      slidesPerView: 2.84,
+    },
+    880: {
+      slidesPerView: 2.5,
+    },
+    800: {
+      slidesPerView: 1.7,
+    },
+    680: {
+      slidesPerView: 1.8,
+    },
+    620: {
+      slidesPerView: 0.93,
+    },
+    320: {
+      slidesPerView: 0.93,
+    }
   }
 })
-const workCasesRoofsSlider = new Swiper('.work-cases__roofs-slider', {
+const workCasesGatesSlider = new Swiper('.work-cases__gates-slider', {
   slidesPerView: 5,
   spaceBetween: 36,
   simulateTouch: false,
-  nested: true,
   slideActiveClass: 'false',
   navigation: {
     nextEl: '.swiper-button-next',
     prevEl: '.swiper-button-prev',
+  },
+  breakpoints: {
+    1880: {
+      slidesPerView: 5,
+    },
+    1670: {
+      slidesPerView: 3.73,
+    },
+    1580: {
+      slidesPerView: 3.7,
+    },
+    1400: {
+      slidesPerView: 3.85,
+    },
+    1280: {
+      slidesPerView: 2.7,
+    },
+    1080: {
+      slidesPerView: 2.85,
+    },
+    1000: {
+      slidesPerView: 2.84,
+    },
+    880: {
+      slidesPerView: 2.5,
+    },
+    800: {
+      slidesPerView: 1.7,
+    },
+    680: {
+      slidesPerView: 1.8,
+    },
+    620: {
+      slidesPerView: 0.93,
+    },
+    320: {
+      slidesPerView: 0.93,
+    }
   }
 })
 
@@ -93,6 +104,28 @@ const feedbackSwiper = new Swiper('.feedback-slider', {
   navigation: {
     nextEl: '.swiper-button-next',
     prevEl: '.swiper-button-prev',
+  },
+  breakpoints: {
+    1680: {
+      slidesPerView: 2.15,
+      spaceBetween: 99,
+    },
+    1480: {
+      slidesPerView: 2,
+      spaceBetween: 99,
+    },
+    1050: {
+      slidesPerView: 1.5,
+      spaceBetween: 99,
+    },
+    870: {
+      slidesPerView: 1.2,
+      spaceBetween: 99,
+    },
+    320: {
+      slidesPerView: 1.15,
+      spaceBetween: 99,
+    }
   }
 });
 
@@ -106,8 +139,144 @@ const ourWorkSwiper = new Swiper('.our-work-slider', {
   navigation: {
     nextEl: '.swiper-button-next',
     prevEl: '.swiper-button-prev',
+  },
+  breakpoints: {
+    1680: {
+      slidesPerView: 2.15,
+      spaceBetween: 99,
+    },
+    1480: {
+      slidesPerView: 2,
+      spaceBetween: 99,
+    },
+    1050: {
+      slidesPerView: 1.5,
+      spaceBetween: 99,
+    },
+    870: {
+      slidesPerView: 1.2,
+      spaceBetween: 99,
+    },
+    320: {
+      slidesPerView: 1.15,
+      spaceBetween: 99,
+    }
   }
 });
 
-const toScroll = idElement => 
-document.getElementById(idElement).scrollIntoView({behavior: 'smooth'});
+const tabNav = document.querySelectorAll('.nav__item');
+const tabContent = document.querySelectorAll('.tab');
+let tabName;
+const modalTabNav = document.querySelectorAll('.modal-nav__item');
+const modalTabContent = document.querySelectorAll('.modal-tab');
+let modalTabName;
+function selectTabNav() {
+  tabNav.forEach(item => {
+    item.classList.remove('--active');
+  });
+  this.classList.add('--active');
+  tabName = this.getAttribute('data-tab-name');
+  selectTabContent(tabName);
+}
+function selectModalTabNav() {
+  modalTabNav.forEach(item => {
+    item.classList.remove('--active');
+  });
+  modalTabName = this.getAttribute('data-tab-name');
+  allActiveTabs = document.querySelectorAll('[data-tab-name="' + modalTabName + '"]');
+  allActiveTabs.forEach(item => {
+    item.classList.add('--active');
+  })
+  selectModalTabContent(modalTabName);
+}
+function selectTabContent(tabName) {
+  tabContent.forEach(item => {
+    item.classList.contains(tabName) ?
+      item.classList.add('--active') :
+      item.classList.remove('--active');
+    switch (tabName) {
+      case 'fences': {
+        workCasesFencesSlider.update();
+        break;
+      }
+      case 'gates': {
+        workCasesGatesSlider.update();
+        break;
+      }
+    }
+  })
+}
+function selectModalTabContent(modalTabName) {
+  modalTabContent.forEach(item => {
+    item.classList.contains(modalTabName) ?
+      item.classList.add('--active') :
+      item.classList.remove('--active');
+  })
+}
+tabNav.forEach(item => {
+  item.addEventListener('click', selectTabNav)
+})
+modalTabNav.forEach(item => {
+  item.addEventListener('click', selectModalTabNav)
+})
+
+const toScroll = (link, tab) => {
+  document.getElementById(link).scrollIntoView({ behavior: 'smooth' });
+  tabNav.forEach(item => {
+    item.classList.remove('--active');
+    tabName = item.getAttribute('data-tab-name');
+    tabName === tab ? item.classList.add('--active') : null;
+  });
+  selectTabContent(tab);
+}
+
+const openModalFencesSlides = document.querySelectorAll('[data-modal-target]');
+const closeModalButtons = document.querySelectorAll('[data-close-button]');
+const overlay = document.getElementById('overlay');
+openModalFencesSlides.forEach(slide => {
+  slide.addEventListener('click', (e) => {
+    e.stopPropagation();
+    const modal = document.querySelector(slide.dataset.modalTarget);
+    openModal(modal);
+  })
+})
+closeModalButtons.forEach(button => {
+  button.addEventListener('click', () => {
+    const modal = button.closest('.modal');
+    closeModal(modal);
+  })
+})
+overlay.addEventListener('click', () => {
+  const modals = document.querySelectorAll('.modal.--active');
+  modals.forEach(modal => {
+    closeModal(modal);
+  })
+})
+function openModal(modal) {
+  if (modal == null) return;
+  modal.classList.add('--active');
+  overlay.classList.add('--active');
+  document.body.classList.add('--scroll-hiden');
+}
+function closeModal(modal) {
+  if (modal == null) return;
+  modal.classList.remove('--active');
+  overlay.classList.remove('--active');
+  document.body.classList.remove('--scroll-hiden');
+}
+
+const burgerMenu = document.querySelector('.header__menu-burger');
+const menuLink = document.querySelectorAll('.header__menu-burger-li');
+const phoneRecallLink = document.querySelector('.burger-phone__recall');
+const burgerLogo = document.querySelector('.menu__burger');
+const closeBurgerBtn = document.querySelector('.menu__close-button');
+burgerLogo.addEventListener('click', toggleBurger);
+phoneRecallLink.addEventListener('click', toggleBurger);
+menuLink.forEach(link => {
+  link.addEventListener('click', toggleBurger);
+});
+closeBurgerBtn.addEventListener('click', toggleBurger);
+function toggleBurger() {
+  burgerMenu.classList.toggle('--active');
+  document.body.classList.toggle('--scroll-hiden');
+};

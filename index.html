@@ -6,6 +6,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>ПрофСтальМонтаж</title>
+  <link rel="icon" type="image/x-icon" href="favicon.ico">
   <link rel="stylesheet" href="css/normalize.css">
   <link rel="preconnect" href="https://fonts.gstatic.com">
   <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700&display=swap" rel="stylesheet">
@@ -39,6 +40,64 @@
         </div>
       </div>
       <div class="header-bottom">
+        <div class="menu__burger">
+          <img class="menu__burger-img" src="./assets/icons/burger-menu.svg" alt="burger-menu">
+        </div>
+        <nav class="header__menu-burger">
+          <button class="menu__close-button">
+            <img src="./assets/icons/close-cross.svg" alt="close" class="menu__close-button__img">
+          </button>
+          <ul class="header__menu-burger-list">
+            <li class="header__menu-burger-li">
+              <a href="#promotion">
+                О нас
+              </a>
+            </li>
+            <li class="header__menu-burger-li">
+              <a href="#work-cases">
+                Наши услуги
+              </a>
+            </li>
+            <li class="header__menu-burger-li">
+              <a href="#our-work">
+                Примеры работ
+              </a>
+            </li>
+            <li class="header__menu-burger-li" onclick="toScroll('work-cases', 'fences')">
+              <a href="#fences">
+                Заборы
+              </a>
+            </li>
+            <li class="header__menu-burger-li" onclick="toScroll('work-cases', 'gates')">
+              <a href="#gates">
+                Ворота и калитки
+              </a>
+            </li>
+          </ul>
+          <div class="contacts">
+            <div class="phone">
+              <div class="messengers">
+                <div class="messenger">
+                  <a href="" class="messenger__link">
+                    <img src="./assets/icons/telegram.svg" alt="telegram" class="messenger__img">
+                  </a>
+                </div>
+                <div class="messenger">
+                  <a href="" class="messenger__link">
+                    <img src="./assets/icons/whatsapp.svg" alt="whatsapp" class="messenger__img">
+                  </a>
+                </div>
+                <div class="messenger">
+                  <a href="" class="messenger__link">
+                    <img src="./assets/icons/viber.svg" alt="viber" class="messenger__img">
+                  </a>
+                </div>
+              </div>
+              <a class="phone__call" href="tel:+375292987964">+ 375 (29) 298-79-64</a>
+              <a class="burger-phone__recall phone__recall" href="#connection">Заказать звонок</a>
+            </div>
+          </div>
+        </nav>
         <nav class="header__nav">
           <ul class="nav__list">
             <li class="nav__li">
@@ -47,23 +106,23 @@
               </a>
             </li>
             <li class="nav__li">
-              <a href="#our-services" class="nav__link">
+              <a href="#work-cases" class="nav__link">
                 Наши услуги
               </a>
             </li>
             <li class="nav__li">
               <a href="#our-work" class="nav__link">
-                Наши работы
+                Примеры работ
               </a>
             </li>
-            <li class="nav__li" onclick="toScroll('work-cases')">
+            <li class="nav__li" onclick="toScroll('work-cases', 'fences')">
               <a href="#fences" class="nav__link">
                 Заборы
               </a>
             </li>
-            <li class="nav__li" onclick="toScroll('work-cases')">
-              <a href="#roofs" class="nav__link">
-                Крыши
+            <li class="nav__li" onclick="toScroll('work-cases', 'gates')">
+              <a href="#gates" class="nav__link">
+                Ворота и калитки
               </a>
             </li>
           </ul>
@@ -76,606 +135,462 @@
     </div>
   </header>
 
-  <section class="about">
-    <div class="container">
-      <div class="header-content">
-        <h1 class="header-content__header">
-          Современные заборы и крыши для защиты вашего дома
-        </h1>
-        <p class="header-content__text">
-          Подберем забор под ваш бюджет
-        </p>
-        <a class="header-content__button" href="#connection">
-          Подобрать проект
-        </a>
+  <main>
+    <section class="about">
+      <div class="container">
+        <div class="header-content">
+          <h1 class="header-content__header">
+            Современные заборы и крыши для защиты вашего дома
+          </h1>
+          <p class="header-content__text">
+            Подберем забор под ваш бюджет
+          </p>
+          <a class="header-content__button" href="#connection">
+            Подобрать проект
+          </a>
+        </div>
+        <div class="about__img-wrapper">
+          <img class="about__img" src="./assets/images/start-bg.png" alt="house">
+        </div>
       </div>
-      <div class="about__img-wrapper">
-        <img class="about__img" src="./assets/images/start-bg.png" alt="house">
-      </div>
-    </div>
-  </section>
+    </section>
 
-  <section id='our-services' class="our-services">
-    <div class="container">
-      <h3 class="our-services__header">
-        наши услуги
-      </h3>
-      <div class="our-services-slider swiper-container">
-        <div class="our-services-slider__wrapper swiper-wrapper">
-          <div class="our-services-slide swiper-slide">
-            <div class="our-services__fences-slider swiper-container">
-              <div class="our-services__fences-slider__wrapper swiper-wrapper">
-                <div class="our-services__fences-slide swiper-slide">
-                  <div class="our-services__card">
-                    <div class="card__img-wrapper">
-                      <img src="./assets/our-services-slider/fences/1.jpg" alt="fence" class="card__img">
+    <section id='work-cases' class="work-cases">
+      <div class="container">
+        <h3 class="work-cases__header">
+          наши услуги
+        </h3>
+        <div class="tabs">
+          <nav class="tabs__nav">
+            <div class="nav__item --active" data-tab-name="fences" id="fences">Заборы</div>
+            <div class="nav__item" data-tab-name="gates" id="gates">Ворота и калитки</div>
+          </nav>
+          <div class="tabs__content">
+            <div class="tab --active fences">
+              <div class="work-cases__fences-slider swiper-container">
+                <div class="work-cases__fences-slider__wrapper swiper-wrapper">
+                  <div class="work-cases__fences-slide swiper-slide">
+                    <div data-modal-target="#modal-econom" class="work-cases__card">
+                      <div class="card__img-wrapper">
+                        <img src="./assets/work-cases-slider/fences/1.jpg" alt="fence" class="card__img">
+                      </div>
+                      <div class="card__content">
+                        <h6 class="card__header">
+                          эконом
+                        </h6>
+                        <p class="card__text">
+                          Забор из металлопрофиля пользуется огромным спросом уже много лет. Листы металлопрофиля стоят
+                          совсем недорого, но при этом они очень прочные и функциональные. Эти качества и прекрасный
+                          внешний
+                          вид делают ограждения из металлопрофиля выгодным вариантом.
+                        </p>
+                        <div class="card__price">от 10 р. за кв/м</div>
+                      </div>
                     </div>
-                    <div class="card__content">
-                      <h6 class="card__header">
-                        Металлопрофиль
-                      </h6>
-                      <p class="card__text">
-                        Забор из металлопрофиля пользуется огромным спросом уже много лет. Листы металлопрофиля стоят
-                        совсем недорого, но при этом они очень прочные и функциональные. Эти качества и прекрасный
-                        внешний
-                        вид делают ограждения из металлопрофиля выгодным вариантом.
-                      </p>
-                      <div class="card__price">от 10 р. за кв/м</div>
+                  </div>
+                  <div class="work-cases__fences-slide swiper-slide">
+                    <div data-modal-target="#modal-econom-plus" class="work-cases__card">
+                      <div class="card__img-wrapper">
+                        <img src="./assets/work-cases-slider/fences/2.jpg" alt="fence" class="card__img">
+                      </div>
+                      <div class="card__content">
+                        <h6 class="card__header">
+                          Эконом +
+                        </h6>
+                        <p class="card__text">
+                          Забор из металлопрофиля пользуется огромным спросом уже много лет. Листы металлопрофиля стоят
+                          совсем недорого, но при этом они очень прочные и функциональные. Эти качества и прекрасный
+                          внешний
+                          вид делают ограждения из металлопрофиля выгодным вариантом.
+                        </p>
+                        <div class="card__price">от 15 р. за кв/м</div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="work-cases__fences-slide swiper-slide">
+                    <div data-modal-target="#modal-standart" class="work-cases__card">
+                      <div class="card__img-wrapper">
+                        <img src="./assets/work-cases-slider/fences/3.jpg" alt="fence" class="card__img">
+                      </div>
+                      <div class="card__content">
+                        <h6 class="card__header">
+                          Стандарт
+                        </h6>
+                        <p class="card__text">
+                          Забор из металлопрофиля пользуется огромным спросом уже много лет. Листы металлопрофиля стоят
+                          совсем недорого, но при этом они очень прочные и функциональные. Эти качества и прекрасный
+                          внешний
+                          вид делают ограждения из металлопрофиля выгодным вариантом.
+                        </p>
+                        <div class="card__price">от 12 р. за кв/м</div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="work-cases__fences-slide swiper-slide">
+                    <div data-modal-target="#modal-premium" class="work-cases__card">
+                      <div class="card__img-wrapper">
+                        <img src="./assets/work-cases-slider/fences/4.jpg" alt="fence" class="card__img">
+                      </div>
+                      <div class="card__content">
+                        <h6 class="card__header">
+                          премиум
+                        </h6>
+                        <p class="card__text">
+                          Забор из металлопрофиля пользуется огромным спросом уже много лет. Листы металлопрофиля стоят
+                          совсем недорого, но при этом они очень прочные и функциональные. Эти качества и прекрасный
+                          внешний
+                          вид делают ограждения из металлопрофиля выгодным вариантом.
+                        </p>
+                        <div class="card__price">от 17 р. за кв/м</div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="work-cases__fences-slide swiper-slide">
+                    <div data-modal-target="#modal-own-version" class="work-cases__card">
+                      <div class="card__img-wrapper">
+                        <img src="./assets/work-cases-slider/fences/5.jpg" alt="fence" class="card__img">
+                      </div>
+                      <div class="card__content">
+                        <h6 class="card__header">
+                          Свой вариант
+                        </h6>
+                        <p class="card__text">
+                          Забор из металлопрофиля пользуется огромным спросом уже много лет. Листы металлопрофиля стоят
+                          совсем недорого, но при этом они очень прочные и функциональные. Эти качества и прекрасный
+                          внешний
+                          вид делают ограждения из металлопрофиля выгодным вариантом.
+                        </p>
+                        <div class="card__price">от 17 р. за кв/м</div>
+                      </div>
                     </div>
                   </div>
                 </div>
-                <div class="our-services__fences-slide swiper-slide">
-                  <div class="our-services__card">
-                    <div class="card__img-wrapper">
-                      <img src="./assets/our-services-slider/fences/2.jpg" alt="fence" class="card__img">
-                    </div>
-                    <div class="card__content">
-                      <h6 class="card__header">
-                        Штакетник
-                      </h6>
-                      <p class="card__text">
-                        Забор из металлопрофиля пользуется огромным спросом уже много лет. Листы металлопрофиля стоят
-                        совсем недорого, но при этом они очень прочные и функциональные. Эти качества и прекрасный
-                        внешний
-                        вид делают ограждения из металлопрофиля выгодным вариантом.
-                      </p>
-                      <div class="card__price">от 15 р. за кв/м</div>
-                    </div>
-                  </div>
+                <div class="slider-button swiper-button-prev">
                 </div>
-                <div class="our-services__fences-slide swiper-slide">
-                  <div class="our-services__card">
-                    <div class="card__img-wrapper">
-                      <img src="./assets/our-services-slider/fences/3.jpg" alt="fence" class="card__img">
-                    </div>
-                    <div class="card__content">
-                      <h6 class="card__header">
-                        Ранчо
-                      </h6>
-                      <p class="card__text">
-                        Забор из металлопрофиля пользуется огромным спросом уже много лет. Листы металлопрофиля стоят
-                        совсем недорого, но при этом они очень прочные и функциональные. Эти качества и прекрасный
-                        внешний
-                        вид делают ограждения из металлопрофиля выгодным вариантом.
-                      </p>
-                      <div class="card__price">от 12 р. за кв/м</div>
-                    </div>
-                  </div>
-                </div>
-                <div class="our-services__fences-slide swiper-slide">
-                  <div class="our-services__card">
-                    <div class="card__img-wrapper">
-                      <img src="./assets/our-services-slider/fences/4.jpg" alt="fence" class="card__img">
-                    </div>
-                    <div class="card__content">
-                      <h6 class="card__header">
-                        3d-забор
-                      </h6>
-                      <p class="card__text">
-                        Забор из металлопрофиля пользуется огромным спросом уже много лет. Листы металлопрофиля стоят
-                        совсем недорого, но при этом они очень прочные и функциональные. Эти качества и прекрасный
-                        внешний
-                        вид делают ограждения из металлопрофиля выгодным вариантом.
-                      </p>
-                      <div class="card__price">от 17 р. за кв/м</div>
-                    </div>
-                  </div>
+                <div class="slider-button swiper-button-next">
                 </div>
               </div>
-              <div class="slider-button swiper-button-prev">
-              </div>
-              <div class="slider-button swiper-button-next">
+            </div>
+            <div class="tab gates">
+              <div class="work-cases__gates-slider swiper-container">
+                <div class="work-cases__gates-slider__wrapper swiper-wrapper">
+                  <div class="work-cases__gates-slide swiper-slide">
+                    <div data-modal-target="#modal-order" class="work-cases__card">
+                      <div class="card__img-wrapper">
+                        <img src="./assets/work-cases-slider/gates/1.jpg" alt="gate" class="card__img">
+                      </div>
+                      <div class="card__content">
+                        <h6 class="card__header">
+                          константа 90 мм
+                        </h6>
+                        <p class="card__text">
+                          Забор из металлического штакетника сочетает в себе долговечность и надежность забора из
+                          профнастила с красотой и воздушностью заборов из деревянного штакетника.
+                        </p>
+                        <div class="card__price">от 10 р. за кв/м</div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="work-cases__gates-slide swiper-slide">
+                    <div data-modal-target="#modal-order" class="work-cases__card">
+                      <div class="card__img-wrapper">
+                        <img src="./assets/work-cases-slider/gates/2.jpg" alt="gate" class="card__img">
+                      </div>
+                      <div class="card__content">
+                        <h6 class="card__header">
+                          трапеция 118 мм
+                        </h6>
+                        <p class="card__text">
+                          Забор из металлического штакетника сочетает в себе долговечность и надежность забора из
+                          профнастила с красотой и воздушностью заборов из деревянного штакетника.
+                        </p>
+                        <div class="card__price">от 15 р. за кв/м</div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="work-cases__gates-slide swiper-slide">
+                    <div data-modal-target="#modal-order" class="work-cases__card">
+                      <div class="card__img-wrapper">
+                        <img src="./assets/work-cases-slider/gates/3.jpg" alt="gate" class="card__img">
+                      </div>
+                      <div class="card__content">
+                        <h6 class="card__header">
+                          европланка 130 мм
+                        </h6>
+                        <p class="card__text">
+                          Забор из металлического штакетника сочетает в себе долговечность и надежность забора из
+                          профнастила с красотой и воздушностью заборов из деревянного штакетника.
+                        </p>
+                        <div class="card__price">от 20 р. за кв/м</div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="slider-button swiper-button-prev">
+                </div>
+                <div class="slider-button swiper-button-next">
+                </div>
               </div>
             </div>
           </div>
-          <div class="our-services-slide swiper-slide">
-            <div class="our-services__roofs-slider swiper-container">
-              <div class="our-services__roofs-slider__wrapper swiper-wrapper">
-                <div class="our-services__roofs-slide swiper-slide">
-                  <div class="our-services__card">
-                    <div class="card__img-wrapper">
-                      <img src="./assets/our-services-slider/roofs/1.jpg" alt="roof" class="card__img">
-                    </div>
-                    <div class="card__content">
-                      <h6 class="card__header">
-                        константа 90 мм 
-                      </h6>
-                      <p class="card__text">
-                        Забор из металлического штакетника  сочетает в себе долговечность и надежность забора из профнастила с красотой и воздушностью заборов из деревянного штакетника.
-                      </p>
-                      <div class="card__price">от 10 р. за кв/м</div>
-                    </div>
-                  </div>
-                </div>
-                <div class="our-services__roofs-slide swiper-slide">
-                  <div class="our-services__card">
-                    <div class="card__img-wrapper">
-                      <img src="./assets/our-services-slider/roofs/2.jpg" alt="roof" class="card__img">
-                    </div>
-                    <div class="card__content">
-                      <h6 class="card__header">
-                        трапеция 118 мм
-                      </h6>
-                      <p class="card__text">
-                        Забор из металлического штакетника  сочетает в себе долговечность и надежность забора из профнастила с красотой и воздушностью заборов из деревянного штакетника.
-                      </p>
-                      <div class="card__price">от 15 р. за кв/м</div>
-                    </div>
-                  </div>
-                </div>
-                <div class="our-services__roofs-slide swiper-slide">
-                  <div class="our-services__card">
-                    <div class="card__img-wrapper">
-                      <img src="./assets/our-services-slider/roofs/3.jpg" alt="roof" class="card__img">
-                    </div>
-                    <div class="card__content">
-                      <h6 class="card__header">
-                        европланка 130 мм
-                      </h6>
-                      <p class="card__text">
-                        Забор из металлического штакетника  сочетает в себе долговечность и надежность забора из профнастила с красотой и воздушностью заборов из деревянного штакетника.
-                      </p>
-                      <div class="card__price">от 20 р. за кв/м</div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <div class="slider-button swiper-button-prev">
-              </div>
-              <div class="slider-button swiper-button-next">
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="swiper-pagination"></div>
-      </div>
-    </div>
-  </section>
-
-  <section id='work-cases' class="work-cases">
-    <div class="container">
-      <h3 class="work-cases__header">
-        типы кейсов
-      </h3>
-      <div class="work-cases-slider swiper-container">
-        <div class="work-cases-slider__wrapper swiper-wrapper">
-          <div class="work-cases-slide swiper-slide" data-hash="fences">
-            <div class="work-cases__fences-slider swiper-container">
-              <div class="work-cases__fences-slider__wrapper swiper-wrapper">
-                <div class="work-cases__fences-slide swiper-slide">
-                  <div class="work-cases__card">
-                    <div class="card__img-wrapper">
-                      <img src="./assets/work-cases-slider/fences/1.jpg" alt="fence" class="card__img">
-                    </div>
-                    <div class="card__content">
-                      <h6 class="card__header">
-                        эконом
-                      </h6>
-                      <p class="card__text">
-                        Забор из металлопрофиля пользуется огромным спросом уже много лет. Листы металлопрофиля стоят
-                        совсем недорого, но при этом они очень прочные и функциональные. Эти качества и прекрасный
-                        внешний
-                        вид делают ограждения из металлопрофиля выгодным вариантом.
-                      </p>
-                      <div class="card__price">от 10 р. за кв/м</div>
-                    </div>
-                  </div>
-                </div>
-                <div class="work-cases__fences-slide swiper-slide">
-                  <div class="work-cases__card">
-                    <div class="card__img-wrapper">
-                      <img src="./assets/work-cases-slider/fences/2.jpg" alt="fence" class="card__img">
-                    </div>
-                    <div class="card__content">
-                      <h6 class="card__header">
-                        Эконом +
-                      </h6>
-                      <p class="card__text">
-                        Забор из металлопрофиля пользуется огромным спросом уже много лет. Листы металлопрофиля стоят
-                        совсем недорого, но при этом они очень прочные и функциональные. Эти качества и прекрасный
-                        внешний
-                        вид делают ограждения из металлопрофиля выгодным вариантом.
-                      </p>
-                      <div class="card__price">от 15 р. за кв/м</div>
-                    </div>
-                  </div>
-                </div>
-                <div class="work-cases__fences-slide swiper-slide">
-                  <div class="work-cases__card">
-                    <div class="card__img-wrapper">
-                      <img src="./assets/work-cases-slider/fences/3.jpg" alt="fence" class="card__img">
-                    </div>
-                    <div class="card__content">
-                      <h6 class="card__header">
-                        Стандарт
-                      </h6>
-                      <p class="card__text">
-                        Забор из металлопрофиля пользуется огромным спросом уже много лет. Листы металлопрофиля стоят
-                        совсем недорого, но при этом они очень прочные и функциональные. Эти качества и прекрасный
-                        внешний
-                        вид делают ограждения из металлопрофиля выгодным вариантом.
-                      </p>
-                      <div class="card__price">от 12 р. за кв/м</div>
-                    </div>
-                  </div>
-                </div>
-                <div class="work-cases__fences-slide swiper-slide">
-                  <div class="work-cases__card">
-                    <div class="card__img-wrapper">
-                      <img src="./assets/work-cases-slider/fences/4.jpg" alt="fence" class="card__img">
-                    </div>
-                    <div class="card__content">
-                      <h6 class="card__header">
-                        премиум
-                      </h6>
-                      <p class="card__text">
-                        Забор из металлопрофиля пользуется огромным спросом уже много лет. Листы металлопрофиля стоят
-                        совсем недорого, но при этом они очень прочные и функциональные. Эти качества и прекрасный
-                        внешний
-                        вид делают ограждения из металлопрофиля выгодным вариантом.
-                      </p>
-                      <div class="card__price">от 17 р. за кв/м</div>
-                    </div>
-                  </div>
-                </div>
-                <div class="work-cases__fences-slide swiper-slide">
-                  <div class="work-cases__card">
-                    <div class="card__img-wrapper">
-                      <img src="./assets/work-cases-slider/fences/5.jpg" alt="fence" class="card__img">
-                    </div>
-                    <div class="card__content">
-                      <h6 class="card__header">
-                        Свой вариант
-                      </h6>
-                      <p class="card__text">
-                        Забор из металлопрофиля пользуется огромным спросом уже много лет. Листы металлопрофиля стоят
-                        совсем недорого, но при этом они очень прочные и функциональные. Эти качества и прекрасный
-                        внешний
-                        вид делают ограждения из металлопрофиля выгодным вариантом.
-                      </p>
-                      <div class="card__price">от 17 р. за кв/м</div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <div class="slider-button swiper-button-prev">
-              </div>
-              <div class="slider-button swiper-button-next">
-              </div>
-            </div>
-          </div>
-          <div class="work-cases-slide swiper-slide" data-hash="roofs">
-            <div class="work-cases__roofs-slider swiper-container">
-              <div class="work-cases__roofs-slider__wrapper swiper-wrapper">
-                <div class="work-cases__roofs-slide swiper-slide">
-                  <div class="work-cases__card">
-                    <div class="card__img-wrapper">
-                      <img src="./assets/work-cases-slider/roofs/1.jpg" alt="roof" class="card__img">
-                    </div>
-                    <div class="card__content">
-                      <h6 class="card__header">
-                        константа 90 мм 
-                      </h6>
-                      <p class="card__text">
-                        Забор из металлического штакетника  сочетает в себе долговечность и надежность забора из профнастила с красотой и воздушностью заборов из деревянного штакетника.
-                      </p>
-                      <div class="card__price">от 10 р. за кв/м</div>
-                    </div>
-                  </div>
-                </div>
-                <div class="work-cases__roofs-slide swiper-slide">
-                  <div class="work-cases__card">
-                    <div class="card__img-wrapper">
-                      <img src="./assets/work-cases-slider/roofs/2.jpg" alt="roof" class="card__img">
-                    </div>
-                    <div class="card__content">
-                      <h6 class="card__header">
-                        трапеция 118 мм
-                      </h6>
-                      <p class="card__text">
-                        Забор из металлического штакетника  сочетает в себе долговечность и надежность забора из профнастила с красотой и воздушностью заборов из деревянного штакетника.
-                      </p>
-                      <div class="card__price">от 15 р. за кв/м</div>
-                    </div>
-                  </div>
-                </div>
-                <div class="work-cases__roofs-slide swiper-slide">
-                  <div class="work-cases__card">
-                    <div class="card__img-wrapper">
-                      <img src="./assets/work-cases-slider/roofs/3.jpg" alt="roof" class="card__img">
-                    </div>
-                    <div class="card__content">
-                      <h6 class="card__header">
-                        европланка 130 мм
-                      </h6>
-                      <p class="card__text">
-                        Забор из металлического штакетника  сочетает в себе долговечность и надежность забора из профнастила с красотой и воздушностью заборов из деревянного штакетника.
-                      </p>
-                      <div class="card__price">от 20 р. за кв/м</div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <div class="slider-button swiper-button-prev">
-              </div>
-              <div class="slider-button swiper-button-next">
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="swiper-pagination"></div>
-      </div>
-    </div>
-  </section>
-
-  <section id="promotion" class="promotion">
-    <div class="container">
-      <h3 class="promotion__header">Почему работать с нами выгодно?</h3>
-      <div class="promotion__content">
-        <div class="promotion-card">
-          <div class="promotion-card__img-wrapper">
-            <img src="./assets/images/Ellipse-1.png" alt="доступные цены" class="promotion-card__img">
-          </div>
-          <p class="promotion-card__text">
-            Качественный материал по <strong>доступным ценам</strong>
-          </p>
-        </div>
-        <div class="promotion-card">
-          <div class="promotion-card__img-wrapper">
-            <img src="./assets/images/Ellipse-2.png" alt="под ключ" class="promotion-card__img">
-          </div>
-          <p class="promotion-card__text">
-            Работаем <strong>под ключ</strong>
-          </p>
-        </div>
-        <div class="promotion-card">
-          <div class="promotion-card__img-wrapper">
-            <img src="./assets/images/Ellipse-3.png" alt="специалисты" class="promotion-card__img">
-          </div>
-          <p class="promotion-card__text">
-            В бригадах работают <strong>высококвалифици-<br>рованные специалисты</strong>
-          </p>
-        </div>
-        <div class="promotion-card">
-          <div class="promotion-card__img-wrapper">
-            <img src="./assets/images/Ellipse-4.png" alt="сроки" class="promotion-card__img">
-          </div>
-          <p class="promotion-card__text">
-            Соблюдаем <strong>заявленные сроки</strong>
-          </p>
         </div>
       </div>
-    </div>
-  </section>
+    </section>
 
-  <section class="principles">
-    <div class="container">
-      <h3 class="principles__header">принцип работы</h3>
-      <div class="principles__content">
-        <div class="principles-card">
-          <div class="principles-card__img-wrapper">
-            <img src="./assets/icons/phone-call.svg" alt="" class="principles-card__img">
-          </div>
-          <p class="principles-card__text">
-            Обращение клиента
-          </p>
-        </div>
-        <div class="principles-card">
-          <div class="principles-card__img-wrapper">
-            <img src="./assets/icons/person.svg" alt="" class="principles-card__img">
-          </div>
-          <p class="principles-card__text">
-            Расчет
-          </p>
-        </div>
-        <div class="principles-card">
-          <div class="principles-card__img-wrapper">
-            <img src="./assets/icons/machine.svg" alt="" class="principles-card__img">
-          </div>
-          <p class="principles-card__text">
-            Выезд на объект
-          </p>
-        </div>
-        <div class="principles-card">
-          <div class="principles-card__img-wrapper">
-            <img src="./assets/icons/paper.svg" alt="" class="principles-card__img">
-          </div>
-          <p class="principles-card__text">
-            Заключение договора
-          </p>
-        </div>
-        <div class="principles-card">
-          <div class="principles-card__img-wrapper">
-            <img src="./assets/icons/materials.svg" alt="" class="principles-card__img">
-          </div>
-          <p class="principles-card__text">
-            Изготовление и установка материала
-          </p>
-        </div>
-        <div class="principles-card">
-          <div class="principles-card__img-wrapper">
-            <img src="./assets/icons/worker.svg" alt="" class="principles-card__img">
-          </div>
-          <p class="principles-card__text">
-            Довольный клиент
-          </p>
-        </div>
+    <section id="our-work" class="our-work">
+      <div class="container">
+        <h3 class="our-work__header">примеры работ</h3>
       </div>
-    </div>
-  </section>
+      <div class="our-work-slider swiper-container">
+        <div class="our-work-slider__wrapper swiper-wrapper">
+          <div class="slide-card swiper-slide">
+            <img src="./assets/our-work-slider/1.jpg" alt="slide" class="slide-card__img">
+          </div>
+          <div class="slide-card swiper-slide">
+            <img src="./assets/our-work-slider/2.jpg" alt="slide" class="slide-card__img">
+          </div>
+          <div class="slide-card swiper-slide">
+            <img src="./assets/our-work-slider/3.jpg" alt="slide" class="slide-card__img">
+          </div>
+        </div>
+        <div class="slider-button swiper-button-prev"></div>
+        <div class="slider-button swiper-button-next"></div>
+      </div>
+    </section>
 
-  <section class="feedback">
-    <div class="container">
-      <h3 class="feedback__header">отзывы клиентов</h3>
-    </div>
-    <div class="feedback-slider swiper-container">
-      <div class="feedback-slider__wrapper swiper-wrapper">
-        <div class="slide-card swiper-slide">
-          <div class="feed-back__slide">
-            <div class="slide__top">
-              <div class="person">
-                <div class="person__photo-wrapper">
-                  <img src="./assets/images/person1.jpg" alt="photo" class="person__photo">
-                </div>
-                <div class="person__info">
-                  <h5 class="name">Алексей</h5>
-                  <div class="status">бизнесмен</div>
-                </div>
-              </div>
-              <div class="stars">
-                <img src="./assets/icons/Star.svg" alt="star" class="star">
-                <img src="./assets/icons/Star.svg" alt="star" class="star">
-                <img src="./assets/icons/Star.svg" alt="star" class="star">
-                <img src="./assets/icons/Star.svg" alt="star" class="star">
-                <img src="./assets/icons/Star.svg" alt="star" class="star">
-              </div>
+    <section id="promotion" class="promotion">
+      <div class="container">
+        <h3 class="promotion__header">Почему работать с нами выгодно?</h3>
+        <div class="promotion__content">
+          <div class="promotion-card">
+            <div class="promotion-card__img-wrapper">
+              <img src="./assets/images/Ellipse-1.png" alt="доступные цены" class="promotion-card__img">
             </div>
-            <div class="slide__bottom">
-              <div class="quote-wrapper">
-                <img src="./assets/icons/quotes.svg" alt="quote" class="quote">
-              </div>
-              <p class="quote-text">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Eu donec mauris, amet, et sit amet ullamcorper.
-                Ut ultricies vitae aliquam semper dui pretium amet duis adipiscing. Cursus ut eget aliquet nibh lobortis
-                hendrerit blandit.
-              </p>
-            </div>
+            <p class="promotion-card__text">
+              Качественный материал по <strong>доступным ценам</strong>
+            </p>
           </div>
-        </div>
-        <div class="slide-card swiper-slide">
-          <div class="feed-back__slide">
-            <div class="slide__top">
-              <div class="person">
-                <div class="person__photo-wrapper">
-                  <img src="./assets/images/person2.jpg" alt="photo" class="person__photo">
-                </div>
-                <div class="person__info">
-                  <h5 class="name">Валентина</h5>
-                  <div class="status">директор</div>
-                </div>
-              </div>
-              <div class="stars">
-                <img src="./assets/icons/Star.svg" alt="star" class="star">
-                <img src="./assets/icons/Star.svg" alt="star" class="star">
-                <img src="./assets/icons/Star.svg" alt="star" class="star">
-                <img src="./assets/icons/Star.svg" alt="star" class="star">
-                <img src="./assets/icons/Star.svg" alt="star" class="star">
-              </div>
+          <div class="promotion-card">
+            <div class="promotion-card__img-wrapper">
+              <img src="./assets/images/Ellipse-2.png" alt="под ключ" class="promotion-card__img">
             </div>
-            <div class="slide__bottom">
-              <div class="quote-wrapper">
-                <img src="./assets/icons/quotes.svg" alt="quote" class="quote">
-              </div>
-              <p class="quote-text">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Eu donec mauris, amet, et sit amet ullamcorper.
-                Ut ultricies vitae aliquam semper dui pretium amet duis adipiscing. Cursus ut eget aliquet nibh lobortis
-                hendrerit blandit.
-              </p>
-            </div>
+            <p class="promotion-card__text">
+              Работаем <strong>под ключ</strong>
+            </p>
           </div>
-        </div>
-        <div class="slide-card swiper-slide">
-          <div class="feed-back__slide">
-            <div class="slide__top">
-              <div class="person">
-                <div class="person__photo-wrapper">
-                  <img src="./assets/images/person3.jpg" alt="photo" class="person__photo">
-                </div>
-                <div class="person__info">
-                  <h5 class="name">Виктор</h5>
-                  <div class="status">бизнесмен</div>
-                </div>
-              </div>
-              <div class="stars">
-                <img src="./assets/icons/Star.svg" alt="star" class="star">
-                <img src="./assets/icons/Star.svg" alt="star" class="star">
-                <img src="./assets/icons/Star.svg" alt="star" class="star">
-                <img src="./assets/icons/Star.svg" alt="star" class="star">
-                <img src="./assets/icons/Star.svg" alt="star" class="star">
-              </div>
+          <div class="promotion-card">
+            <div class="promotion-card__img-wrapper">
+              <img src="./assets/images/Ellipse-3.png" alt="специалисты" class="promotion-card__img">
             </div>
+            <p class="promotion-card__text">
+              В бригадах работают <strong>высококвалифици-<br>рованные специалисты</strong>
+            </p>
           </div>
-          <div class="slide__bottom">
-            <div class="quote-wrapper">
-              <img src="./assets/icons/quotes.svg" alt="quote" class="quote">
+          <div class="promotion-card">
+            <div class="promotion-card__img-wrapper">
+              <img src="./assets/images/Ellipse-4.png" alt="сроки" class="promotion-card__img">
             </div>
-            <p class="quote-text">
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Eu donec mauris, amet, et sit amet ullamcorper.
-              Ut ultricies vitae aliquam semper dui pretium amet duis adipiscing. Cursus ut eget aliquet nibh lobortis
-              hendrerit blandit.
+            <p class="promotion-card__text">
+              Соблюдаем <strong>заявленные сроки</strong>
             </p>
           </div>
         </div>
       </div>
-      <div class="slider-button swiper-button-prev">
-      </div>
-      <div class="slider-button swiper-button-next">
-      </div>
-    </div>
-  </section>
+    </section>
 
-  <section id="our-work" class="our-work">
-    <div class="container">
-      <h3 class="our-work__header">наши работы</h3>
-    </div>
-    <div class="our-work-slider swiper-container">
-      <div class="our-work-slider__wrapper swiper-wrapper">
-        <div class="slide-card swiper-slide">
-          <img src="./assets/our-work-slider/1.jpg" alt="slide" class="slide-card__img">
-        </div>
-        <div class="slide-card swiper-slide">
-          <img src="./assets/our-work-slider/2.jpg" alt="slide" class="slide-card__img">
-        </div>
-        <div class="slide-card swiper-slide">
-          <img src="./assets/our-work-slider/3.jpg" alt="slide" class="slide-card__img">
+    <section class="principles">
+      <div class="container">
+        <h3 class="principles__header">принцип работы</h3>
+        <div class="principles__content">
+          <div class="principles-card">
+            <div class="principles-card__img-wrapper">
+              <img src="./assets/icons/phone-call.svg" alt="" class="principles-card__img">
+            </div>
+            <p class="principles-card__text">
+              Обращение клиента
+            </p>
+          </div>
+          <div class="principles-card">
+            <div class="principles-card__img-wrapper">
+              <img src="./assets/icons/person.svg" alt="" class="principles-card__img">
+            </div>
+            <p class="principles-card__text">
+              Расчет
+            </p>
+          </div>
+          <div class="principles-card">
+            <div class="principles-card__img-wrapper">
+              <img src="./assets/icons/machine.svg" alt="" class="principles-card__img">
+            </div>
+            <p class="principles-card__text">
+              Выезд на объект
+            </p>
+          </div>
+          <div class="principles-card">
+            <div class="principles-card__img-wrapper">
+              <img src="./assets/icons/paper.svg" alt="" class="principles-card__img">
+            </div>
+            <p class="principles-card__text">
+              Заключение договора
+            </p>
+          </div>
+          <div class="principles-card">
+            <div class="principles-card__img-wrapper">
+              <img src="./assets/icons/materials.svg" alt="" class="principles-card__img">
+            </div>
+            <p class="principles-card__text">
+              Изготовление и установка материала
+            </p>
+          </div>
+          <div class="principles-card">
+            <div class="principles-card__img-wrapper">
+              <img src="./assets/icons/worker.svg" alt="" class="principles-card__img">
+            </div>
+            <p class="principles-card__text">
+              Довольный клиент
+            </p>
+          </div>
         </div>
       </div>
-      <div class="slider-button swiper-button-prev"></div>
-      <div class="slider-button swiper-button-next"></div>
-    </div>
-  </section>
+    </section>
 
-  <section id="connection" class="connection">
-    <div class="container">
-      <h3 class="connection__header">
-        наши специалисты ответят на все ваши вопросы
-      </h3>
-      <div class="connection__content">
-        <form action="" class="connection__form">
-          <label class="connection__lable" for="name">Имя</label>
-          <input class="connection__input" type="text" id="name" name="name" placeholder="Введите имя">
-          <label class="connection__lable " for="phone">Телефон</label>
-          <input class="connection__input" type="text" id="phone" name="phone" placeholder="+_ (___) ___-____">
-          <label class="connection__lable " for="description">Описание</label>
-          <textarea name="description" id="description" rows="4" maxlength="200" class="connection__textarea" placeholder="Кратко опишите суть вопроса: виды работ, стоимость, материалы"></textarea>
-          <button class="connection__button" type="submit" value="Submit">Записаться на консультацию</button>
-        </form>
-        <div class="connection__image-wrapper">
-          <img src="./assets/images/connection.jpg" alt="" class="connection__image">
+    <section class="feedback">
+      <div class="container">
+        <h3 class="feedback__header">отзывы клиентов</h3>
+      </div>
+      <div class="feedback-slider swiper-container">
+        <div class="feedback-slider__wrapper swiper-wrapper">
+          <div class="slide-card swiper-slide">
+            <div class="feed-back__slide">
+              <div class="slide__top">
+                <div class="person">
+                  <div class="person__photo-wrapper">
+                    <img src="./assets/images/person1.jpg" alt="photo" class="person__photo">
+                  </div>
+                  <div class="person__info">
+                    <h5 class="name">Алексей</h5>
+                    <div class="status">бизнесмен</div>
+                  </div>
+                </div>
+                <div class="stars">
+                  <img src="./assets/icons/Star.svg" alt="star" class="star">
+                  <img src="./assets/icons/Star.svg" alt="star" class="star">
+                  <img src="./assets/icons/Star.svg" alt="star" class="star">
+                  <img src="./assets/icons/Star.svg" alt="star" class="star">
+                  <img src="./assets/icons/Star.svg" alt="star" class="star">
+                </div>
+              </div>
+              <div class="slide__bottom">
+                <div class="quote-wrapper">
+                  <img src="./assets/icons/quotes.svg" alt="quote" class="quote">
+                </div>
+                <p class="quote-text">
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Eu donec mauris, amet, et sit amet
+                  ullamcorper.
+                  Ut ultricies vitae aliquam semper dui pretium amet duis adipiscing. Cursus ut eget aliquet nibh
+                  lobortis
+                  hendrerit blandit.
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="slide-card swiper-slide">
+            <div class="feed-back__slide">
+              <div class="slide__top">
+                <div class="person">
+                  <div class="person__photo-wrapper">
+                    <img src="./assets/images/person2.jpg" alt="photo" class="person__photo">
+                  </div>
+                  <div class="person__info">
+                    <h5 class="name">Валентина</h5>
+                    <div class="status">директор</div>
+                  </div>
+                </div>
+                <div class="stars">
+                  <img src="./assets/icons/Star.svg" alt="star" class="star">
+                  <img src="./assets/icons/Star.svg" alt="star" class="star">
+                  <img src="./assets/icons/Star.svg" alt="star" class="star">
+                  <img src="./assets/icons/Star.svg" alt="star" class="star">
+                  <img src="./assets/icons/Star.svg" alt="star" class="star">
+                </div>
+              </div>
+              <div class="slide__bottom">
+                <div class="quote-wrapper">
+                  <img src="./assets/icons/quotes.svg" alt="quote" class="quote">
+                </div>
+                <p class="quote-text">
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Eu donec mauris, amet, et sit amet
+                  ullamcorper.
+                  Ut ultricies vitae aliquam semper dui pretium amet duis adipiscing. Cursus ut eget aliquet nibh
+                  lobortis
+                  hendrerit blandit.
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="slide-card swiper-slide">
+            <div class="feed-back__slide">
+              <div class="slide__top">
+                <div class="person">
+                  <div class="person__photo-wrapper">
+                    <img src="./assets/images/person3.jpg" alt="photo" class="person__photo">
+                  </div>
+                  <div class="person__info">
+                    <h5 class="name">Виктор</h5>
+                    <div class="status">бизнесмен</div>
+                  </div>
+                </div>
+                <div class="stars">
+                  <img src="./assets/icons/Star.svg" alt="star" class="star">
+                  <img src="./assets/icons/Star.svg" alt="star" class="star">
+                  <img src="./assets/icons/Star.svg" alt="star" class="star">
+                  <img src="./assets/icons/Star.svg" alt="star" class="star">
+                  <img src="./assets/icons/Star.svg" alt="star" class="star">
+                </div>
+              </div>
+            </div>
+            <div class="slide__bottom">
+              <div class="quote-wrapper">
+                <img src="./assets/icons/quotes.svg" alt="quote" class="quote">
+              </div>
+              <p class="quote-text">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Eu donec mauris, amet, et sit amet ullamcorper.
+                Ut ultricies vitae aliquam semper dui pretium amet duis adipiscing. Cursus ut eget aliquet nibh lobortis
+                hendrerit blandit.
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="slider-button swiper-button-prev">
+        </div>
+        <div class="slider-button swiper-button-next">
         </div>
       </div>
-    </div>
-  </section>
+    </section>
+
+    <section id="connection" class="connection">
+      <div class="container">
+        <h3 class="connection__header">
+          наши специалисты ответят на все ваши вопросы
+        </h3>
+        <div class="connection__content">
+          <form action="" class="connection__form">
+            <label class="connection__lable" for="name">Имя</label>
+            <input class="connection__input" type="text" id="name" name="name" placeholder="Введите имя">
+            <label class="connection__lable " for="phone">Телефон</label>
+            <input class="connection__input" type="text" id="phone" name="phone" placeholder="+_ (___) ___-____">
+            <label class="connection__lable " for="description">Описание</label>
+            <textarea name="description" id="description" rows="4" maxlength="200" class="connection__textarea"
+              placeholder="Кратко опишите критерии проекта: виды работ, желаемая стоимость, материалы"></textarea>
+            <button class="connection__button" type="submit" value="Submit">Записаться на консультацию</button>
+          </form>
+          <div class="connection__image-wrapper">
+            <img src="./assets/images/connection.jpg" alt="" class="connection__image">
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
 
   <footer class="footer">
     <div class="container">
@@ -689,33 +604,33 @@
       <div class="navigation-conteiner">
         <nav class="navigation-conteiner__nav">
           <ul class="nav__list">
-            <li class="nav__li" onclick="toScroll('work-cases')">
-              <a href="#fences" class="nav__link">
-                Заборы
+            <li class="nav__li">
+              <a href="#promotion" class="nav__link">
+                О нас
               </a>
             </li>
-            <li class="nav__li" onclick="toScroll('work-cases')">
-              <a href="#roofs" class="nav__link">
-                Крыши
+            <li class="nav__li">
+              <a href="#work-cases" class="nav__link">
+                Наши услуги
+              </a>
+            </li>
+            <li class="nav__li">
+              <a href="#our-work" class="nav__link">
+                Примеры работ
               </a>
             </li>
           </ul>
         </nav>
         <nav class="navigation-conteiner__nav">
           <ul class="nav__list">
-            <li class="nav__li">
-              <a href="#our-work" class="nav__link">
-                Наши работы
+            <li class="nav__li" onclick="toScroll('work-cases', 'fences')">
+              <a href="#fences" class="nav__link">
+                Заборы
               </a>
             </li>
-            <li class="nav__li">
-              <a href="#our-services" class="nav__link">
-                Наши услуги
-              </a>
-            </li>
-            <li class="nav__li">
-              <a href="#promotion" class="nav__link">
-                О нас
+            <li class="nav__li" onclick="toScroll('work-cases', 'gates')">
+              <a href="#gates" class="nav__link">
+                Ворота и калитки
               </a>
             </li>
           </ul>
@@ -746,6 +661,1390 @@
       </div>
     </div>
   </footer>
+
+  <div class="modal" id="modal-econom">
+    <button data-close-button class="close-button">
+      <img src="./assets/icons/close-cross.svg" alt="close" class="close-button__img">
+    </button>
+    <div class="modal-tabs">
+      <nav class="modal-tabs__nav">
+        <div class="modal-nav__item --active" data-tab-name="modal-1" id="modal-1">Рабица</div>
+        <div class="modal-nav__item" data-tab-name="modal-2" id="modal-2">Металлопрофиль</div>
+        <div class="modal-nav__item" data-tab-name="modal-3" id="modal-3">Штакетник</div>
+      </nav>
+      <div class="modal-tabs__content">
+        <div class="modal-tab --active modal-1">
+          <div class="tab__images">
+            <div class="image__wrapper-1">
+              <img src="./assets/our-work-slider/1.jpg" alt="modal-image" class="image-1">
+            </div>
+            <div class="image__wrapper-2">
+              <img src="./assets/images/schem.png" alt="modal-image" class="image-2">
+            </div>
+          </div>
+          <div class="tab__content">
+            <div class="content__top">
+              <p class="modal-description">
+                Забор из металлопрофиля пользуется огромным спросом уже много лет. Листы металлопрофиля стоят совсем
+                недорого, но при этом они очень прочные и функциональные.
+              </p>
+              <table class="modal-table">
+                <tr>
+                  <th>За материалы</th>
+                  <td>от 20 р. за кв/м</td>
+                </tr>
+                <tr>
+                  <th>За монтаж</th>
+                  <td>от 20 р. за кв/м</td>
+                </tr>
+                <tr>
+                  <th>Скидка</th>
+                  <td>-10%</td>
+                </tr>
+              </table>
+            </div>
+            <div class="content__bottom">
+              <div class="notes">
+                <p class="note">* Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vitae mattis eu quis leo enim
+                  amet egestas ut.</p>
+                <p class="note">* Все цены не являются публичной офертой.</p>
+              </div>
+              <div class="colors">
+                <h6 class="colors__header">Цвета:</h6>
+                <div class="colors__container">
+                  <div class="color">
+                    <div class="color__image">
+                      <img src="./assets/images/colors/1.png" alt="color">
+                    </div>
+                    <div class="color__name">
+                      RAL 5005
+                    </div>
+                  </div>
+                  <div class="color">
+                    <div class="color__image">
+                      <img src="./assets/images/colors/2.png" alt="color">
+                    </div>
+                    <div class="color__name">
+                      RAL 5005
+                    </div>
+                  </div>
+                  <div class="color">
+                    <div class="color__image">
+                      <img src="./assets/images/colors/3.png" alt="color">
+                    </div>
+                    <div class="color__name">
+                      RAL 5005
+                    </div>
+                  </div>
+                  <div class="color">
+                    <div class="color__image">
+                      <img src="./assets/images/colors/4.png" alt="color">
+                    </div>
+                    <div class="color__name">
+                      RAL 5005
+                    </div>
+                  </div>
+                  <div class="color">
+                    <div class="color__image">
+                      <img src="./assets/images/colors/5.png" alt="color">
+                    </div>
+                    <div class="color__name">
+                      RAL 5005
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <p class="note">* Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nisl fermentum lectus mattis
+                odio eleifend imperdiet odio enim.</p>
+            </div>
+          </div>
+        </div>
+        <div class="modal-tab modal-2">
+          <div class="tab__images">
+            <div class="image__wrapper-1">
+              <img src="./assets/our-work-slider/1.jpg" alt="modal-image" class="image-1">
+            </div>
+            <div class="image__wrapper-2">
+              <img src="./assets/images/schem.png" alt="modal-image" class="image-2">
+            </div>
+          </div>
+          <div class="tab__content">
+            <div class="content__top">
+              <p class="modal-description">
+                Забор из металлопрофиля пользуется огромным спросом уже много лет. Листы металлопрофиля стоят совсем
+                недорого, но при этом они очень прочные и функциональные.
+              </p>
+              <table class="modal-table">
+                <tr>
+                  <th>За материалы</th>
+                  <td>от 20 р. за кв/м</td>
+                </tr>
+                <tr>
+                  <th>За монтаж</th>
+                  <td>от 20 р. за кв/м</td>
+                </tr>
+                <tr>
+                  <th>Скидка</th>
+                  <td>-10%</td>
+                </tr>
+              </table>
+            </div>
+            <div class="content__bottom">
+              <div class="notes">
+                <p class="note">* Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vitae mattis eu quis leo enim
+                  amet egestas ut.</p>
+                <p class="note">* Все цены не являются публичной офертой.</p>
+              </div>
+              <div class="colors">
+                <h6 class="colors__header">Цвета:</h6>
+                <div class="colors__container">
+                  <div class="color">
+                    <div class="color__image">
+                      <img src="./assets/images/colors/1.png" alt="color">
+                    </div>
+                    <div class="color__name">
+                      RAL 5005
+                    </div>
+                  </div>
+                  <div class="color">
+                    <div class="color__image">
+                      <img src="./assets/images/colors/2.png" alt="color">
+                    </div>
+                    <div class="color__name">
+                      RAL 5005
+                    </div>
+                  </div>
+                  <div class="color">
+                    <div class="color__image">
+                      <img src="./assets/images/colors/3.png" alt="color">
+                    </div>
+                    <div class="color__name">
+                      RAL 5005
+                    </div>
+                  </div>
+                  <div class="color">
+                    <div class="color__image">
+                      <img src="./assets/images/colors/4.png" alt="color">
+                    </div>
+                    <div class="color__name">
+                      RAL 5005
+                    </div>
+                  </div>
+                  <div class="color">
+                    <div class="color__image">
+                      <img src="./assets/images/colors/5.png" alt="color">
+                    </div>
+                    <div class="color__name">
+                      RAL 5005
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <p class="note">* Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nisl fermentum lectus mattis
+                odio eleifend imperdiet odio enim.</p>
+            </div>
+          </div>
+        </div>
+        <div class="modal-tab modal-3">
+          <div class="tab__images">
+            <div class="image__wrapper-1">
+              <img src="./assets/our-work-slider/1.jpg" alt="modal-image" class="image-1">
+            </div>
+            <div class="image__wrapper-2">
+              <img src="./assets/images/schem.png" alt="modal-image" class="image-2">
+            </div>
+          </div>
+          <div class="tab__content">
+            <div class="content__top">
+              <p class="modal-description">
+                Забор из металлопрофиля пользуется огромным спросом уже много лет. Листы металлопрофиля стоят совсем
+                недорого, но при этом они очень прочные и функциональные.
+              </p>
+              <table class="modal-table">
+                <tr>
+                  <th>За материалы</th>
+                  <td>от 20 р. за кв/м</td>
+                </tr>
+                <tr>
+                  <th>За монтаж</th>
+                  <td>от 20 р. за кв/м</td>
+                </tr>
+                <tr>
+                  <th>Скидка</th>
+                  <td>-10%</td>
+                </tr>
+              </table>
+            </div>
+            <div class="content__bottom">
+              <div class="notes">
+                <p class="note">* Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vitae mattis eu quis leo enim
+                  amet egestas ut.</p>
+                <p class="note">* Все цены не являются публичной офертой.</p>
+              </div>
+              <div class="colors">
+                <h6 class="colors__header">Цвета:</h6>
+                <div class="colors__container">
+                  <div class="color">
+                    <div class="color__image">
+                      <img src="./assets/images/colors/1.png" alt="color">
+                    </div>
+                    <div class="color__name">
+                      RAL 5005
+                    </div>
+                  </div>
+                  <div class="color">
+                    <div class="color__image">
+                      <img src="./assets/images/colors/2.png" alt="color">
+                    </div>
+                    <div class="color__name">
+                      RAL 5005
+                    </div>
+                  </div>
+                  <div class="color">
+                    <div class="color__image">
+                      <img src="./assets/images/colors/3.png" alt="color">
+                    </div>
+                    <div class="color__name">
+                      RAL 5005
+                    </div>
+                  </div>
+                  <div class="color">
+                    <div class="color__image">
+                      <img src="./assets/images/colors/4.png" alt="color">
+                    </div>
+                    <div class="color__name">
+                      RAL 5005
+                    </div>
+                  </div>
+                  <div class="color">
+                    <div class="color__image">
+                      <img src="./assets/images/colors/5.png" alt="color">
+                    </div>
+                    <div class="color__name">
+                      RAL 5005
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <p class="note">* Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nisl fermentum lectus mattis
+                odio eleifend imperdiet odio enim.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="modal" id="modal-econom-plus">
+    <button data-close-button class="close-button">
+      <img src="./assets/icons/close-cross.svg" alt="close" class="close-button__img">
+    </button>
+    <div class="modal-tabs">
+      <nav class="modal-tabs__nav">
+        <div class="modal-nav__item --active" data-tab-name="modal-1" id="modal-1">Рабица</div>
+        <div class="modal-nav__item" data-tab-name="modal-2" id="modal-2">Металлопрофиль</div>
+        <div class="modal-nav__item" data-tab-name="modal-3" id="modal-3">Штакетник</div>
+      </nav>
+      <div class="modal-tabs__content">
+        <div class="modal-tab --active modal-1">
+          <div class="tab__images">
+            <div class="image__wrapper-1">
+              <img src="./assets/our-work-slider/1.jpg" alt="modal-image" class="image-1">
+            </div>
+            <div class="image__wrapper-2">
+              <img src="./assets/images/schem.png" alt="modal-image" class="image-2">
+            </div>
+          </div>
+          <div class="tab__content">
+            <div class="content__top">
+              <p class="modal-description">
+                Забор из металлопрофиля пользуется огромным спросом уже много лет. Листы металлопрофиля стоят совсем
+                недорого, но при этом они очень прочные и функциональные.
+              </p>
+              <table class="modal-table">
+                <tr>
+                  <th>За материалы</th>
+                  <td>от 20 р. за кв/м</td>
+                </tr>
+                <tr>
+                  <th>За монтаж</th>
+                  <td>от 20 р. за кв/м</td>
+                </tr>
+                <tr>
+                  <th>Скидка</th>
+                  <td>-10%</td>
+                </tr>
+              </table>
+            </div>
+            <div class="content__bottom">
+              <div class="notes">
+                <p class="note">* Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vitae mattis eu quis leo enim
+                  amet egestas ut.</p>
+                <p class="note">* Все цены не являются публичной офертой.</p>
+              </div>
+              <div class="colors">
+                <h6 class="colors__header">Цвета:</h6>
+                <div class="colors__container">
+                  <div class="color">
+                    <div class="color__image">
+                      <img src="./assets/images/colors/1.png" alt="color">
+                    </div>
+                    <div class="color__name">
+                      RAL 5005
+                    </div>
+                  </div>
+                  <div class="color">
+                    <div class="color__image">
+                      <img src="./assets/images/colors/2.png" alt="color">
+                    </div>
+                    <div class="color__name">
+                      RAL 5005
+                    </div>
+                  </div>
+                  <div class="color">
+                    <div class="color__image">
+                      <img src="./assets/images/colors/3.png" alt="color">
+                    </div>
+                    <div class="color__name">
+                      RAL 5005
+                    </div>
+                  </div>
+                  <div class="color">
+                    <div class="color__image">
+                      <img src="./assets/images/colors/4.png" alt="color">
+                    </div>
+                    <div class="color__name">
+                      RAL 5005
+                    </div>
+                  </div>
+                  <div class="color">
+                    <div class="color__image">
+                      <img src="./assets/images/colors/5.png" alt="color">
+                    </div>
+                    <div class="color__name">
+                      RAL 5005
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <p class="note">* Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nisl fermentum lectus mattis
+                odio eleifend imperdiet odio enim.</p>
+            </div>
+          </div>
+        </div>
+        <div class="modal-tab modal-2">
+          <div class="tab__images">
+            <div class="image__wrapper-1">
+              <img src="./assets/our-work-slider/1.jpg" alt="modal-image" class="image-1">
+            </div>
+            <div class="image__wrapper-2">
+              <img src="./assets/images/schem.png" alt="modal-image" class="image-2">
+            </div>
+          </div>
+          <div class="tab__content">
+            <div class="content__top">
+              <p class="modal-description">
+                Забор из металлопрофиля пользуется огромным спросом уже много лет. Листы металлопрофиля стоят совсем
+                недорого, но при этом они очень прочные и функциональные.
+              </p>
+              <table class="modal-table">
+                <tr>
+                  <th>За материалы</th>
+                  <td>от 20 р. за кв/м</td>
+                </tr>
+                <tr>
+                  <th>За монтаж</th>
+                  <td>от 20 р. за кв/м</td>
+                </tr>
+                <tr>
+                  <th>Скидка</th>
+                  <td>-10%</td>
+                </tr>
+              </table>
+            </div>
+            <div class="content__bottom">
+              <div class="notes">
+                <p class="note">* Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vitae mattis eu quis leo enim
+                  amet egestas ut.</p>
+                <p class="note">* Все цены не являются публичной офертой.</p>
+              </div>
+              <div class="colors">
+                <h6 class="colors__header">Цвета:</h6>
+                <div class="colors__container">
+                  <div class="color">
+                    <div class="color__image">
+                      <img src="./assets/images/colors/1.png" alt="color">
+                    </div>
+                    <div class="color__name">
+                      RAL 5005
+                    </div>
+                  </div>
+                  <div class="color">
+                    <div class="color__image">
+                      <img src="./assets/images/colors/2.png" alt="color">
+                    </div>
+                    <div class="color__name">
+                      RAL 5005
+                    </div>
+                  </div>
+                  <div class="color">
+                    <div class="color__image">
+                      <img src="./assets/images/colors/3.png" alt="color">
+                    </div>
+                    <div class="color__name">
+                      RAL 5005
+                    </div>
+                  </div>
+                  <div class="color">
+                    <div class="color__image">
+                      <img src="./assets/images/colors/4.png" alt="color">
+                    </div>
+                    <div class="color__name">
+                      RAL 5005
+                    </div>
+                  </div>
+                  <div class="color">
+                    <div class="color__image">
+                      <img src="./assets/images/colors/5.png" alt="color">
+                    </div>
+                    <div class="color__name">
+                      RAL 5005
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <p class="note">* Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nisl fermentum lectus mattis
+                odio eleifend imperdiet odio enim.</p>
+            </div>
+          </div>
+        </div>
+        <div class="modal-tab modal-3">
+          <div class="tab__images">
+            <div class="image__wrapper-1">
+              <img src="./assets/our-work-slider/1.jpg" alt="modal-image" class="image-1">
+            </div>
+            <div class="image__wrapper-2">
+              <img src="./assets/images/schem.png" alt="modal-image" class="image-2">
+            </div>
+          </div>
+          <div class="tab__content">
+            <div class="content__top">
+              <p class="modal-description">
+                Забор из металлопрофиля пользуется огромным спросом уже много лет. Листы металлопрофиля стоят совсем
+                недорого, но при этом они очень прочные и функциональные.
+              </p>
+              <table class="modal-table">
+                <tr>
+                  <th>За материалы</th>
+                  <td>от 20 р. за кв/м</td>
+                </tr>
+                <tr>
+                  <th>За монтаж</th>
+                  <td>от 20 р. за кв/м</td>
+                </tr>
+                <tr>
+                  <th>Скидка</th>
+                  <td>-10%</td>
+                </tr>
+              </table>
+            </div>
+            <div class="content__bottom">
+              <div class="notes">
+                <p class="note">* Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vitae mattis eu quis leo enim
+                  amet egestas ut.</p>
+                <p class="note">* Все цены не являются публичной офертой.</p>
+              </div>
+              <div class="colors">
+                <h6 class="colors__header">Цвета:</h6>
+                <div class="colors__container">
+                  <div class="color">
+                    <div class="color__image">
+                      <img src="./assets/images/colors/1.png" alt="color">
+                    </div>
+                    <div class="color__name">
+                      RAL 5005
+                    </div>
+                  </div>
+                  <div class="color">
+                    <div class="color__image">
+                      <img src="./assets/images/colors/2.png" alt="color">
+                    </div>
+                    <div class="color__name">
+                      RAL 5005
+                    </div>
+                  </div>
+                  <div class="color">
+                    <div class="color__image">
+                      <img src="./assets/images/colors/3.png" alt="color">
+                    </div>
+                    <div class="color__name">
+                      RAL 5005
+                    </div>
+                  </div>
+                  <div class="color">
+                    <div class="color__image">
+                      <img src="./assets/images/colors/4.png" alt="color">
+                    </div>
+                    <div class="color__name">
+                      RAL 5005
+                    </div>
+                  </div>
+                  <div class="color">
+                    <div class="color__image">
+                      <img src="./assets/images/colors/5.png" alt="color">
+                    </div>
+                    <div class="color__name">
+                      RAL 5005
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <p class="note">* Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nisl fermentum lectus mattis
+                odio eleifend imperdiet odio enim.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="modal" id="modal-standart">
+    <button data-close-button class="close-button">
+      <img src="./assets/icons/close-cross.svg" alt="close" class="close-button__img">
+    </button>
+    <div class="modal-tabs">
+      <nav class="modal-tabs__nav">
+        <div class="modal-nav__item --active" data-tab-name="modal-1" id="modal-1">Рабица</div>
+        <div class="modal-nav__item" data-tab-name="modal-2" id="modal-2">Металлопрофиль</div>
+        <div class="modal-nav__item" data-tab-name="modal-3" id="modal-3">Штакетник</div>
+      </nav>
+      <div class="modal-tabs__content">
+        <div class="modal-tab --active modal-1">
+          <div class="tab__images">
+            <div class="image__wrapper-1">
+              <img src="./assets/our-work-slider/1.jpg" alt="modal-image" class="image-1">
+            </div>
+            <div class="image__wrapper-2">
+              <img src="./assets/images/schem.png" alt="modal-image" class="image-2">
+            </div>
+          </div>
+          <div class="tab__content">
+            <div class="content__top">
+              <p class="modal-description">
+                Забор из металлопрофиля пользуется огромным спросом уже много лет. Листы металлопрофиля стоят совсем
+                недорого, но при этом они очень прочные и функциональные.
+              </p>
+              <table class="modal-table">
+                <tr>
+                  <th>За материалы</th>
+                  <td>от 20 р. за кв/м</td>
+                </tr>
+                <tr>
+                  <th>За монтаж</th>
+                  <td>от 20 р. за кв/м</td>
+                </tr>
+                <tr>
+                  <th>Скидка</th>
+                  <td>-10%</td>
+                </tr>
+              </table>
+            </div>
+            <div class="content__bottom">
+              <div class="notes">
+                <p class="note">* Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vitae mattis eu quis leo enim
+                  amet egestas ut.</p>
+                <p class="note">* Все цены не являются публичной офертой.</p>
+              </div>
+              <div class="colors">
+                <h6 class="colors__header">Цвета:</h6>
+                <div class="colors__container">
+                  <div class="color">
+                    <div class="color__image">
+                      <img src="./assets/images/colors/1.png" alt="color">
+                    </div>
+                    <div class="color__name">
+                      RAL 5005
+                    </div>
+                  </div>
+                  <div class="color">
+                    <div class="color__image">
+                      <img src="./assets/images/colors/2.png" alt="color">
+                    </div>
+                    <div class="color__name">
+                      RAL 5005
+                    </div>
+                  </div>
+                  <div class="color">
+                    <div class="color__image">
+                      <img src="./assets/images/colors/3.png" alt="color">
+                    </div>
+                    <div class="color__name">
+                      RAL 5005
+                    </div>
+                  </div>
+                  <div class="color">
+                    <div class="color__image">
+                      <img src="./assets/images/colors/4.png" alt="color">
+                    </div>
+                    <div class="color__name">
+                      RAL 5005
+                    </div>
+                  </div>
+                  <div class="color">
+                    <div class="color__image">
+                      <img src="./assets/images/colors/5.png" alt="color">
+                    </div>
+                    <div class="color__name">
+                      RAL 5005
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <p class="note">* Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nisl fermentum lectus mattis
+                odio eleifend imperdiet odio enim.</p>
+            </div>
+          </div>
+        </div>
+        <div class="modal-tab modal-2">
+          <div class="tab__images">
+            <div class="image__wrapper-1">
+              <img src="./assets/our-work-slider/1.jpg" alt="modal-image" class="image-1">
+            </div>
+            <div class="image__wrapper-2">
+              <img src="./assets/images/schem.png" alt="modal-image" class="image-2">
+            </div>
+          </div>
+          <div class="tab__content">
+            <div class="content__top">
+              <p class="modal-description">
+                Забор из металлопрофиля пользуется огромным спросом уже много лет. Листы металлопрофиля стоят совсем
+                недорого, но при этом они очень прочные и функциональные.
+              </p>
+              <table class="modal-table">
+                <tr>
+                  <th>За материалы</th>
+                  <td>от 20 р. за кв/м</td>
+                </tr>
+                <tr>
+                  <th>За монтаж</th>
+                  <td>от 20 р. за кв/м</td>
+                </tr>
+                <tr>
+                  <th>Скидка</th>
+                  <td>-10%</td>
+                </tr>
+              </table>
+            </div>
+            <div class="content__bottom">
+              <div class="notes">
+                <p class="note">* Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vitae mattis eu quis leo enim
+                  amet egestas ut.</p>
+                <p class="note">* Все цены не являются публичной офертой.</p>
+              </div>
+              <div class="colors">
+                <h6 class="colors__header">Цвета:</h6>
+                <div class="colors__container">
+                  <div class="color">
+                    <div class="color__image">
+                      <img src="./assets/images/colors/1.png" alt="color">
+                    </div>
+                    <div class="color__name">
+                      RAL 5005
+                    </div>
+                  </div>
+                  <div class="color">
+                    <div class="color__image">
+                      <img src="./assets/images/colors/2.png" alt="color">
+                    </div>
+                    <div class="color__name">
+                      RAL 5005
+                    </div>
+                  </div>
+                  <div class="color">
+                    <div class="color__image">
+                      <img src="./assets/images/colors/3.png" alt="color">
+                    </div>
+                    <div class="color__name">
+                      RAL 5005
+                    </div>
+                  </div>
+                  <div class="color">
+                    <div class="color__image">
+                      <img src="./assets/images/colors/4.png" alt="color">
+                    </div>
+                    <div class="color__name">
+                      RAL 5005
+                    </div>
+                  </div>
+                  <div class="color">
+                    <div class="color__image">
+                      <img src="./assets/images/colors/5.png" alt="color">
+                    </div>
+                    <div class="color__name">
+                      RAL 5005
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <p class="note">* Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nisl fermentum lectus mattis
+                odio eleifend imperdiet odio enim.</p>
+            </div>
+          </div>
+        </div>
+        <div class="modal-tab modal-3">
+          <div class="tab__images">
+            <div class="image__wrapper-1">
+              <img src="./assets/our-work-slider/1.jpg" alt="modal-image" class="image-1">
+            </div>
+            <div class="image__wrapper-2">
+              <img src="./assets/images/schem.png" alt="modal-image" class="image-2">
+            </div>
+          </div>
+          <div class="tab__content">
+            <div class="content__top">
+              <p class="modal-description">
+                Забор из металлопрофиля пользуется огромным спросом уже много лет. Листы металлопрофиля стоят совсем
+                недорого, но при этом они очень прочные и функциональные.
+              </p>
+              <table class="modal-table">
+                <tr>
+                  <th>За материалы</th>
+                  <td>от 20 р. за кв/м</td>
+                </tr>
+                <tr>
+                  <th>За монтаж</th>
+                  <td>от 20 р. за кв/м</td>
+                </tr>
+                <tr>
+                  <th>Скидка</th>
+                  <td>-10%</td>
+                </tr>
+              </table>
+            </div>
+            <div class="content__bottom">
+              <div class="notes">
+                <p class="note">* Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vitae mattis eu quis leo enim
+                  amet egestas ut.</p>
+                <p class="note">* Все цены не являются публичной офертой.</p>
+              </div>
+              <div class="colors">
+                <h6 class="colors__header">Цвета:</h6>
+                <div class="colors__container">
+                  <div class="color">
+                    <div class="color__image">
+                      <img src="./assets/images/colors/1.png" alt="color">
+                    </div>
+                    <div class="color__name">
+                      RAL 5005
+                    </div>
+                  </div>
+                  <div class="color">
+                    <div class="color__image">
+                      <img src="./assets/images/colors/2.png" alt="color">
+                    </div>
+                    <div class="color__name">
+                      RAL 5005
+                    </div>
+                  </div>
+                  <div class="color">
+                    <div class="color__image">
+                      <img src="./assets/images/colors/3.png" alt="color">
+                    </div>
+                    <div class="color__name">
+                      RAL 5005
+                    </div>
+                  </div>
+                  <div class="color">
+                    <div class="color__image">
+                      <img src="./assets/images/colors/4.png" alt="color">
+                    </div>
+                    <div class="color__name">
+                      RAL 5005
+                    </div>
+                  </div>
+                  <div class="color">
+                    <div class="color__image">
+                      <img src="./assets/images/colors/5.png" alt="color">
+                    </div>
+                    <div class="color__name">
+                      RAL 5005
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <p class="note">* Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nisl fermentum lectus mattis
+                odio eleifend imperdiet odio enim.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="modal" id="modal-premium">
+    <button data-close-button class="close-button">
+      <img src="./assets/icons/close-cross.svg" alt="close" class="close-button__img">
+    </button>
+    <div class="modal-tabs">
+      <nav class="modal-tabs__nav">
+        <div class="modal-nav__item --active" data-tab-name="modal-1" id="modal-1">Рабица</div>
+        <div class="modal-nav__item" data-tab-name="modal-2" id="modal-2">Металлопрофиль</div>
+        <div class="modal-nav__item" data-tab-name="modal-3" id="modal-3">Штакетник</div>
+      </nav>
+      <div class="modal-tabs__content">
+        <div class="modal-tab --active modal-1">
+          <div class="tab__images">
+            <div class="image__wrapper-1">
+              <img src="./assets/our-work-slider/1.jpg" alt="modal-image" class="image-1">
+            </div>
+            <div class="image__wrapper-2">
+              <img src="./assets/images/schem.png" alt="modal-image" class="image-2">
+            </div>
+          </div>
+          <div class="tab__content">
+            <div class="content__top">
+              <p class="modal-description">
+                Забор из металлопрофиля пользуется огромным спросом уже много лет. Листы металлопрофиля стоят совсем
+                недорого, но при этом они очень прочные и функциональные.
+              </p>
+              <table class="modal-table">
+                <tr>
+                  <th>За материалы</th>
+                  <td>от 20 р. за кв/м</td>
+                </tr>
+                <tr>
+                  <th>За монтаж</th>
+                  <td>от 20 р. за кв/м</td>
+                </tr>
+                <tr>
+                  <th>Скидка</th>
+                  <td>-10%</td>
+                </tr>
+              </table>
+            </div>
+            <div class="content__bottom">
+              <div class="notes">
+                <p class="note">* Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vitae mattis eu quis leo enim
+                  amet egestas ut.</p>
+                <p class="note">* Все цены не являются публичной офертой.</p>
+              </div>
+              <div class="colors">
+                <h6 class="colors__header">Цвета:</h6>
+                <div class="colors__container">
+                  <div class="color">
+                    <div class="color__image">
+                      <img src="./assets/images/colors/1.png" alt="color">
+                    </div>
+                    <div class="color__name">
+                      RAL 5005
+                    </div>
+                  </div>
+                  <div class="color">
+                    <div class="color__image">
+                      <img src="./assets/images/colors/2.png" alt="color">
+                    </div>
+                    <div class="color__name">
+                      RAL 5005
+                    </div>
+                  </div>
+                  <div class="color">
+                    <div class="color__image">
+                      <img src="./assets/images/colors/3.png" alt="color">
+                    </div>
+                    <div class="color__name">
+                      RAL 5005
+                    </div>
+                  </div>
+                  <div class="color">
+                    <div class="color__image">
+                      <img src="./assets/images/colors/4.png" alt="color">
+                    </div>
+                    <div class="color__name">
+                      RAL 5005
+                    </div>
+                  </div>
+                  <div class="color">
+                    <div class="color__image">
+                      <img src="./assets/images/colors/5.png" alt="color">
+                    </div>
+                    <div class="color__name">
+                      RAL 5005
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <p class="note">* Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nisl fermentum lectus mattis
+                odio eleifend imperdiet odio enim.</p>
+            </div>
+          </div>
+        </div>
+        <div class="modal-tab modal-2">
+          <div class="tab__images">
+            <div class="image__wrapper-1">
+              <img src="./assets/our-work-slider/1.jpg" alt="modal-image" class="image-1">
+            </div>
+            <div class="image__wrapper-2">
+              <img src="./assets/images/schem.png" alt="modal-image" class="image-2">
+            </div>
+          </div>
+          <div class="tab__content">
+            <div class="content__top">
+              <p class="modal-description">
+                Забор из металлопрофиля пользуется огромным спросом уже много лет. Листы металлопрофиля стоят совсем
+                недорого, но при этом они очень прочные и функциональные.
+              </p>
+              <table class="modal-table">
+                <tr>
+                  <th>За материалы</th>
+                  <td>от 20 р. за кв/м</td>
+                </tr>
+                <tr>
+                  <th>За монтаж</th>
+                  <td>от 20 р. за кв/м</td>
+                </tr>
+                <tr>
+                  <th>Скидка</th>
+                  <td>-10%</td>
+                </tr>
+              </table>
+            </div>
+            <div class="content__bottom">
+              <div class="notes">
+                <p class="note">* Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vitae mattis eu quis leo enim
+                  amet egestas ut.</p>
+                <p class="note">* Все цены не являются публичной офертой.</p>
+              </div>
+              <div class="colors">
+                <h6 class="colors__header">Цвета:</h6>
+                <div class="colors__container">
+                  <div class="color">
+                    <div class="color__image">
+                      <img src="./assets/images/colors/1.png" alt="color">
+                    </div>
+                    <div class="color__name">
+                      RAL 5005
+                    </div>
+                  </div>
+                  <div class="color">
+                    <div class="color__image">
+                      <img src="./assets/images/colors/2.png" alt="color">
+                    </div>
+                    <div class="color__name">
+                      RAL 5005
+                    </div>
+                  </div>
+                  <div class="color">
+                    <div class="color__image">
+                      <img src="./assets/images/colors/3.png" alt="color">
+                    </div>
+                    <div class="color__name">
+                      RAL 5005
+                    </div>
+                  </div>
+                  <div class="color">
+                    <div class="color__image">
+                      <img src="./assets/images/colors/4.png" alt="color">
+                    </div>
+                    <div class="color__name">
+                      RAL 5005
+                    </div>
+                  </div>
+                  <div class="color">
+                    <div class="color__image">
+                      <img src="./assets/images/colors/5.png" alt="color">
+                    </div>
+                    <div class="color__name">
+                      RAL 5005
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <p class="note">* Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nisl fermentum lectus mattis
+                odio eleifend imperdiet odio enim.</p>
+            </div>
+          </div>
+        </div>
+        <div class="modal-tab modal-3">
+          <div class="tab__images">
+            <div class="image__wrapper-1">
+              <img src="./assets/our-work-slider/1.jpg" alt="modal-image" class="image-1">
+            </div>
+            <div class="image__wrapper-2">
+              <img src="./assets/images/schem.png" alt="modal-image" class="image-2">
+            </div>
+          </div>
+          <div class="tab__content">
+            <div class="content__top">
+              <p class="modal-description">
+                Забор из металлопрофиля пользуется огромным спросом уже много лет. Листы металлопрофиля стоят совсем
+                недорого, но при этом они очень прочные и функциональные.
+              </p>
+              <table class="modal-table">
+                <tr>
+                  <th>За материалы</th>
+                  <td>от 20 р. за кв/м</td>
+                </tr>
+                <tr>
+                  <th>За монтаж</th>
+                  <td>от 20 р. за кв/м</td>
+                </tr>
+                <tr>
+                  <th>Скидка</th>
+                  <td>-10%</td>
+                </tr>
+              </table>
+            </div>
+            <div class="content__bottom">
+              <div class="notes">
+                <p class="note">* Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vitae mattis eu quis leo enim
+                  amet egestas ut.</p>
+                <p class="note">* Все цены не являются публичной офертой.</p>
+              </div>
+              <div class="colors">
+                <h6 class="colors__header">Цвета:</h6>
+                <div class="colors__container">
+                  <div class="color">
+                    <div class="color__image">
+                      <img src="./assets/images/colors/1.png" alt="color">
+                    </div>
+                    <div class="color__name">
+                      RAL 5005
+                    </div>
+                  </div>
+                  <div class="color">
+                    <div class="color__image">
+                      <img src="./assets/images/colors/2.png" alt="color">
+                    </div>
+                    <div class="color__name">
+                      RAL 5005
+                    </div>
+                  </div>
+                  <div class="color">
+                    <div class="color__image">
+                      <img src="./assets/images/colors/3.png" alt="color">
+                    </div>
+                    <div class="color__name">
+                      RAL 5005
+                    </div>
+                  </div>
+                  <div class="color">
+                    <div class="color__image">
+                      <img src="./assets/images/colors/4.png" alt="color">
+                    </div>
+                    <div class="color__name">
+                      RAL 5005
+                    </div>
+                  </div>
+                  <div class="color">
+                    <div class="color__image">
+                      <img src="./assets/images/colors/5.png" alt="color">
+                    </div>
+                    <div class="color__name">
+                      RAL 5005
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <p class="note">* Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nisl fermentum lectus mattis
+                odio eleifend imperdiet odio enim.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="modal" id="modal-own-version">
+    <button data-close-button class="close-button">
+      <img src="./assets/icons/close-cross.svg" alt="close" class="close-button__img">
+    </button>
+    <div class="modal-tabs">
+      <nav class="modal-tabs__nav">
+        <div class="modal-nav__item --active" data-tab-name="modal-1" id="modal-1">Рабица</div>
+        <div class="modal-nav__item" data-tab-name="modal-2" id="modal-2">Металлопрофиль</div>
+        <div class="modal-nav__item" data-tab-name="modal-3" id="modal-3">Штакетник</div>
+      </nav>
+      <div class="modal-tabs__content">
+        <div class="modal-tab --active modal-1">
+          <div class="tab__images">
+            <div class="image__wrapper-1">
+              <img src="./assets/our-work-slider/1.jpg" alt="modal-image" class="image-1">
+            </div>
+            <div class="image__wrapper-2">
+              <img src="./assets/images/schem.png" alt="modal-image" class="image-2">
+            </div>
+          </div>
+          <div class="tab__content">
+            <div class="content__top">
+              <p class="modal-description">
+                Забор из металлопрофиля пользуется огромным спросом уже много лет. Листы металлопрофиля стоят совсем
+                недорого, но при этом они очень прочные и функциональные.
+              </p>
+              <table class="modal-table">
+                <tr>
+                  <th>За материалы</th>
+                  <td>от 20 р. за кв/м</td>
+                </tr>
+                <tr>
+                  <th>За монтаж</th>
+                  <td>от 20 р. за кв/м</td>
+                </tr>
+                <tr>
+                  <th>Скидка</th>
+                  <td>-10%</td>
+                </tr>
+              </table>
+            </div>
+            <div class="content__bottom">
+              <div class="notes">
+                <p class="note">* Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vitae mattis eu quis leo enim
+                  amet egestas ut.</p>
+                <p class="note">* Все цены не являются публичной офертой.</p>
+              </div>
+              <div class="colors">
+                <h6 class="colors__header">Цвета:</h6>
+                <div class="colors__container">
+                  <div class="color">
+                    <div class="color__image">
+                      <img src="./assets/images/colors/1.png" alt="color">
+                    </div>
+                    <div class="color__name">
+                      RAL 5005
+                    </div>
+                  </div>
+                  <div class="color">
+                    <div class="color__image">
+                      <img src="./assets/images/colors/2.png" alt="color">
+                    </div>
+                    <div class="color__name">
+                      RAL 5005
+                    </div>
+                  </div>
+                  <div class="color">
+                    <div class="color__image">
+                      <img src="./assets/images/colors/3.png" alt="color">
+                    </div>
+                    <div class="color__name">
+                      RAL 5005
+                    </div>
+                  </div>
+                  <div class="color">
+                    <div class="color__image">
+                      <img src="./assets/images/colors/4.png" alt="color">
+                    </div>
+                    <div class="color__name">
+                      RAL 5005
+                    </div>
+                  </div>
+                  <div class="color">
+                    <div class="color__image">
+                      <img src="./assets/images/colors/5.png" alt="color">
+                    </div>
+                    <div class="color__name">
+                      RAL 5005
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <p class="note">* Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nisl fermentum lectus mattis
+                odio eleifend imperdiet odio enim.</p>
+            </div>
+          </div>
+        </div>
+        <div class="modal-tab modal-2">
+          <div class="tab__images">
+            <div class="image__wrapper-1">
+              <img src="./assets/our-work-slider/1.jpg" alt="modal-image" class="image-1">
+            </div>
+            <div class="image__wrapper-2">
+              <img src="./assets/images/schem.png" alt="modal-image" class="image-2">
+            </div>
+          </div>
+          <div class="tab__content">
+            <div class="content__top">
+              <p class="modal-description">
+                Забор из металлопрофиля пользуется огромным спросом уже много лет. Листы металлопрофиля стоят совсем
+                недорого, но при этом они очень прочные и функциональные.
+              </p>
+              <table class="modal-table">
+                <tr>
+                  <th>За материалы</th>
+                  <td>от 20 р. за кв/м</td>
+                </tr>
+                <tr>
+                  <th>За монтаж</th>
+                  <td>от 20 р. за кв/м</td>
+                </tr>
+                <tr>
+                  <th>Скидка</th>
+                  <td>-10%</td>
+                </tr>
+              </table>
+            </div>
+            <div class="content__bottom">
+              <div class="notes">
+                <p class="note">* Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vitae mattis eu quis leo enim
+                  amet egestas ut.</p>
+                <p class="note">* Все цены не являются публичной офертой.</p>
+              </div>
+              <div class="colors">
+                <h6 class="colors__header">Цвета:</h6>
+                <div class="colors__container">
+                  <div class="color">
+                    <div class="color__image">
+                      <img src="./assets/images/colors/1.png" alt="color">
+                    </div>
+                    <div class="color__name">
+                      RAL 5005
+                    </div>
+                  </div>
+                  <div class="color">
+                    <div class="color__image">
+                      <img src="./assets/images/colors/2.png" alt="color">
+                    </div>
+                    <div class="color__name">
+                      RAL 5005
+                    </div>
+                  </div>
+                  <div class="color">
+                    <div class="color__image">
+                      <img src="./assets/images/colors/3.png" alt="color">
+                    </div>
+                    <div class="color__name">
+                      RAL 5005
+                    </div>
+                  </div>
+                  <div class="color">
+                    <div class="color__image">
+                      <img src="./assets/images/colors/4.png" alt="color">
+                    </div>
+                    <div class="color__name">
+                      RAL 5005
+                    </div>
+                  </div>
+                  <div class="color">
+                    <div class="color__image">
+                      <img src="./assets/images/colors/5.png" alt="color">
+                    </div>
+                    <div class="color__name">
+                      RAL 5005
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <p class="note">* Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nisl fermentum lectus mattis
+                odio eleifend imperdiet odio enim.</p>
+            </div>
+          </div>
+        </div>
+        <div class="modal-tab modal-3">
+          <div class="tab__images">
+            <div class="image__wrapper-1">
+              <img src="./assets/our-work-slider/1.jpg" alt="modal-image" class="image-1">
+            </div>
+            <div class="image__wrapper-2">
+              <img src="./assets/images/schem.png" alt="modal-image" class="image-2">
+            </div>
+          </div>
+          <div class="tab__content">
+            <div class="content__top">
+              <p class="modal-description">
+                Забор из металлопрофиля пользуется огромным спросом уже много лет. Листы металлопрофиля стоят совсем
+                недорого, но при этом они очень прочные и функциональные.
+              </p>
+              <table class="modal-table">
+                <tr>
+                  <th>За материалы</th>
+                  <td>от 20 р. за кв/м</td>
+                </tr>
+                <tr>
+                  <th>За монтаж</th>
+                  <td>от 20 р. за кв/м</td>
+                </tr>
+                <tr>
+                  <th>Скидка</th>
+                  <td>-10%</td>
+                </tr>
+              </table>
+            </div>
+            <div class="content__bottom">
+              <div class="notes">
+                <p class="note">* Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vitae mattis eu quis leo enim
+                  amet egestas ut.</p>
+                <p class="note">* Все цены не являются публичной офертой.</p>
+              </div>
+              <div class="colors">
+                <h6 class="colors__header">Цвета:</h6>
+                <div class="colors__container">
+                  <div class="color">
+                    <div class="color__image">
+                      <img src="./assets/images/colors/1.png" alt="color">
+                    </div>
+                    <div class="color__name">
+                      RAL 5005
+                    </div>
+                  </div>
+                  <div class="color">
+                    <div class="color__image">
+                      <img src="./assets/images/colors/2.png" alt="color">
+                    </div>
+                    <div class="color__name">
+                      RAL 5005
+                    </div>
+                  </div>
+                  <div class="color">
+                    <div class="color__image">
+                      <img src="./assets/images/colors/3.png" alt="color">
+                    </div>
+                    <div class="color__name">
+                      RAL 5005
+                    </div>
+                  </div>
+                  <div class="color">
+                    <div class="color__image">
+                      <img src="./assets/images/colors/4.png" alt="color">
+                    </div>
+                    <div class="color__name">
+                      RAL 5005
+                    </div>
+                  </div>
+                  <div class="color">
+                    <div class="color__image">
+                      <img src="./assets/images/colors/5.png" alt="color">
+                    </div>
+                    <div class="color__name">
+                      RAL 5005
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <p class="note">* Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nisl fermentum lectus mattis
+                odio eleifend imperdiet odio enim.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="modal" id="modal-order">
+    <button data-close-button class="close-button">
+      <img src="./assets/icons/close-cross.svg" alt="close" class="close-button__img">
+    </button>
+    <div class="modal__content">
+      <form action="" class="modal__form">
+        <label class="modal__lable" for="modal-name">Имя</label>
+        <input class="modal__input" type="text" id="modal-name" name="modal-name" placeholder="Введите имя">
+        <label class="modal__lable " for="modal-phone">Телефон</label>
+        <input class="modal__input" type="text" id="modal-phone" name="modal-phone" placeholder="+_ (___) ___-____">
+        <label class="modal__lable " for="modal-description">Описание</label>
+        <textarea name="description" id="modal-description" rows="4" maxlength="200" class="modal__textarea"
+          placeholder="Кратко опишите критерии проекта: виды работ, желаемая стоимость, материалы"></textarea>
+        <button class="modal__button" type="submit" value="Submit">Заказать звонок</button>
+      </form>
+    </div>
+  </div>
+  <div class="modal-overlay" id="overlay"></div>
+  <button data-modal-target="#modal-order" class="need-help">
+    <img src="./assets/icons/perm_phone_msg_white_24dp.svg" alt="bell" class="need-help__icon">
+  </button>
   <script src="js/swiper.js"></script>
   <script src="js/main.js"></script>
 </body>
