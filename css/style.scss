@@ -1225,10 +1225,11 @@ button {
   }
 }
 @media (max-width: 1670px) {
-  .work-cases__fences-slider .slider-button, .work-cases__gates-slider .slider-button {
+  .work-cases__fences-slider .slider-button,
+  .work-cases__gates-slider .slider-button {
     top: 45%;
     display: block;
-}
+  }
 }
 @media (max-width: 1580px) {
   .about {
@@ -1313,7 +1314,7 @@ button {
     height: 44px;
     border-radius: 0;
     top: 55%;
-    &:hover{
+    &:hover {
       box-shadow: none;
     }
   }
@@ -1327,190 +1328,190 @@ button {
     transform: scaleX(-1);
     right: 30px;
   }
-}
-.our-work {
-  margin: 0;
-  margin-top: 28px;
-  .our-work-slider__wrapper {
-    padding: 50px 0 50px;
-  }
-}
-.feedback {
-  margin: 0;
-  .feedback-slider__wrapper {
-    padding: 50px 0px 50px;
-  }
-  .slide__top {
-    margin: 20px 44px 50px 45px;
-    .person {
-      .person__photo-wrapper {
-        margin-right: 20px;
-      }
-    }
-    .stars {
-      .star {
-        width: 24px;
-        height: 24px;
-      }
+  .our-work {
+    margin: 0;
+    margin-top: 28px;
+    .our-work-slider__wrapper {
+      padding: 50px 0 50px;
     }
   }
-  .slide__bottom {
-    margin: 0 45px;
+  .feedback {
+    margin: 0;
+    .feedback-slider__wrapper {
+      padding: 50px 0px 50px;
+    }
+    .slide__top {
+      margin: 20px 44px 50px 45px;
+      .person {
+        .person__photo-wrapper {
+          margin-right: 20px;
+        }
+      }
+      .stars {
+        .star {
+          width: 24px;
+          height: 24px;
+        }
+      }
+    }
+    .slide__bottom {
+      margin: 0 45px;
+    }
   }
-}
-.promotion {
-  .promotion__content {
-    .promotion-card {
-      margin-top: 50px;
-      &__img-wrapper {
-        width: 200px;
-        height: 200px;
-        img {
+  .promotion {
+    .promotion__content {
+      .promotion-card {
+        margin-top: 50px;
+        &__img-wrapper {
           width: 200px;
+          height: 200px;
+          img {
+            width: 200px;
+          }
         }
       }
     }
   }
-}
-.principles {
-  .principles__content {
-    .principles-card {
-      margin-top: 50px;
-      &__img-wrapper {
-        height: 100px;
-        img {
+  .principles {
+    .principles__content {
+      .principles-card {
+        margin-top: 50px;
+        &__img-wrapper {
           height: 100px;
+          img {
+            height: 100px;
+          }
         }
       }
     }
   }
-}
-.connection {
-  margin-top: 68px;
-  .connection__content {
-    justify-content: center;
+  .connection {
     margin-top: 68px;
-  }
-  .connection__image-wrapper {
-    display: none;
-  }
-}
-.footer {
-  .container {
-    .navigation-conteiner {
-      justify-content: space-around;
+    .connection__content {
+      justify-content: center;
+      margin-top: 68px;
+    }
+    .connection__image-wrapper {
+      display: none;
     }
   }
-}
-.footer {
-  .container {
-    .logo-container {
-      align-items: center;
-      .logo {
-        width: 220px;
-      }
-      .logo-container__contacts {
-        max-width: 300px;
-        width: 100%;
+  .footer {
+    .container {
+      .navigation-conteiner {
+        justify-content: space-around;
       }
     }
-    .navigation-conteiner {
-      .navigation-conteiner__nav + .navigation-conteiner__nav {
-        margin-left: 0px;
-      }
-    }
-    .contacts {
-      width: 100%;
-      .phone {
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
+  }
+  .footer {
+    .container {
+      .logo-container {
         align-items: center;
-        .phone__call {
-          margin: 8px 0px;
+        .logo {
+          width: 220px;
         }
-        .messengers {
-          margin: 0;
+        .logo-container__contacts {
+          max-width: 300px;
+          width: 100%;
         }
       }
-    }
-  }
-}
-.modal {
-  border-radius: 50px;
-  .close-button {
-    top: 25px;
-    right: 25px;
-    &__img {
-      width: 30px;
-      height: 30px;
-    }
-  }
-}
-.modal.--active {
-  .close-button {
-    &__img {
-      width: 30px;
-      height: 30px;
-    }
-  }
-}
-.modal.--active {
-  .modal-tabs {
-    .modal-tabs__nav {
-      top: 60px;
-      left: 0;
-      right: 0;
-      .modal-nav__item + .modal-nav__item {
-        margin-left: 15px;
+      .navigation-conteiner {
+        .navigation-conteiner__nav + .navigation-conteiner__nav {
+          margin-left: 0px;
+        }
       }
-    }
-    .modal-tab {
-      .tab__content {
+      .contacts {
         width: 100%;
-        padding: 50px 20px 0 20px;
-        .content__top {
-          height: 40%;
+        .phone {
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+          align-items: center;
+          .phone__call {
+            margin: 8px 0px;
+          }
+          .messengers {
+            margin: 0;
+          }
         }
-        .content__bottom {
-          height: 60%;
-        }
-      }
-      .tab__images {
-        display: none;
       }
     }
   }
-}
-#modal-order {
-  .modal__content {
-    .modal__form {
-      .modal__lable {
-        margin-bottom: 6px;
-        font-size: 3rem;
-        padding: 10px 15px;
-        &::placeholder {
+  .modal {
+    border-radius: 50px;
+    .close-button {
+      top: 25px;
+      right: 25px;
+      &__img {
+        width: 30px;
+        height: 30px;
+      }
+    }
+  }
+  .modal.--active {
+    .close-button {
+      &__img {
+        width: 30px;
+        height: 30px;
+      }
+    }
+  }
+  .modal.--active {
+    .modal-tabs {
+      .modal-tabs__nav {
+        top: 60px;
+        left: 0;
+        right: 0;
+        .modal-nav__item + .modal-nav__item {
+          margin-left: 15px;
+        }
+      }
+      .modal-tab {
+        .tab__content {
+          width: 100%;
+          padding: 50px 20px 0 20px;
+          .content__top {
+            height: 40%;
+          }
+          .content__bottom {
+            height: 60%;
+          }
+        }
+        .tab__images {
+          display: none;
+        }
+      }
+    }
+  }
+  #modal-order {
+    .modal__content {
+      .modal__form {
+        .modal__lable {
+          margin-bottom: 6px;
           font-size: 3rem;
+          padding: 10px 15px;
+          &::placeholder {
+            font-size: 3rem;
+          }
         }
-      }
-      .modal__input {
-        margin-bottom: 15px;
-        font-size: 2.5rem;
-        padding: 10px 15px;
-        &::placeholder {
+        .modal__input {
+          margin-bottom: 15px;
           font-size: 2.5rem;
+          padding: 10px 15px;
+          &::placeholder {
+            font-size: 2.5rem;
+          }
         }
-      }
-      .modal__textarea {
-        font-size: 2.5rem;
-        padding: 10px 15px;
-        &::placeholder {
+        .modal__textarea {
           font-size: 2.5rem;
+          padding: 10px 15px;
+          &::placeholder {
+            font-size: 2.5rem;
+          }
         }
-      }
-      .modal__button {
-        margin-top: 15px;
-        padding: 30px;
+        .modal__button {
+          margin-top: 15px;
+          padding: 30px;
+        }
       }
     }
   }
