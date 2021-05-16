@@ -139,6 +139,7 @@ h6 {
 h1 {
   font-size: 6rem;
   line-height: 118.68%;
+  text-shadow: #fff 0 0 10px;
 }
 
 h3 {
@@ -276,6 +277,7 @@ button {
         margin-bottom: 226px;
         font-size: 3.6rem;
         line-height: 4.9rem;
+        text-shadow: #fff 0 0 10px;
       }
       .header-content__button {
         @include active-button();
@@ -952,7 +954,13 @@ button {
           &__container {
             display: flex;
             width: 100%;
-            overflow: hidden;
+            overflow-y: hidden;
+            overflow-x: auto;
+            -ms-overflow-style: none;
+            scrollbar-width: none;
+            &::-webkit-scrollbar {
+              display: none;
+            }
             .color {
               display: flex;
               flex-direction: column;
@@ -1214,6 +1222,13 @@ button {
   }
 }
 
+@media (max-width: 1880px) {
+  .work-cases__fences-slider .slider-button,
+  .work-cases__gates-slider .slider-button {
+    top: 45%;
+    display: block;
+  }
+}
 @media (max-width: 1800px) {
   .about {
     .container {
@@ -1222,13 +1237,6 @@ button {
         height: 100%;
       }
     }
-  }
-}
-@media (max-width: 1670px) {
-  .work-cases__fences-slider .slider-button,
-  .work-cases__gates-slider .slider-button {
-    top: 45%;
-    display: block;
   }
 }
 @media (max-width: 1580px) {
@@ -1736,6 +1744,11 @@ button {
   .work-cases__fences-slider,
   .work-cases__gates-slider {
     padding: 50px 30px;
+  }
+  .our-work{
+    .our-work-slider__wrapper {
+      padding: 0px 0px 50px;
+    }
   }
   .feedback {
     margin: 0;
