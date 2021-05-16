@@ -280,3 +280,11 @@ function toggleBurger() {
   burgerMenu.classList.toggle('--active');
   document.body.classList.toggle('--scroll-hiden');
 };
+
+const colorsContainer = document.querySelectorAll('.colors__container');
+colorsContainer.forEach(container => {
+  container.addEventListener('mousewheel', function(e) {
+    this.scrollLeft -= (e.wheelDelta);
+    e.preventDefault();
+  }, false);
+})
