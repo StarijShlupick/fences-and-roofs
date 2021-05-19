@@ -1109,14 +1109,16 @@ button {
   padding: 15px 15px;
   cursor: pointer;
   @include active-button();
-  background-color: #74f052;
+  -webkit-animation: color 10s ease-in-out infinite;
+    -moz-animation: color 10s ease-in-out infinite;
+    animation: color 10s ease-in-out infinite;
   &__icon {
     @include image-wrapper();
     width: 40px;
     height: 40px;
-    -webkit-animation: ring 2s ease-in-out 3;
-    -moz-animation: ring 2s ease-in-out 3;
-    animation: ring 2s ease-in-out 3;
+    -webkit-animation: ring 3s ease-in-out infinite;
+    -moz-animation: ring 3s ease-in-out infinite;
+    animation: ring 3s ease-in-out infinite;
   }
 }
 
@@ -1219,6 +1221,20 @@ button {
   }
   100% {
     transform: translateY(0);
+  }
+}
+@keyframes color {
+  0% {
+    background-color: #74f052;
+  }
+  33% {
+    background-color: #5274F0;
+  }
+  67% {
+    background-color: #F05274;
+  }
+  100% {
+    background-color: #74f052;
   }
 }
 
