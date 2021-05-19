@@ -88,6 +88,15 @@ h5 {
   text-transform: uppercase;
 }
 
+label.required {
+  position: relative;
+}
+
+label.required::after {
+  content: ' *';
+  color: red;
+}
+
 input,
 textarea {
   outline: none;
