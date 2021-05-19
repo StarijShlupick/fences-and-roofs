@@ -447,6 +447,7 @@ button {
   background: #ffe600;
   border-radius: 100px;
   padding: 0 5px;
+  font-weight: 600;
   z-index: 4;
 }
 
@@ -1042,6 +1043,16 @@ button {
           justify-content: center;
   max-width: 358px;
   width: 100%;
+}
+
+.footer .logo-container__contacts {
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
 
 .footer .logo {
@@ -1650,6 +1661,20 @@ button {
   left: 0;
   position: fixed;
   background-color: #f2e464;
+  pointer-events: none;
+  -webkit-transform: translateX(-100%);
+          transform: translateX(-100%);
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
+}
+
+.header__menu-burger.--active {
+  pointer-events: all;
+  -webkit-transform: translateX(0);
+          transform: translateX(0);
+}
+
+.header__menu-burger__wrapper {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1663,17 +1688,9 @@ button {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  pointer-events: none;
-  -webkit-transform: translateX(-100%);
-          transform: translateX(-100%);
-  -webkit-transition: all 0.3s;
-  transition: all 0.3s;
-}
-
-.header__menu-burger.--active {
-  pointer-events: all;
-  -webkit-transform: translateX(0);
-          transform: translateX(0);
+  height: 100%;
+  padding: 20px 0;
+  overflow-y: auto;
 }
 
 .header__menu-burger .menu__close-button {
@@ -2187,6 +2204,35 @@ button {
   #modal-order-gates .modal__content .modal__form .modal__button {
     margin-top: 15px;
     padding: 30px;
+  }
+  .footer .container .logo-container .logo {
+    margin-bottom: 15px;
+  }
+  .footer .logo-container {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    max-width: 358px;
+    width: 100%;
+  }
+  .footer .logo-container__contacts {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
   }
 }
 

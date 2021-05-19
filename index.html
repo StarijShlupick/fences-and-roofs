@@ -44,62 +44,67 @@
           <img class="menu__burger-img" src="./assets/icons/burger-menu.svg" alt="burger-menu">
         </div>
         <nav class="header__menu-burger">
-          <button class="menu__close-button">
-            <img src="./assets/icons/close-cross.svg" alt="close" class="menu__close-button__img">
-          </button>
-          <ul class="header__menu-burger-list">
-            <li class="header__menu-burger-li">
-              <a href="#promotion">
-                О нас
-              </a>
-            </li>
-            <li class="header__menu-burger-li">
-              <a href="#work-cases">
-                Наши услуги
-              </a>
-            </li>
-            <li class="header__menu-burger-li">
-              <a href="#our-work">
-                Примеры работ
-              </a>
-            </li>
-            <li class="header__menu-burger-li" onclick="toScroll('work-cases', 'fences')">
-              <a href="#fences">
-                Заборы
-              </a>
-            </li>
-            <li class="header__menu-burger-li" onclick="toScroll('work-cases', 'gates')">
-              <a href="#gates">
-                Ворота и калитки
-              </a>
-            </li>
-          </ul>
-          <div class="contacts">
-            <div class="phone">
-              <div class="messengers">
-                <div class="messenger">
-                  <a href="" class="messenger__link">
-                    <img src="./assets/icons/telegram.svg" alt="telegram" class="messenger__img">
-                  </a>
+          <div class="header__menu-burger__wrapper">
+
+            <button class="menu__close-button">
+              <img src="./assets/icons/close-cross.svg" alt="close" class="menu__close-button__img">
+            </button>
+            <ul class="header__menu-burger-list">
+              <li class="header__menu-burger-li">
+                <a href="#promotion">
+                  О нас
+                </a>
+              </li>
+              <li class="header__menu-burger-li">
+                <a href="#work-cases">
+                  Наши услуги
+                </a>
+              </li>
+              <li class="header__menu-burger-li">
+                <a href="#our-work">
+                  Примеры работ
+                </a>
+              </li>
+              <li class="header__menu-burger-li" onclick="toScroll('work-cases', 'fences')">
+                <a href="#fences">
+                  Заборы
+                </a>
+              </li>
+              <li class="header__menu-burger-li" onclick="toScroll('work-cases', 'gates')">
+                <a href="#gates">
+                  Ворота и калитки
+                </a>
+              </li>
+            </ul>
+            <div class="contacts">
+              <div class="phone">
+                <div class="messengers">
+                  <div class="messenger">
+                    <a href="" class="messenger__link">
+                      <img src="./assets/icons/telegram.svg" alt="telegram" class="messenger__img">
+                    </a>
+                  </div>
+                  <div class="messenger">
+                    <a href="" class="messenger__link">
+                      <img src="./assets/icons/whatsapp.svg" alt="whatsapp" class="messenger__img">
+                    </a>
+                  </div>
+                  <div class="messenger">
+                    <a href="" class="messenger__link">
+                      <img src="./assets/icons/viber.svg" alt="viber" class="messenger__img">
+                    </a>
+                  </div>
                 </div>
-                <div class="messenger">
-                  <a href="" class="messenger__link">
-                    <img src="./assets/icons/whatsapp.svg" alt="whatsapp" class="messenger__img">
-                  </a>
-                </div>
-                <div class="messenger">
-                  <a href="" class="messenger__link">
-                    <img src="./assets/icons/viber.svg" alt="viber" class="messenger__img">
-                  </a>
-                </div>
+                <a class="phone__call" href="tel:+375292987964">+ 375 (29) 298-79-64</a>
+                <a class="phone__call" href="tel:+375292987964">+ 375 (29) 298-79-64</a>
+                <a class="phone__call" href="tel:+375292987964">+ 375 (29) 298-79-64</a>
+                <a class="phone__call" href="tel:+375292987964">+ 375 (29) 298-79-64</a>
+                <a class="burger-phone__recall phone__recall" href="#connection">Заказать звонок</a>
               </div>
-              <a class="phone__call" href="tel:+375292987964">+ 375 (29) 298-79-64</a>
-              <a class="phone__call" href="tel:+375292987964">+ 375 (29) 298-79-64</a>
-              <a class="phone__call" href="tel:+375292987964">+ 375 (29) 298-79-64</a>
-              <a class="phone__call" href="tel:+375292987964">+ 375 (29) 298-79-64</a>
-              <a class="burger-phone__recall phone__recall" href="#connection">Заказать звонок</a>
             </div>
+
           </div>
+
         </nav>
         <nav class="header__nav">
           <ul class="nav__list">
@@ -601,7 +606,8 @@
             <label class="connection__lable" for="name">Ваше имя</label>
             <input class="connection__input" type="text" id="name" name="name" placeholder="Введите имя">
             <label class="connection__lable " for="phone">Телефон</label>
-            <input class="connection__input" type="text" id="phone" name="phone" placeholder="+375(__) ___-__-__" required>
+            <input class="connection__input" type="text" id="phone" name="phone" placeholder="+375(__) ___-__-__"
+              required>
             <label class="connection__lable " for="description">Описание</label>
             <textarea name="description" id="description" rows="4" maxlength="200" class="connection__textarea"
               placeholder="Кратко опишите параметры проекта (длинна, высота, материал) и мы подберём для Вас лучший вариант!"></textarea>
@@ -620,8 +626,10 @@
       <div class="logo-container">
         <img src="./assets/images/logo-footer.png" alt="ПрофСтальМонтаж" class="logo">
         <div class="logo-container__contacts">
-          <a href="https://yandex.com/maps/geo/53177019/?ll=27.561481%2C53.902496&z=12" class="logo-container__link" target="_blank">г.Минск</a>
-          <a href="mailto:email@shelter.com" class="logo-container__link" target="_blank">почта</a>
+          <a href="https://yandex.com/maps/geo/53177019/?ll=27.561481%2C53.902496&z=12" class="logo-container__link"
+            target="_blank">г.Минск</a>
+          <a href="mailto:profsteelinstall@gmail.com" class="logo-container__link"
+            target="_blank">profsteelinstall@gmail.com</a>
         </div>
       </div>
       <div class="navigation-conteiner">
@@ -1514,7 +1522,8 @@
         <label class="modal__lable" for="modal-name">Ваше имя</label>
         <input class="modal__input" type="text" id="modal-name" name="modal-name" placeholder="Введите имя">
         <label class="modal__lable " for="modal-phone">Телефон</label>
-        <input class="modal__input" type="text" id="modal-phone" name="modal-phone" placeholder="+375(__) ___-__-__" required>
+        <input class="modal__input" type="text" id="modal-phone" name="modal-phone" placeholder="+375(__) ___-__-__"
+          required>
         <label class="modal__lable " for="modal-description">Описание</label>
         <textarea name="description" id="modal-description" rows="4" maxlength="200" class="modal__textarea"
           placeholder="Кратко опишите параметры проекта (длинна, высота, материал) и мы подберём для Вас лучший вариант!"></textarea>
@@ -1531,7 +1540,8 @@
         <label class="modal__lable" for="modal-name">Имя</label>
         <input class="modal__input" type="text" id="modal-name" name="modal-name" placeholder="Введите имя">
         <label class="modal__lable " for="modal-phone">Телефон</label>
-        <input class="modal__input" type="text" id="modal-phone" name="modal-phone" placeholder="+375(__) ___-__-__" required>
+        <input class="modal__input" type="text" id="modal-phone" name="modal-phone" placeholder="+375(__) ___-__-__"
+          required>
         <label class="modal__lable " for="modal-description">Описание</label>
         <textarea name="description" id="modal-description" rows="4" maxlength="200" class="modal__textarea"
           placeholder="Кратко опишите параметры желаемого забора (длинна, высота, материал) и мы подберём для Вас лучший вариант!"></textarea>
@@ -1548,7 +1558,8 @@
         <label class="modal__lable" for="modal-name">Имя</label>
         <input class="modal__input" type="text" id="modal-name" name="modal-name" placeholder="Введите имя">
         <label class="modal__lable " for="modal-phone">Телефон</label>
-        <input class="modal__input" type="text" id="modal-phone" name="modal-phone" placeholder="+375(__) ___-__-__" required>
+        <input class="modal__input" type="text" id="modal-phone" name="modal-phone" placeholder="+375(__) ___-__-__"
+          required>
         <label class="modal__lable " for="modal-description">Описание</label>
         <textarea name="description" id="modal-description" rows="4" maxlength="200" class="modal__textarea"
           placeholder="Кратко опишите параметры ворот или калитки (ширина, высота, материал заполнения) и мы подберём для Вас лучший вариант!"></textarea>
