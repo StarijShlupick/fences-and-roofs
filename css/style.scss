@@ -350,11 +350,11 @@ button {
       content: "";
       position: absolute;
       top: 0;
-      right: 0;
-      width: 100px;
-      height: 100px;
+      right: -3px;
+      width: 140px;
+      height: 140px;
       background-image: url("../assets/images/sales.png");
-      background-size: 100%;
+      background-size: contain;
     }
   }
   &::before {
@@ -387,6 +387,19 @@ button {
   .card__content {
     padding: 18px 28px 0 30px;
     color: $true-black;
+    &.sales-banner {
+      &::before {
+        content: "-10%";
+        position: absolute;
+        left: 3.26%;
+        bottom: 2.88%;
+        font-size: 30px;
+        background: $ellow-color;
+        border-radius: 100px;
+        padding: 0 5px;
+        z-index: 4;
+      }
+    }
     .card__header {
       font-size: 2.05736rem;
       line-height: 118.68%;
@@ -924,24 +937,27 @@ button {
       }
     }
     .tab__content {
-      display: flex;
-      justify-content: space-between;
-      flex-direction: column;
+      overflow-y: auto;
       width: 65%;
-      padding: 60px 20px 0 20px;
+      margin-top: 60px;
+      padding: 0px 20px 0 20px;
       .content__top,
       .content__bottom {
-        display: flex;
-        justify-content: space-between;
-        flex-direction: column;
         font-weight: normal;
         font-size: 1.6rem;
         line-height: 121.68%;
       }
       .content__top {
-        height: 50%;
         .modal-description {
-          @include limited-text(5);
+          padding-top: 25px;
+          position: relative;
+          &::before {
+            content: "Описание:";
+            position: absolute;
+            top: 0;
+            left: 0;
+            font-weight: 700;
+          }
         }
         table {
           width: 100%;
@@ -951,7 +967,7 @@ button {
           border-style: hidden;
           box-shadow: 0 0 0 3px $black-color;
           text-align: center;
-          margin-bottom: 50px;
+          margin: 30px 0;
         }
         th,
         td {
@@ -963,16 +979,14 @@ button {
         }
       }
       .content__bottom {
-        height: 50%;
         .notes {
           .note + .note {
             margin-top: 9px;
           }
         }
-        .note {
-          @include limited-text(3);
-        }
         .colors {
+          margin-top: 20px;
+          margin-bottom: 20px;
           &__header {
             margin: 18px 0;
             font-weight: 600;
@@ -1057,7 +1071,9 @@ button {
   }
 }
 
-#modal-order {
+#modal-order,
+#modal-order-your-version,
+#modal-order-gates {
   left: 250%;
   transform: translate(-50%, -50%);
   z-index: 11;
@@ -1353,6 +1369,9 @@ button {
           .tab__images {
             display: none;
           }
+          .tab__content {
+            width: 95%;
+          }
         }
       }
     }
@@ -1544,13 +1563,6 @@ button {
       .modal-tab {
         .tab__content {
           width: 100%;
-          padding: 50px 20px 0 20px;
-          .content__top {
-            height: 40%;
-          }
-          .content__bottom {
-            height: 60%;
-          }
         }
         .tab__images {
           display: none;
@@ -1558,7 +1570,9 @@ button {
       }
     }
   }
-  #modal-order {
+  #modal-order,
+  #modal-order-your-version,
+  #modal-order-gates {
     .modal__content {
       .modal__form {
         .modal__lable {
@@ -1775,12 +1789,6 @@ button {
   }
 }
 @media (max-width: 540px) {
-  .modal.--active .modal-tabs .modal-tab .tab__content .content__top {
-    height: 50%;
-  }
-  .modal.--active .modal-tabs .modal-tab .tab__content .content__bottom {
-    height: 50%;
-  }
   .modal .modal-tab .tab__content .content__top table {
     margin-bottom: 10px;
   }
@@ -1949,11 +1957,36 @@ button {
   .header__menu-burger-list .header__menu-burger-li {
     margin-bottom: 15px;
   }
-  #modal-order .modal__content .modal__form .modal__lable {
+  #modal-order,
+  #modal-order-your-version,
+  #modal-order-gates .modal__content .modal__form .modal__lable {
     margin-bottom: 6px;
     font-size: 3rem;
     padding: 0px 15px;
-}
+  }
+  .modal .modal-tab .tab__content .content__top th,
+  .modal .modal-tab .tab__content .content__top td {
+    padding: 5px 0;
+    border-bottom: 2px solid #1f1f1f;
+  }
+  .modal .modal-tab .tab__content .content__top table {
+    border-radius: 15px;
+    -webkit-box-shadow: 0 0 0 2px #1f1f1f;
+    box-shadow: 0 0 0 2px #1f1f1f;
+  }
+  .modal .modal-tab .tab__content .content__bottom .colors__container .color .color__image img {
+    height: 70px;
+  }
+  .modal .modal-tab .tab__content {
+    margin-top: 40px;
+  }
+  .modal .modal-tab .tab__content .content__top,
+  .modal .modal-tab .tab__content .content__bottom {
+    font-size: 2.6rem;
+  }
+  .modal .modal-tab .tab__content {
+    padding: 0 10px;
+  }
 }
 @media (max-width: 360px) {
   .work-cases__fences-slider,
@@ -1985,5 +2018,63 @@ button {
   .work-cases__fences-slider,
   .work-cases__gates-slider {
     padding: 35px 0px;
+  }
+}
+@media (max-height: 680px) {
+  #modal-order,
+  #modal-order-your-version,
+  #modal-order-gates {
+    .modal__content {
+      .modal__form {
+        .modal__lable {
+          font-size: 2.5rem;
+          line-height: 3.5rem;
+          margin-bottom: 5px;
+        }
+        .modal__input {
+          padding: 10px 16px;
+          margin-bottom: 10px;
+        }
+        .modal__textarea {
+          padding: 10px 16px;
+          margin-bottom: 20px;
+        }
+        .modal__button {
+          margin-top: 0px;
+          padding: 20px;
+        }
+      }
+    }
+  }
+}
+@media (max-height: 465px) {
+  #modal-order,
+  #modal-order-your-version,
+  #modal-order-gates {
+    .modal__content {
+      width: 100%;
+      .modal__form {
+        padding: 0 20px;
+        overflow-y: auto;
+        .modal__lable {
+          font-size: 2.5rem;
+          line-height: 3.5rem;
+          margin-bottom: 5px;
+        }
+        .modal__input {
+          padding: 10px 16px;
+          margin-bottom: 10px;
+        }
+        .modal__textarea {
+          padding: 10px 16px;
+          margin-bottom: 20px;
+          min-height: 200px;
+        }
+        .modal__button {
+          margin-top: 0px;
+          padding: 20px;
+        }
+      }
+    }
   }
 }

@@ -176,7 +176,7 @@
               <div class="work-cases__fences-slider swiper-container">
                 <div class="work-cases__fences-slider__wrapper swiper-wrapper">
                   <div class="work-cases__fences-slide swiper-slide">
-                    <div data-modal-target="#modal-order" class="work-cases__card">
+                    <div data-modal-target="#modal-order-your-version" class="work-cases__card">
                       <div class="card__img-wrapper">
                         <img src="./assets/work-cases-slider/fences/5.jpg" alt="fence" class="card__img">
                       </div>
@@ -218,7 +218,7 @@
                       <div class="card__img-wrapper">
                         <img src="./assets/work-cases-slider/fences/3.jpg" alt="fence" class="card__img">
                       </div>
-                      <div class="card__content">
+                      <div class="card__content sales-banner">
                         <h6 class="card__header">
                           Стандарт
                         </h6>
@@ -262,7 +262,7 @@
               <div class="work-cases__gates-slider swiper-container">
                 <div class="work-cases__gates-slider__wrapper swiper-wrapper">
                   <div class="work-cases__gates-slide swiper-slide">
-                    <div data-modal-target="#modal-order" class="work-cases__card">
+                    <div data-modal-target="#modal-order-gates" class="work-cases__card">
                       <div class="card__img-wrapper">
                         <img src="./assets/work-cases-slider/gates/1.jpg" alt="gate" class="card__img">
                       </div>
@@ -279,7 +279,7 @@
                     </div>
                   </div>
                   <div class="work-cases__gates-slide swiper-slide">
-                    <div data-modal-target="#modal-order" class="work-cases__card">
+                    <div data-modal-target="#modal-order-gates" class="work-cases__card">
                       <div class="card__img-wrapper">
                         <img src="./assets/work-cases-slider/gates/2.jpg" alt="gate" class="card__img">
                       </div>
@@ -296,7 +296,7 @@
                     </div>
                   </div>
                   <div class="work-cases__gates-slide swiper-slide">
-                    <div data-modal-target="#modal-order" class="work-cases__card">
+                    <div data-modal-target="#modal-order-gates" class="work-cases__card">
                       <div class="card__img-wrapper">
                         <img src="./assets/work-cases-slider/gates/3.jpg" alt="gate" class="card__img">
                       </div>
@@ -334,10 +334,16 @@
             <img src="./assets/our-work-slider/1.jpg" alt="slide" class="slide-card__img">
           </div>
           <div class="slide-card swiper-slide">
+            <img src="./assets/our-work-slider/3.jpg" alt="slide" class="slide-card__img">
+          </div>
+          <div class="slide-card swiper-slide">
             <img src="./assets/our-work-slider/2.jpg" alt="slide" class="slide-card__img">
           </div>
           <div class="slide-card swiper-slide">
             <img src="./assets/our-work-slider/3.jpg" alt="slide" class="slide-card__img">
+          </div>
+          <div class="slide-card swiper-slide">
+            <img src="./assets/our-work-slider/2.jpg" alt="slide" class="slide-card__img">
           </div>
         </div>
         <div class="slider-button swiper-button-prev"></div>
@@ -488,6 +494,39 @@
                     <img src="./assets/icons/logo.svg" alt="photo" class="person__photo">
                   </div>
                   <div class="person__info">
+                    <h5 class="name">Игорь</h5>
+                  </div>
+                </div>
+                <div class="stars">
+                  <img src="./assets/icons/Star.svg" alt="star" class="star">
+                  <img src="./assets/icons/Star.svg" alt="star" class="star">
+                  <img src="./assets/icons/Star.svg" alt="star" class="star">
+                  <img src="./assets/icons/Star.svg" alt="star" class="star">
+                  <img src="./assets/icons/Star.svg" alt="star" class="star">
+                </div>
+              </div>
+              <div class="slide__bottom">
+                <div class="quote-wrapper">
+                  <img src="./assets/icons/quotes.svg" alt="quote" class="quote">
+                </div>
+                <p class="quote-text">
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Eu donec mauris, amet, et sit amet
+                  ullamcorper.
+                  Ut ultricies vitae aliquam semper dui pretium amet duis adipiscing. Cursus ut eget aliquet nibh
+                  lobortis
+                  hendrerit blandit.
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="slide-card swiper-slide">
+            <div class="feed-back__slide">
+              <div class="slide__top">
+                <div class="person">
+                  <div class="person__photo-wrapper">
+                    <img src="./assets/icons/logo.svg" alt="photo" class="person__photo">
+                  </div>
+                  <div class="person__info">
                     <h5 class="name">Валентина</h5>
                   </div>
                 </div>
@@ -555,18 +594,18 @@
     <section id="connection" class="connection">
       <div class="container">
         <h3 class="connection__header">
-          наши специалисты ответят на все ваши вопросы
+          наши специалисты свяжутся с вами и ответят на все ваши вопросы
         </h3>
         <div class="connection__content">
           <form action="" class="connection__form">
-            <label class="connection__lable" for="name">Имя</label>
+            <label class="connection__lable" for="name">Ваше имя</label>
             <input class="connection__input" type="text" id="name" name="name" placeholder="Введите имя">
             <label class="connection__lable " for="phone">Телефон</label>
-            <input class="connection__input" type="text" id="phone" name="phone" placeholder="+_ (___) ___-____">
+            <input class="connection__input" type="text" id="phone" name="phone" placeholder="+375(__) ___-__-__" required>
             <label class="connection__lable " for="description">Описание</label>
             <textarea name="description" id="description" rows="4" maxlength="200" class="connection__textarea"
-              placeholder="Кратко опишите критерии проекта: виды работ, желаемая стоимость, материалы"></textarea>
-            <button class="connection__button" type="submit" value="Submit">Записаться на консультацию</button>
+              placeholder="Кратко опишите параметры проекта (длинна, высота, материал) и мы подберём для Вас лучший вариант!"></textarea>
+            <button class="connection__button" type="submit" value="Submit">Заказать звонок</button>
           </form>
           <div class="connection__image-wrapper">
             <img src="./assets/images/connection.jpg" alt="" class="connection__image">
@@ -694,7 +733,7 @@
               <div class="notes">
                 <p class="note">* Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vitae mattis eu quis leo enim
                   amet egestas ut.</p>
-                <p class="note">* Все цены не являются публичной офертой.</p>
+                <p class="note">* Представленные цены не являются публичным договором.</p>
               </div>
               <div class="colors">
                 <h6 class="colors__header">Цвета:</h6>
@@ -741,8 +780,8 @@
                   </div>
                 </div>
               </div>
-              <p class="note">* Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nisl fermentum lectus mattis
-                odio eleifend imperdiet odio enim.</p>
+              <p class="note">* Полную палитру и варианты цветов можно посмотреть у наших технических специалистов.</p>
+              <p class="note">* В зависимости от цветовой гаммы вашего устройства, цвета на сайте могут отличаться.</p>
             </div>
           </div>
         </div>
@@ -780,7 +819,7 @@
               <div class="notes">
                 <p class="note">* Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vitae mattis eu quis leo enim
                   amet egestas ut.</p>
-                <p class="note">* Все цены не являются публичной офертой.</p>
+                <p class="note">* Представленные цены не являются публичным договором.</p>
               </div>
               <div class="colors">
                 <h6 class="colors__header">Цвета:</h6>
@@ -827,8 +866,8 @@
                   </div>
                 </div>
               </div>
-              <p class="note">* Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nisl fermentum lectus mattis
-                odio eleifend imperdiet odio enim.</p>
+              <p class="note">* Полную палитру и варианты цветов можно посмотреть у наших технических специалистов.</p>
+              <p class="note">* В зависимости от цветовой гаммы вашего устройства, цвета на сайте могут отличаться.</p>
             </div>
           </div>
         </div>
@@ -866,7 +905,7 @@
               <div class="notes">
                 <p class="note">* Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vitae mattis eu quis leo enim
                   amet egestas ut.</p>
-                <p class="note">* Все цены не являются публичной офертой.</p>
+                <p class="note">* Представленные цены не являются публичным договором.</p>
               </div>
               <div class="colors">
                 <h6 class="colors__header">Цвета:</h6>
@@ -913,8 +952,8 @@
                   </div>
                 </div>
               </div>
-              <p class="note">* Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nisl fermentum lectus mattis
-                odio eleifend imperdiet odio enim.</p>
+              <p class="note">* Полную палитру и варианты цветов можно посмотреть у наших технических специалистов.</p>
+              <p class="note">* В зависимости от цветовой гаммы вашего устройства, цвета на сайте могут отличаться.</p>
             </div>
           </div>
         </div>
@@ -966,7 +1005,7 @@
               <div class="notes">
                 <p class="note">* Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vitae mattis eu quis leo enim
                   amet egestas ut.</p>
-                <p class="note">* Все цены не являются публичной офертой.</p>
+                <p class="note">* Представленные цены не являются публичным договором.</p>
               </div>
               <div class="colors">
                 <h6 class="colors__header">Цвета:</h6>
@@ -1013,8 +1052,8 @@
                   </div>
                 </div>
               </div>
-              <p class="note">* Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nisl fermentum lectus mattis
-                odio eleifend imperdiet odio enim.</p>
+              <p class="note">* Полную палитру и варианты цветов можно посмотреть у наших технических специалистов.</p>
+              <p class="note">* В зависимости от цветовой гаммы вашего устройства, цвета на сайте могут отличаться.</p>
             </div>
           </div>
         </div>
@@ -1052,7 +1091,7 @@
               <div class="notes">
                 <p class="note">* Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vitae mattis eu quis leo enim
                   amet egestas ut.</p>
-                <p class="note">* Все цены не являются публичной офертой.</p>
+                <p class="note">* Представленные цены не являются публичным договором.</p>
               </div>
               <div class="colors">
                 <h6 class="colors__header">Цвета:</h6>
@@ -1099,8 +1138,8 @@
                   </div>
                 </div>
               </div>
-              <p class="note">* Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nisl fermentum lectus mattis
-                odio eleifend imperdiet odio enim.</p>
+              <p class="note">* Полную палитру и варианты цветов можно посмотреть у наших технических специалистов.</p>
+              <p class="note">* В зависимости от цветовой гаммы вашего устройства, цвета на сайте могут отличаться.</p>
             </div>
           </div>
         </div>
@@ -1138,7 +1177,7 @@
               <div class="notes">
                 <p class="note">* Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vitae mattis eu quis leo enim
                   amet egestas ut.</p>
-                <p class="note">* Все цены не являются публичной офертой.</p>
+                <p class="note">* Представленные цены не являются публичным договором.</p>
               </div>
               <div class="colors">
                 <h6 class="colors__header">Цвета:</h6>
@@ -1185,8 +1224,8 @@
                   </div>
                 </div>
               </div>
-              <p class="note">* Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nisl fermentum lectus mattis
-                odio eleifend imperdiet odio enim.</p>
+              <p class="note">* Полную палитру и варианты цветов можно посмотреть у наших технических специалистов.</p>
+              <p class="note">* В зависимости от цветовой гаммы вашего устройства, цвета на сайте могут отличаться.</p>
             </div>
           </div>
         </div>
@@ -1238,7 +1277,7 @@
               <div class="notes">
                 <p class="note">* Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vitae mattis eu quis leo enim
                   amet egestas ut.</p>
-                <p class="note">* Все цены не являются публичной офертой.</p>
+                <p class="note">* Представленные цены не являются публичным договором.</p>
               </div>
               <div class="colors">
                 <h6 class="colors__header">Цвета:</h6>
@@ -1285,8 +1324,8 @@
                   </div>
                 </div>
               </div>
-              <p class="note">* Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nisl fermentum lectus mattis
-                odio eleifend imperdiet odio enim.</p>
+              <p class="note">* Полную палитру и варианты цветов можно посмотреть у наших технических специалистов.</p>
+              <p class="note">* В зависимости от цветовой гаммы вашего устройства, цвета на сайте могут отличаться.</p>
             </div>
           </div>
         </div>
@@ -1324,7 +1363,7 @@
               <div class="notes">
                 <p class="note">* Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vitae mattis eu quis leo enim
                   amet egestas ut.</p>
-                <p class="note">* Все цены не являются публичной офертой.</p>
+                <p class="note">* Представленные цены не являются публичным договором.</p>
               </div>
               <div class="colors">
                 <h6 class="colors__header">Цвета:</h6>
@@ -1371,8 +1410,8 @@
                   </div>
                 </div>
               </div>
-              <p class="note">* Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nisl fermentum lectus mattis
-                odio eleifend imperdiet odio enim.</p>
+              <p class="note">* Полную палитру и варианты цветов можно посмотреть у наших технических специалистов.</p>
+              <p class="note">* В зависимости от цветовой гаммы вашего устройства, цвета на сайте могут отличаться.</p>
             </div>
           </div>
         </div>
@@ -1410,7 +1449,7 @@
               <div class="notes">
                 <p class="note">* Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vitae mattis eu quis leo enim
                   amet egestas ut.</p>
-                <p class="note">* Все цены не являются публичной офертой.</p>
+                <p class="note">* Представленные цены не являются публичным договором.</p>
               </div>
               <div class="colors">
                 <h6 class="colors__header">Цвета:</h6>
@@ -1457,8 +1496,8 @@
                   </div>
                 </div>
               </div>
-              <p class="note">* Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nisl fermentum lectus mattis
-                odio eleifend imperdiet odio enim.</p>
+              <p class="note">* Полную палитру и варианты цветов можно посмотреть у наших технических специалистов.</p>
+              <p class="note">* В зависимости от цветовой гаммы вашего устройства, цвета на сайте могут отличаться.</p>
             </div>
           </div>
         </div>
@@ -1472,13 +1511,47 @@
     </button>
     <div class="modal__content">
       <form action="" class="modal__form">
+        <label class="modal__lable" for="modal-name">Ваше имя</label>
+        <input class="modal__input" type="text" id="modal-name" name="modal-name" placeholder="Введите имя">
+        <label class="modal__lable " for="modal-phone">Телефон</label>
+        <input class="modal__input" type="text" id="modal-phone" name="modal-phone" placeholder="+375(__) ___-__-__" required>
+        <label class="modal__lable " for="modal-description">Описание</label>
+        <textarea name="description" id="modal-description" rows="4" maxlength="200" class="modal__textarea"
+          placeholder="Кратко опишите параметры проекта (длинна, высота, материал) и мы подберём для Вас лучший вариант!"></textarea>
+        <button class="modal__button" type="submit" value="Submit">Заказать звонок</button>
+      </form>
+    </div>
+  </div>
+  <div class="modal" id="modal-order-your-version">
+    <button data-close-button class="close-button">
+      <img src="./assets/icons/close-cross.svg" alt="close" class="close-button__img">
+    </button>
+    <div class="modal__content">
+      <form action="" class="modal__form">
         <label class="modal__lable" for="modal-name">Имя</label>
         <input class="modal__input" type="text" id="modal-name" name="modal-name" placeholder="Введите имя">
         <label class="modal__lable " for="modal-phone">Телефон</label>
-        <input class="modal__input" type="text" id="modal-phone" name="modal-phone" placeholder="+_ (___) ___-____">
+        <input class="modal__input" type="text" id="modal-phone" name="modal-phone" placeholder="+375(__) ___-__-__" required>
         <label class="modal__lable " for="modal-description">Описание</label>
         <textarea name="description" id="modal-description" rows="4" maxlength="200" class="modal__textarea"
-          placeholder="Кратко опишите критерии проекта: виды работ, желаемая стоимость, материалы"></textarea>
+          placeholder="Кратко опишите параметры желаемого забора (длинна, высота, материал) и мы подберём для Вас лучший вариант!"></textarea>
+        <button class="modal__button" type="submit" value="Submit">Заказать звонок</button>
+      </form>
+    </div>
+  </div>
+  <div class="modal" id="modal-order-gates">
+    <button data-close-button class="close-button">
+      <img src="./assets/icons/close-cross.svg" alt="close" class="close-button__img">
+    </button>
+    <div class="modal__content">
+      <form action="" class="modal__form">
+        <label class="modal__lable" for="modal-name">Имя</label>
+        <input class="modal__input" type="text" id="modal-name" name="modal-name" placeholder="Введите имя">
+        <label class="modal__lable " for="modal-phone">Телефон</label>
+        <input class="modal__input" type="text" id="modal-phone" name="modal-phone" placeholder="+375(__) ___-__-__" required>
+        <label class="modal__lable " for="modal-description">Описание</label>
+        <textarea name="description" id="modal-description" rows="4" maxlength="200" class="modal__textarea"
+          placeholder="Кратко опишите параметры ворот или калитки (ширина, высота, материал заполнения) и мы подберём для Вас лучший вариант!"></textarea>
         <button class="modal__button" type="submit" value="Submit">Заказать звонок</button>
       </form>
     </div>
