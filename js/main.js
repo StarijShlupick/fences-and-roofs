@@ -41,7 +41,7 @@ const workCasesFencesSlider = new Swiper('.work-cases__fences-slider', {
     620: {
       slidesPerView: 0.93,
     },
-    300: {
+    270: {
       slidesPerView: 0.93,
     }
   }
@@ -89,7 +89,7 @@ const workCasesGatesSlider = new Swiper('.work-cases__gates-slider', {
     620: {
       slidesPerView: 0.93,
     },
-    300: {
+    270: {
       slidesPerView: 0.93,
     }
   }
@@ -123,7 +123,7 @@ const feedbackSwiper = new Swiper('.feedback-slider', {
       slidesPerView: 1.2,
       spaceBetween: 99,
     },
-    300: {
+    270: {
       slidesPerView: 1.15,
       spaceBetween: 99,
     }
@@ -158,7 +158,7 @@ const ourWorkSwiper = new Swiper('.our-work-slider', {
       slidesPerView: 1.2,
       spaceBetween: 99,
     },
-    300: {
+    270: {
       slidesPerView: 1.15,
       spaceBetween: 99,
     }
