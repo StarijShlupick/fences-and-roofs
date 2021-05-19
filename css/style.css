@@ -1,3 +1,4 @@
+@charset "UTF-8";
 html {
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
@@ -229,13 +230,13 @@ button {
 
 .phone .phone__call {
   margin-right: 27px;
-  margin-bottom: 16px;
   font-weight: bold;
   font-size: 2.7rem;
   line-height: 3.7rem;
 }
 
 .phone .phone__recall {
+  margin-top: 16px;
   font-size: 2rem;
   line-height: 2.7rem;
   -webkit-text-decoration-line: underline;
@@ -255,12 +256,13 @@ button {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
-  -webkit-box-align: end;
-      -ms-flex-align: end;
-          align-items: flex-end;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
 .about .container .header-content {
+  margin-top: 150px;
   max-width: 698px;
 }
 
@@ -296,6 +298,7 @@ button {
 }
 
 .about .container .about__img {
+  margin-top: 100px;
   width: 938px;
   height: 1062px;
   display: block;
@@ -336,6 +339,10 @@ button {
   cursor: pointer;
 }
 
+.work-cases .nav__item:hover {
+  background-color: #ffe600;
+}
+
 .work-cases .nav__item.--active {
   color: #1f1f1f;
   font-weight: 600;
@@ -344,11 +351,13 @@ button {
           box-shadow: 5px -2px 25px rgba(255, 255, 255, 0.5);
   border: none;
   border-radius: 100px;
+  -webkit-box-shadow: -2.09231px 46.0308px 70.0923px -29.2923px rgba(255, 230, 0, 0.89), inset 1.04615px -9.41538px 12.5538px rgba(0, 0, 0, 0.13), inset 5.23077px -2.09231px 26.1538px rgba(255, 255, 255, 0.5);
+          box-shadow: -2.09231px 46.0308px 70.0923px -29.2923px rgba(255, 230, 0, 0.89), inset 1.04615px -9.41538px 12.5538px rgba(0, 0, 0, 0.13), inset 5.23077px -2.09231px 26.1538px rgba(255, 255, 255, 0.5);
 }
 
 .work-cases .nav__item.--active:hover {
-  -webkit-box-shadow: none;
-          box-shadow: none;
+  -webkit-box-shadow: -2.09231px 46.0308px 70.0923px -29.2923px rgba(255, 230, 0, 0.89), inset 1.04615px -9.41538px 12.5538px rgba(0, 0, 0, 0.13), inset 5.23077px -2.09231px 26.1538px rgba(255, 255, 255, 0.5);
+          box-shadow: -2.09231px 46.0308px 70.0923px -29.2923px rgba(255, 230, 0, 0.89), inset 1.04615px -9.41538px 12.5538px rgba(0, 0, 0, 0.13), inset 5.23077px -2.09231px 26.1538px rgba(255, 255, 255, 0.5);
 }
 
 .work-cases .tab {
@@ -376,6 +385,17 @@ button {
   transition: -webkit-transform 0.3s;
   transition: transform 0.3s;
   transition: transform 0.3s, -webkit-transform 0.3s;
+}
+
+.work-cases__card.sales::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: -3px;
+  width: 140px;
+  height: 140px;
+  background-image: url("../assets/images/sales.png");
+  background-size: contain;
 }
 
 .work-cases__card::before {
@@ -416,6 +436,18 @@ button {
 .work-cases__card .card__content {
   padding: 18px 28px 0 30px;
   color: #000000;
+}
+
+.work-cases__card .card__content.sales-banner::before {
+  content: "-10%";
+  position: absolute;
+  left: 3.26%;
+  bottom: 2.88%;
+  font-size: 30px;
+  background: #ffe600;
+  border-radius: 100px;
+  padding: 0 5px;
+  z-index: 4;
 }
 
 .work-cases__card .card__content .card__header {
@@ -516,6 +548,8 @@ button {
 .promotion .promotion__content .promotion-card__img {
   display: block;
   margin: auto;
+  width: 262px;
+  height: 262px;
   -webkit-transform: scale(1.05);
           transform: scale(1.05);
   -o-object-fit: cover;
@@ -558,6 +592,7 @@ button {
 .principles .principles__content .principles-card {
   margin-top: 120px;
   width: 279px;
+  padding: 0 20px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -587,6 +622,8 @@ button {
 
 .principles .principles__content .principles-card__img {
   display: block;
+  max-width: 215px;
+  max-height: 146px;
   -webkit-transition: ease-in-out 0.5s;
   transition: ease-in-out 0.5s;
 }
@@ -594,7 +631,7 @@ button {
 .principles .principles__content .principles-card__text {
   margin-top: 38.8px;
   text-align: center;
-  font-size: 3.6rem;
+  font-size: 3rem;
   line-height: 118.68%;
 }
 
@@ -689,16 +726,15 @@ button {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  width: 142px;
-  height: 142px;
+  width: 100px;
+  height: 100px;
   margin-right: 46px;
-  border-radius: 100%;
   overflow: hidden;
 }
 
 .feedback .slide__top .person__photo-wrapper .person__photo {
   display: block;
-  width: 142px;
+  width: 100%;
   margin: auto;
   -o-object-fit: cover;
      object-fit: cover;
@@ -1047,6 +1083,7 @@ button {
   width: 29px;
   height: 29px;
   background-image: url(../assets/icons/adress.svg);
+  background-size: 100%;
   left: 0;
   top: 5px;
 }
@@ -1057,6 +1094,7 @@ button {
   width: 31px;
   height: 31px;
   background-image: url(../assets/icons/email.svg);
+  background-size: 100%;
   left: 0;
   top: 5px;
 }
@@ -1080,11 +1118,11 @@ button {
 }
 
 .footer .phone__call {
-  margin-bottom: 8px;
   color: #000000;
 }
 
 .footer .phone__recall {
+  margin-top: 8px;
   margin-bottom: 20px;
   color: #000000;
 }
@@ -1211,50 +1249,30 @@ button {
 }
 
 .modal .modal-tab .tab__content {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
+  overflow-y: auto;
   width: 65%;
-  padding: 60px 20px 0 20px;
+  margin-top: 60px;
+  padding: 0px 20px 0 20px;
 }
 
 .modal .modal-tab .tab__content .content__top,
 .modal .modal-tab .tab__content .content__bottom {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
   font-weight: normal;
   font-size: 1.6rem;
   line-height: 121.68%;
 }
 
-.modal .modal-tab .tab__content .content__top {
-  height: 50%;
+.modal .modal-tab .tab__content .content__top .modal-description {
+  padding-top: 25px;
+  position: relative;
 }
 
-.modal .modal-tab .tab__content .content__top .modal-description {
-  overflow: hidden;
-  text-overflow: ellipsis;
-  display: -moz-box;
-  display: -webkit-box;
-  -webkit-line-clamp: 5;
-  -webkit-box-orient: vertical;
-  line-clamp: 5;
-  box-orient: vertical;
+.modal .modal-tab .tab__content .content__top .modal-description::before {
+  content: "Описание:";
+  position: absolute;
+  top: 0;
+  left: 0;
+  font-weight: 700;
 }
 
 .modal .modal-tab .tab__content .content__top table {
@@ -1266,7 +1284,7 @@ button {
   -webkit-box-shadow: 0 0 0 3px #1f1f1f;
           box-shadow: 0 0 0 3px #1f1f1f;
   text-align: center;
-  margin-bottom: 50px;
+  margin: 30px 0;
 }
 
 .modal .modal-tab .tab__content .content__top th,
@@ -1279,23 +1297,13 @@ button {
   border-left: 3px solid #1f1f1f;
 }
 
-.modal .modal-tab .tab__content .content__bottom {
-  height: 50%;
-}
-
 .modal .modal-tab .tab__content .content__bottom .notes .note + .note {
   margin-top: 9px;
 }
 
-.modal .modal-tab .tab__content .content__bottom .note {
-  overflow: hidden;
-  text-overflow: ellipsis;
-  display: -moz-box;
-  display: -webkit-box;
-  -webkit-line-clamp: 3;
-  -webkit-box-orient: vertical;
-  line-clamp: 3;
-  box-orient: vertical;
+.modal .modal-tab .tab__content .content__bottom .colors {
+  margin-top: 20px;
+  margin-bottom: 20px;
 }
 
 .modal .modal-tab .tab__content .content__bottom .colors__header {
@@ -1405,7 +1413,9 @@ button {
   pointer-events: all;
 }
 
-#modal-order {
+#modal-order,
+#modal-order-your-version,
+#modal-order-gates {
   left: 250%;
   -webkit-transform: translate(-50%, -50%);
           transform: translate(-50%, -50%);
@@ -1414,11 +1424,15 @@ button {
   transition: left 0.5s;
 }
 
-#modal-order.--active {
+#modal-order.--active,
+#modal-order-your-version.--active,
+#modal-order-gates.--active {
   left: 50%;
 }
 
-#modal-order .modal__content {
+#modal-order .modal__content,
+#modal-order-your-version .modal__content,
+#modal-order-gates .modal__content {
   width: 100%;
   height: 100%;
   padding: 20px;
@@ -1437,7 +1451,9 @@ button {
           align-items: center;
 }
 
-#modal-order .modal__content .modal__form {
+#modal-order .modal__content .modal__form,
+#modal-order-your-version .modal__content .modal__form,
+#modal-order-gates .modal__content .modal__form {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1452,48 +1468,70 @@ button {
 #modal-order .modal__content .modal__form .modal__lable,
 #modal-order .modal__content .modal__form .modal__input,
 #modal-order .modal__content .modal__form .modal__button,
-#modal-order .modal__content .modal__form .modal__textarea {
+#modal-order .modal__content .modal__form .modal__textarea,
+#modal-order-your-version .modal__content .modal__form .modal__lable,
+#modal-order-your-version .modal__content .modal__form .modal__input,
+#modal-order-your-version .modal__content .modal__form .modal__button,
+#modal-order-your-version .modal__content .modal__form .modal__textarea,
+#modal-order-gates .modal__content .modal__form .modal__lable,
+#modal-order-gates .modal__content .modal__form .modal__input,
+#modal-order-gates .modal__content .modal__form .modal__button,
+#modal-order-gates .modal__content .modal__form .modal__textarea {
   display: inline-block;
 }
 
-#modal-order .modal__content .modal__form .modal__lable {
+#modal-order .modal__content .modal__form .modal__lable,
+#modal-order-your-version .modal__content .modal__form .modal__lable,
+#modal-order-gates .modal__content .modal__form .modal__lable {
   font-size: 2.5rem;
   line-height: 3.5rem;
-  margin-bottom: 12px;
+  margin-bottom: 5px;
 }
 
-#modal-order .modal__content .modal__form .modal__input {
+#modal-order .modal__content .modal__form .modal__input,
+#modal-order-your-version .modal__content .modal__form .modal__input,
+#modal-order-gates .modal__content .modal__form .modal__input {
   padding: 20px 26px;
   font-size: 2rem;
   line-height: 2.5rem;
-  margin-bottom: 30px;
+  margin-bottom: 15px;
 }
 
-#modal-order .modal__content .modal__form .modal__input::-webkit-input-placeholder {
+#modal-order .modal__content .modal__form .modal__input::-webkit-input-placeholder,
+#modal-order-your-version .modal__content .modal__form .modal__input::-webkit-input-placeholder,
+#modal-order-gates .modal__content .modal__form .modal__input::-webkit-input-placeholder {
   color: #5f5f5f;
   font-size: 2rem;
   line-height: 2.5rem;
 }
 
-#modal-order .modal__content .modal__form .modal__input:-ms-input-placeholder {
+#modal-order .modal__content .modal__form .modal__input:-ms-input-placeholder,
+#modal-order-your-version .modal__content .modal__form .modal__input:-ms-input-placeholder,
+#modal-order-gates .modal__content .modal__form .modal__input:-ms-input-placeholder {
   color: #5f5f5f;
   font-size: 2rem;
   line-height: 2.5rem;
 }
 
-#modal-order .modal__content .modal__form .modal__input::-ms-input-placeholder {
+#modal-order .modal__content .modal__form .modal__input::-ms-input-placeholder,
+#modal-order-your-version .modal__content .modal__form .modal__input::-ms-input-placeholder,
+#modal-order-gates .modal__content .modal__form .modal__input::-ms-input-placeholder {
   color: #5f5f5f;
   font-size: 2rem;
   line-height: 2.5rem;
 }
 
-#modal-order .modal__content .modal__form .modal__input::placeholder {
+#modal-order .modal__content .modal__form .modal__input::placeholder,
+#modal-order-your-version .modal__content .modal__form .modal__input::placeholder,
+#modal-order-gates .modal__content .modal__form .modal__input::placeholder {
   color: #5f5f5f;
   font-size: 2rem;
   line-height: 2.5rem;
 }
 
-#modal-order .modal__content .modal__form .modal__textarea {
+#modal-order .modal__content .modal__form .modal__textarea,
+#modal-order-your-version .modal__content .modal__form .modal__textarea,
+#modal-order-gates .modal__content .modal__form .modal__textarea {
   overflow: auto;
   resize: none;
   padding: 20px 26px;
@@ -1502,36 +1540,48 @@ button {
   margin-bottom: 30px;
 }
 
-#modal-order .modal__content .modal__form .modal__textarea::-webkit-input-placeholder {
+#modal-order .modal__content .modal__form .modal__textarea::-webkit-input-placeholder,
+#modal-order-your-version .modal__content .modal__form .modal__textarea::-webkit-input-placeholder,
+#modal-order-gates .modal__content .modal__form .modal__textarea::-webkit-input-placeholder {
   color: #5f5f5f;
   font-size: 2rem;
   line-height: 2.5rem;
 }
 
-#modal-order .modal__content .modal__form .modal__textarea:-ms-input-placeholder {
+#modal-order .modal__content .modal__form .modal__textarea:-ms-input-placeholder,
+#modal-order-your-version .modal__content .modal__form .modal__textarea:-ms-input-placeholder,
+#modal-order-gates .modal__content .modal__form .modal__textarea:-ms-input-placeholder {
   color: #5f5f5f;
   font-size: 2rem;
   line-height: 2.5rem;
 }
 
-#modal-order .modal__content .modal__form .modal__textarea::-ms-input-placeholder {
+#modal-order .modal__content .modal__form .modal__textarea::-ms-input-placeholder,
+#modal-order-your-version .modal__content .modal__form .modal__textarea::-ms-input-placeholder,
+#modal-order-gates .modal__content .modal__form .modal__textarea::-ms-input-placeholder {
   color: #5f5f5f;
   font-size: 2rem;
   line-height: 2.5rem;
 }
 
-#modal-order .modal__content .modal__form .modal__textarea::placeholder {
+#modal-order .modal__content .modal__form .modal__textarea::placeholder,
+#modal-order-your-version .modal__content .modal__form .modal__textarea::placeholder,
+#modal-order-gates .modal__content .modal__form .modal__textarea::placeholder {
   color: #5f5f5f;
   font-size: 2rem;
   line-height: 2.5rem;
 }
 
-#modal-order .modal__content .modal__form .modal__textarea:focus {
+#modal-order .modal__content .modal__form .modal__textarea:focus,
+#modal-order-your-version .modal__content .modal__form .modal__textarea:focus,
+#modal-order-gates .modal__content .modal__form .modal__textarea:focus {
   border-radius: 0px;
 }
 
-#modal-order .modal__content .modal__form .modal__button {
-  margin-top: 50px;
+#modal-order .modal__content .modal__form .modal__button,
+#modal-order-your-version .modal__content .modal__form .modal__button,
+#modal-order-gates .modal__content .modal__form .modal__button {
+  margin-top: 20px;
   color: #1f1f1f;
   font-weight: 600;
   background-color: #ffe600;
@@ -1548,7 +1598,9 @@ button {
   padding: 46px 54px 47px 54px;
 }
 
-#modal-order .modal__content .modal__form .modal__button:hover {
+#modal-order .modal__content .modal__form .modal__button:hover,
+#modal-order-your-version .modal__content .modal__form .modal__button:hover,
+#modal-order-gates .modal__content .modal__form .modal__button:hover {
   -webkit-box-shadow: -2.09231px 46.0308px 70.0923px -29.2923px rgba(255, 230, 0, 0.89), inset 1.04615px -9.41538px 12.5538px rgba(0, 0, 0, 0.13), inset 5.23077px -2.09231px 26.1538px rgba(255, 255, 255, 0.5);
           box-shadow: -2.09231px 46.0308px 70.0923px -29.2923px rgba(255, 230, 0, 0.89), inset 1.04615px -9.41538px 12.5538px rgba(0, 0, 0, 0.13), inset 5.23077px -2.09231px 26.1538px rgba(255, 255, 255, 0.5);
 }
@@ -1573,7 +1625,8 @@ button {
   transition: -webkit-box-shadow 0.3s;
   transition: box-shadow 0.3s;
   transition: box-shadow 0.3s, -webkit-box-shadow 0.3s;
-  background-color: #74f052;
+  -webkit-animation: color 5s infinite;
+  animation: color 5s infinite;
 }
 
 .need-help:hover {
@@ -1585,8 +1638,8 @@ button {
   display: block;
   width: 40px;
   height: 40px;
-  -webkit-animation: ring 2s ease-in-out 3;
-  animation: ring 2s ease-in-out 3;
+  -webkit-animation: ring 3s ease-in-out infinite;
+  animation: ring 3s ease-in-out infinite;
 }
 
 .header__menu-burger {
@@ -1758,11 +1811,33 @@ button {
   }
 }
 
-@media (max-width: 1880px) {
-  .work-cases__fences-slider .slider-button,
-  .work-cases__gates-slider .slider-button {
-    top: 45%;
-    display: block;
+@-webkit-keyframes color {
+  0% {
+    background-color: #74f052;
+  }
+  33% {
+    background-color: #5274f0;
+  }
+  67% {
+    background-color: #f05274;
+  }
+  100% {
+    background-color: #74f052;
+  }
+}
+
+@keyframes color {
+  0% {
+    background-color: #74f052;
+  }
+  33% {
+    background-color: #5274f0;
+  }
+  67% {
+    background-color: #f05274;
+  }
+  100% {
+    background-color: #74f052;
   }
 }
 
@@ -1775,6 +1850,9 @@ button {
 
 @media (max-width: 1580px) {
   .about .container {
+    -webkit-box-align: end;
+        -ms-flex-align: end;
+            align-items: flex-end;
     background-image: url("../assets/images/start-bg.png");
     background-repeat: no-repeat;
     background-position-x: right;
@@ -1782,7 +1860,7 @@ button {
     background-size: 45%;
   }
   .about .container .header-content {
-    margin-top: 240px;
+    margin-top: 24%;
   }
   .about .container .about__img-wrapper {
     display: none;
@@ -1790,6 +1868,14 @@ button {
   .work-cases__fences-slider,
   .work-cases__gates-slider {
     padding: 100px 50px;
+  }
+}
+
+@media (max-width: 1400px) {
+  .work-cases__fences-slider .slider-button,
+  .work-cases__gates-slider .slider-button {
+    top: 45%;
+    display: block;
   }
 }
 
@@ -1846,9 +1932,24 @@ button {
   .modal .modal-tabs .modal-tabs__content .modal-tab .tab__images {
     display: none;
   }
+  .modal .modal-tabs .modal-tabs__content .modal-tab .tab__content {
+    width: 95%;
+  }
+}
+
+@media (max-width: 1000px) {
+  .header .container .header-top .messengers {
+    display: none;
+  }
+  .header-bottom .phone {
+    display: none;
+  }
 }
 
 @media (max-width: 870px) {
+  .about .container .header-content {
+    margin-top: 240px;
+  }
   .slide-card {
     height: 400px;
   }
@@ -1967,7 +2068,7 @@ button {
             align-items: center;
   }
   .footer .container .contacts .phone .phone__call {
-    margin: 8px 0px;
+    margin: 0px 0px;
   }
   .footer .container .contacts .phone .messengers {
     margin: 0;
@@ -1997,68 +2098,93 @@ button {
   }
   .modal.--active .modal-tabs .modal-tab .tab__content {
     width: 100%;
-    padding: 50px 20px 0 20px;
-  }
-  .modal.--active .modal-tabs .modal-tab .tab__content .content__top {
-    height: 40%;
-  }
-  .modal.--active .modal-tabs .modal-tab .tab__content .content__bottom {
-    height: 60%;
   }
   .modal.--active .modal-tabs .modal-tab .tab__images {
     display: none;
   }
-  #modal-order .modal__content .modal__form .modal__lable {
+  #modal-order .modal__content .modal__form .modal__lable,
+  #modal-order-your-version .modal__content .modal__form .modal__lable,
+  #modal-order-gates .modal__content .modal__form .modal__lable {
     margin-bottom: 6px;
     font-size: 3rem;
     padding: 10px 15px;
   }
-  #modal-order .modal__content .modal__form .modal__lable::-webkit-input-placeholder {
+  #modal-order .modal__content .modal__form .modal__lable::-webkit-input-placeholder,
+  #modal-order-your-version .modal__content .modal__form .modal__lable::-webkit-input-placeholder,
+  #modal-order-gates .modal__content .modal__form .modal__lable::-webkit-input-placeholder {
     font-size: 3rem;
   }
-  #modal-order .modal__content .modal__form .modal__lable:-ms-input-placeholder {
+  #modal-order .modal__content .modal__form .modal__lable:-ms-input-placeholder,
+  #modal-order-your-version .modal__content .modal__form .modal__lable:-ms-input-placeholder,
+  #modal-order-gates .modal__content .modal__form .modal__lable:-ms-input-placeholder {
     font-size: 3rem;
   }
-  #modal-order .modal__content .modal__form .modal__lable::-ms-input-placeholder {
+  #modal-order .modal__content .modal__form .modal__lable::-ms-input-placeholder,
+  #modal-order-your-version .modal__content .modal__form .modal__lable::-ms-input-placeholder,
+  #modal-order-gates .modal__content .modal__form .modal__lable::-ms-input-placeholder {
     font-size: 3rem;
   }
-  #modal-order .modal__content .modal__form .modal__lable::placeholder {
+  #modal-order .modal__content .modal__form .modal__lable::placeholder,
+  #modal-order-your-version .modal__content .modal__form .modal__lable::placeholder,
+  #modal-order-gates .modal__content .modal__form .modal__lable::placeholder {
     font-size: 3rem;
   }
-  #modal-order .modal__content .modal__form .modal__input {
+  #modal-order .modal__content .modal__form .modal__input,
+  #modal-order-your-version .modal__content .modal__form .modal__input,
+  #modal-order-gates .modal__content .modal__form .modal__input {
     margin-bottom: 15px;
     font-size: 2.5rem;
     padding: 10px 15px;
   }
-  #modal-order .modal__content .modal__form .modal__input::-webkit-input-placeholder {
+  #modal-order .modal__content .modal__form .modal__input::-webkit-input-placeholder,
+  #modal-order-your-version .modal__content .modal__form .modal__input::-webkit-input-placeholder,
+  #modal-order-gates .modal__content .modal__form .modal__input::-webkit-input-placeholder {
     font-size: 2.5rem;
   }
-  #modal-order .modal__content .modal__form .modal__input:-ms-input-placeholder {
+  #modal-order .modal__content .modal__form .modal__input:-ms-input-placeholder,
+  #modal-order-your-version .modal__content .modal__form .modal__input:-ms-input-placeholder,
+  #modal-order-gates .modal__content .modal__form .modal__input:-ms-input-placeholder {
     font-size: 2.5rem;
   }
-  #modal-order .modal__content .modal__form .modal__input::-ms-input-placeholder {
+  #modal-order .modal__content .modal__form .modal__input::-ms-input-placeholder,
+  #modal-order-your-version .modal__content .modal__form .modal__input::-ms-input-placeholder,
+  #modal-order-gates .modal__content .modal__form .modal__input::-ms-input-placeholder {
     font-size: 2.5rem;
   }
-  #modal-order .modal__content .modal__form .modal__input::placeholder {
+  #modal-order .modal__content .modal__form .modal__input::placeholder,
+  #modal-order-your-version .modal__content .modal__form .modal__input::placeholder,
+  #modal-order-gates .modal__content .modal__form .modal__input::placeholder {
     font-size: 2.5rem;
   }
-  #modal-order .modal__content .modal__form .modal__textarea {
+  #modal-order .modal__content .modal__form .modal__textarea,
+  #modal-order-your-version .modal__content .modal__form .modal__textarea,
+  #modal-order-gates .modal__content .modal__form .modal__textarea {
     font-size: 2.5rem;
     padding: 10px 15px;
   }
-  #modal-order .modal__content .modal__form .modal__textarea::-webkit-input-placeholder {
+  #modal-order .modal__content .modal__form .modal__textarea::-webkit-input-placeholder,
+  #modal-order-your-version .modal__content .modal__form .modal__textarea::-webkit-input-placeholder,
+  #modal-order-gates .modal__content .modal__form .modal__textarea::-webkit-input-placeholder {
     font-size: 2.5rem;
   }
-  #modal-order .modal__content .modal__form .modal__textarea:-ms-input-placeholder {
+  #modal-order .modal__content .modal__form .modal__textarea:-ms-input-placeholder,
+  #modal-order-your-version .modal__content .modal__form .modal__textarea:-ms-input-placeholder,
+  #modal-order-gates .modal__content .modal__form .modal__textarea:-ms-input-placeholder {
     font-size: 2.5rem;
   }
-  #modal-order .modal__content .modal__form .modal__textarea::-ms-input-placeholder {
+  #modal-order .modal__content .modal__form .modal__textarea::-ms-input-placeholder,
+  #modal-order-your-version .modal__content .modal__form .modal__textarea::-ms-input-placeholder,
+  #modal-order-gates .modal__content .modal__form .modal__textarea::-ms-input-placeholder {
     font-size: 2.5rem;
   }
-  #modal-order .modal__content .modal__form .modal__textarea::placeholder {
+  #modal-order .modal__content .modal__form .modal__textarea::placeholder,
+  #modal-order-your-version .modal__content .modal__form .modal__textarea::placeholder,
+  #modal-order-gates .modal__content .modal__form .modal__textarea::placeholder {
     font-size: 2.5rem;
   }
-  #modal-order .modal__content .modal__form .modal__button {
+  #modal-order .modal__content .modal__form .modal__button,
+  #modal-order-your-version .modal__content .modal__form .modal__button,
+  #modal-order-gates .modal__content .modal__form .modal__button {
     margin-top: 15px;
     padding: 30px;
   }
@@ -2122,9 +2248,8 @@ button {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
-    width: 100px;
-    height: 100px;
-    border-radius: 100%;
+    width: 50px;
+    height: 50px;
     overflow: hidden;
   }
   .feedback .slide__top .person__photo-wrapper .person__photo {
@@ -2201,9 +2326,6 @@ button {
   .header .header-top .messengers {
     display: none;
   }
-  .header .header-bottom .phone {
-    display: none;
-  }
   .header .header-bottom .header__menu-burger .phone {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -2276,15 +2398,20 @@ button {
   .footer {
     margin-top: 108px;
   }
+  .footer .logo-container__contacts .logo-container__link {
+    padding-left: 30px;
+  }
+  .footer .logo-container__contacts .logo-container__link:last-child::before {
+    width: 20px;
+    height: 20px;
+  }
+  .footer .logo-container__contacts .logo-container__link:first-child::before {
+    width: 20px;
+    height: 20px;
+  }
 }
 
 @media (max-width: 540px) {
-  .modal.--active .modal-tabs .modal-tab .tab__content .content__top {
-    height: 50%;
-  }
-  .modal.--active .modal-tabs .modal-tab .tab__content .content__bottom {
-    height: 50%;
-  }
   .modal .modal-tab .tab__content .content__top table {
     margin-bottom: 10px;
   }
@@ -2438,10 +2565,54 @@ button {
             align-items: center;
   }
   .footer .container .contacts .phone .phone__call {
-    margin: 8px 0px;
+    margin: 0px 0px;
   }
   .footer .container .contacts .phone .messengers {
     margin: 0;
+  }
+  .footer .logo-container__contacts .logo-container__link {
+    padding-left: 20px;
+  }
+  .footer .logo-container__contacts .logo-container__link:last-child::before {
+    width: 12px;
+    height: 12px;
+  }
+  .footer .logo-container__contacts .logo-container__link:first-child::before {
+    width: 12px;
+    height: 12px;
+  }
+  .header__menu-burger-list .header__menu-burger-li {
+    margin-bottom: 15px;
+  }
+  #modal-order,
+  #modal-order-your-version,
+  #modal-order-gates .modal__content .modal__form .modal__lable {
+    margin-bottom: 6px;
+    font-size: 3rem;
+    padding: 0px 15px;
+  }
+  .modal .modal-tab .tab__content .content__top th,
+  .modal .modal-tab .tab__content .content__top td {
+    padding: 5px 0;
+    border-bottom: 2px solid #1f1f1f;
+  }
+  .modal .modal-tab .tab__content .content__top table {
+    border-radius: 15px;
+    -webkit-box-shadow: 0 0 0 2px #1f1f1f;
+    box-shadow: 0 0 0 2px #1f1f1f;
+  }
+  .modal .modal-tab .tab__content .content__bottom .colors__container .color .color__image img {
+    height: 70px;
+  }
+  .modal .modal-tab .tab__content {
+    margin-top: 40px;
+  }
+  .modal .modal-tab .tab__content .content__top,
+  .modal .modal-tab .tab__content .content__bottom {
+    font-size: 2.6rem;
+  }
+  .modal .modal-tab .tab__content {
+    padding: 0 10px;
   }
 }
 
@@ -2474,6 +2645,74 @@ button {
   .work-cases__fences-slider,
   .work-cases__gates-slider {
     padding: 35px 0px;
+  }
+}
+
+@media (max-height: 680px) {
+  #modal-order .modal__content .modal__form .modal__lable,
+  #modal-order-your-version .modal__content .modal__form .modal__lable,
+  #modal-order-gates .modal__content .modal__form .modal__lable {
+    font-size: 2.5rem;
+    line-height: 3.5rem;
+    margin-bottom: 5px;
+  }
+  #modal-order .modal__content .modal__form .modal__input,
+  #modal-order-your-version .modal__content .modal__form .modal__input,
+  #modal-order-gates .modal__content .modal__form .modal__input {
+    padding: 10px 16px;
+    margin-bottom: 10px;
+  }
+  #modal-order .modal__content .modal__form .modal__textarea,
+  #modal-order-your-version .modal__content .modal__form .modal__textarea,
+  #modal-order-gates .modal__content .modal__form .modal__textarea {
+    padding: 10px 16px;
+    margin-bottom: 20px;
+  }
+  #modal-order .modal__content .modal__form .modal__button,
+  #modal-order-your-version .modal__content .modal__form .modal__button,
+  #modal-order-gates .modal__content .modal__form .modal__button {
+    margin-top: 0px;
+    padding: 20px;
+  }
+}
+
+@media (max-height: 465px) {
+  #modal-order .modal__content,
+  #modal-order-your-version .modal__content,
+  #modal-order-gates .modal__content {
+    width: 100%;
+  }
+  #modal-order .modal__content .modal__form,
+  #modal-order-your-version .modal__content .modal__form,
+  #modal-order-gates .modal__content .modal__form {
+    padding: 0 20px;
+    overflow-y: auto;
+  }
+  #modal-order .modal__content .modal__form .modal__lable,
+  #modal-order-your-version .modal__content .modal__form .modal__lable,
+  #modal-order-gates .modal__content .modal__form .modal__lable {
+    font-size: 2.5rem;
+    line-height: 3.5rem;
+    margin-bottom: 5px;
+  }
+  #modal-order .modal__content .modal__form .modal__input,
+  #modal-order-your-version .modal__content .modal__form .modal__input,
+  #modal-order-gates .modal__content .modal__form .modal__input {
+    padding: 10px 16px;
+    margin-bottom: 10px;
+  }
+  #modal-order .modal__content .modal__form .modal__textarea,
+  #modal-order-your-version .modal__content .modal__form .modal__textarea,
+  #modal-order-gates .modal__content .modal__form .modal__textarea {
+    padding: 10px 16px;
+    margin-bottom: 20px;
+    min-height: 200px;
+  }
+  #modal-order .modal__content .modal__form .modal__button,
+  #modal-order-your-version .modal__content .modal__form .modal__button,
+  #modal-order-gates .modal__content .modal__form .modal__button {
+    margin-top: 0px;
+    padding: 20px;
   }
 }
 /*# sourceMappingURL=style.css.map */

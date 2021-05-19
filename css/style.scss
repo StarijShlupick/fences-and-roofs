@@ -36,6 +36,9 @@ $card-gray-color: #e0e0e0;
 }
 @mixin pagination-button {
   @include unactive-button();
+  &:hover {
+    background-color: $ellow-color;
+  }
 }
 @mixin pagination-button-active {
   color: $black-color;
@@ -44,8 +47,13 @@ $card-gray-color: #e0e0e0;
   box-shadow: 5px -2px 25px rgba(255, 255, 255, 0.5);
   border: none;
   border-radius: 100px;
+  box-shadow: -2.09231px 46.0308px 70.0923px -29.2923px rgba(255, 230, 0, 0.89),
+    inset 1.04615px -9.41538px 12.5538px rgba(0, 0, 0, 0.13),
+    inset 5.23077px -2.09231px 26.1538px rgba(255, 255, 255, 0.5);
   &:hover {
-    box-shadow: none;
+    box-shadow: -2.09231px 46.0308px 70.0923px -29.2923px rgba(255, 230, 0, 0.89),
+      inset 1.04615px -9.41538px 12.5538px rgba(0, 0, 0, 0.13),
+      inset 5.23077px -2.09231px 26.1538px rgba(255, 255, 255, 0.5);
   }
 }
 @mixin limited-text($lines-count) {
@@ -249,12 +257,12 @@ button {
   }
   .phone__call {
     margin-right: 27px;
-    margin-bottom: 16px;
     font-weight: bold;
     font-size: 2.7rem;
     line-height: 3.7rem;
   }
   .phone__recall {
+    margin-top: 16px;
     font-size: 2rem;
     line-height: 2.7rem;
     text-decoration-line: underline;
@@ -269,8 +277,9 @@ button {
   .container {
     display: flex;
     justify-content: space-between;
-    align-items: flex-end;
+    align-items: center;
     .header-content {
+      margin-top: 150px;
       max-width: 698px;
       .header-content__text {
         margin-top: 55px;
@@ -288,6 +297,7 @@ button {
       }
     }
     .about__img {
+      margin-top: 100px;
       width: 938px;
       height: 1062px;
       @include image-wrapper();
@@ -335,6 +345,18 @@ button {
   border-radius: 17.1447px;
   cursor: pointer;
   transition: transform 0.3s;
+  &.sales {
+    &::after {
+      content: "";
+      position: absolute;
+      top: 0;
+      right: -3px;
+      width: 140px;
+      height: 140px;
+      background-image: url("../assets/images/sales.png");
+      background-size: contain;
+    }
+  }
   &::before {
     content: "";
     position: absolute;
@@ -365,6 +387,19 @@ button {
   .card__content {
     padding: 18px 28px 0 30px;
     color: $true-black;
+    &.sales-banner {
+      &::before {
+        content: "-10%";
+        position: absolute;
+        left: 3.26%;
+        bottom: 2.88%;
+        font-size: 30px;
+        background: $ellow-color;
+        border-radius: 100px;
+        padding: 0 5px;
+        z-index: 4;
+      }
+    }
     .card__header {
       font-size: 2.05736rem;
       line-height: 118.68%;
@@ -429,6 +464,8 @@ button {
       &__img {
         @include image-wrapper();
         margin: auto;
+        width: 262px;
+        height: 262px;
         transform: scale(1.05);
         object-fit: cover;
         object-position: center;
@@ -458,6 +495,7 @@ button {
     .principles-card {
       margin-top: 120px;
       width: 279px;
+      padding: 0 20px;
       display: flex;
       flex-direction: column;
       align-items: center;
@@ -471,12 +509,14 @@ button {
       }
       &__img {
         @include image-wrapper();
+        max-width: 215px;
+        max-height: 146px;
         transition: ease-in-out 0.5s;
       }
       &__text {
         margin-top: 38.8px;
         text-align: center;
-        font-size: 3.6rem;
+        font-size: 3rem;
         line-height: 118.68%;
       }
     }
@@ -545,14 +585,13 @@ button {
       justify-content: space-between;
       &__photo-wrapper {
         display: flex;
-        width: 142px;
-        height: 142px;
+        width: 100px;
+        height: 100px;
         margin-right: 46px;
-        border-radius: 100%;
         overflow: hidden;
         .person__photo {
           @include image-wrapper();
-          width: 142px;
+          width: 100%;
           margin: auto;
           object-fit: cover;
           object-position: top;
@@ -772,6 +811,7 @@ button {
       width: 29px;
       height: 29px;
       background-image: url(../assets/icons/adress.svg);
+      background-size: 100%;
       left: 0;
       top: 5px;
     }
@@ -781,6 +821,7 @@ button {
       width: 31px;
       height: 31px;
       background-image: url(../assets/icons/email.svg);
+      background-size: 100%;
       left: 0;
       top: 5px;
     }
@@ -799,10 +840,10 @@ button {
     margin-left: 30px;
   }
   .phone__call {
-    margin-bottom: 8px;
     color: $true-black;
   }
   .phone__recall {
+    margin-top: 8px;
     margin-bottom: 20px;
     color: $true-black;
     &:hover {
@@ -896,24 +937,27 @@ button {
       }
     }
     .tab__content {
-      display: flex;
-      justify-content: space-between;
-      flex-direction: column;
+      overflow-y: auto;
       width: 65%;
-      padding: 60px 20px 0 20px;
+      margin-top: 60px;
+      padding: 0px 20px 0 20px;
       .content__top,
       .content__bottom {
-        display: flex;
-        justify-content: space-between;
-        flex-direction: column;
         font-weight: normal;
         font-size: 1.6rem;
         line-height: 121.68%;
       }
       .content__top {
-        height: 50%;
         .modal-description {
-          @include limited-text(5);
+          padding-top: 25px;
+          position: relative;
+          &::before {
+            content: "Описание:";
+            position: absolute;
+            top: 0;
+            left: 0;
+            font-weight: 700;
+          }
         }
         table {
           width: 100%;
@@ -923,7 +967,7 @@ button {
           border-style: hidden;
           box-shadow: 0 0 0 3px $black-color;
           text-align: center;
-          margin-bottom: 50px;
+          margin: 30px 0;
         }
         th,
         td {
@@ -935,16 +979,14 @@ button {
         }
       }
       .content__bottom {
-        height: 50%;
         .notes {
           .note + .note {
             margin-top: 9px;
           }
         }
-        .note {
-          @include limited-text(3);
-        }
         .colors {
+          margin-top: 20px;
+          margin-bottom: 20px;
           &__header {
             margin: 18px 0;
             font-weight: 600;
@@ -1029,7 +1071,9 @@ button {
   }
 }
 
-#modal-order {
+#modal-order,
+#modal-order-your-version,
+#modal-order-gates {
   left: 250%;
   transform: translate(-50%, -50%);
   z-index: 11;
@@ -1059,13 +1103,13 @@ button {
       .modal__lable {
         font-size: 2.5rem;
         line-height: 3.5rem;
-        margin-bottom: 12px;
+        margin-bottom: 5px;
       }
       .modal__input {
         padding: 20px 26px;
         font-size: 2rem;
         line-height: 2.5rem;
-        margin-bottom: 30px;
+        margin-bottom: 15px;
         &::placeholder {
           color: $unactive-gray-color;
           font-size: 2rem;
@@ -1089,7 +1133,7 @@ button {
         }
       }
       .modal__button {
-        margin-top: 50px;
+        margin-top: 20px;
         @include active-button();
         font-size: 2.5rem;
         line-height: 3rem;
@@ -1109,14 +1153,16 @@ button {
   padding: 15px 15px;
   cursor: pointer;
   @include active-button();
-  background-color: #74f052;
+  -webkit-animation: color 5s infinite;
+  -moz-animation: color 5s infinite;
+  animation: color 5s infinite;
   &__icon {
     @include image-wrapper();
     width: 40px;
     height: 40px;
-    -webkit-animation: ring 2s ease-in-out 3;
-    -moz-animation: ring 2s ease-in-out 3;
-    animation: ring 2s ease-in-out 3;
+    -webkit-animation: ring 3s ease-in-out infinite;
+    -moz-animation: ring 3s ease-in-out infinite;
+    animation: ring 3s ease-in-out infinite;
   }
 }
 
@@ -1221,14 +1267,21 @@ button {
     transform: translateY(0);
   }
 }
-
-@media (max-width: 1880px) {
-  .work-cases__fences-slider .slider-button,
-  .work-cases__gates-slider .slider-button {
-    top: 45%;
-    display: block;
+@keyframes color {
+  0% {
+    background-color: #74f052;
+  }
+  33% {
+    background-color: #5274f0;
+  }
+  67% {
+    background-color: #f05274;
+  }
+  100% {
+    background-color: #74f052;
   }
 }
+
 @media (max-width: 1800px) {
   .about {
     .container {
@@ -1242,13 +1295,14 @@ button {
 @media (max-width: 1580px) {
   .about {
     .container {
+      align-items: flex-end;
       background-image: url("../assets/images/start-bg.png");
       background-repeat: no-repeat;
       background-position-x: right;
       background-position-y: bottom;
       background-size: 45%;
       .header-content {
-        margin-top: 240px;
+        margin-top: 24%;
       }
       .about__img-wrapper {
         display: none;
@@ -1258,6 +1312,13 @@ button {
   .work-cases__fences-slider,
   .work-cases__gates-slider {
     padding: 100px 50px;
+  }
+}
+@media (max-width: 1400px) {
+  .work-cases__fences-slider .slider-button,
+  .work-cases__gates-slider .slider-button {
+    top: 45%;
+    display: block;
   }
 }
 @media (max-width: 1280px) {
@@ -1308,12 +1369,38 @@ button {
           .tab__images {
             display: none;
           }
+          .tab__content {
+            width: 95%;
+          }
         }
       }
     }
   }
 }
+@media (max-width: 1000px) {
+  .header {
+    .container {
+      .header-top {
+        .messengers {
+          display: none;
+        }
+      }
+    }
+  }
+  .header-bottom {
+    .phone {
+      display: none;
+    }
+  }
+}
 @media (max-width: 870px) {
+  .about {
+    .container {
+      .header-content {
+        margin-top: 240px;
+      }
+    }
+  }
   .slide-card {
     height: 400px;
   }
@@ -1435,7 +1522,7 @@ button {
           justify-content: center;
           align-items: center;
           .phone__call {
-            margin: 8px 0px;
+            margin: 0px 0px;
           }
           .messengers {
             margin: 0;
@@ -1476,13 +1563,6 @@ button {
       .modal-tab {
         .tab__content {
           width: 100%;
-          padding: 50px 20px 0 20px;
-          .content__top {
-            height: 40%;
-          }
-          .content__bottom {
-            height: 60%;
-          }
         }
         .tab__images {
           display: none;
@@ -1490,7 +1570,9 @@ button {
       }
     }
   }
-  #modal-order {
+  #modal-order,
+  #modal-order-your-version,
+  #modal-order-gates {
     .modal__content {
       .modal__form {
         .modal__lable {
@@ -1567,9 +1649,8 @@ button {
         justify-content: space-between;
         &__photo-wrapper {
           display: flex;
-          width: 100px;
-          height: 100px;
-          border-radius: 100%;
+          width: 50px;
+          height: 50px;
           overflow: hidden;
           .person__photo {
             @include image-wrapper();
@@ -1634,9 +1715,6 @@ button {
       }
     }
     .header-bottom {
-      .phone {
-        display: none;
-      }
       .header__menu-burger {
         .phone {
           display: flex;
@@ -1698,14 +1776,19 @@ button {
   .footer {
     margin-top: 108px;
   }
+  .footer .logo-container__contacts .logo-container__link {
+    padding-left: 30px;
+  }
+  .footer .logo-container__contacts .logo-container__link:last-child::before {
+    width: 20px;
+    height: 20px;
+  }
+  .footer .logo-container__contacts .logo-container__link:first-child::before {
+    width: 20px;
+    height: 20px;
+  }
 }
 @media (max-width: 540px) {
-  .modal.--active .modal-tabs .modal-tab .tab__content .content__top {
-    height: 50%;
-  }
-  .modal.--active .modal-tabs .modal-tab .tab__content .content__bottom {
-    height: 50%;
-  }
   .modal .modal-tab .tab__content .content__top table {
     margin-bottom: 10px;
   }
@@ -1745,7 +1828,7 @@ button {
   .work-cases__gates-slider {
     padding: 50px 30px;
   }
-  .our-work{
+  .our-work {
     .our-work-slider__wrapper {
       padding: 0px 0px 50px;
     }
@@ -1851,7 +1934,7 @@ button {
           justify-content: center;
           align-items: center;
           .phone__call {
-            margin: 8px 0px;
+            margin: 0px 0px;
           }
           .messengers {
             margin: 0;
@@ -1859,6 +1942,50 @@ button {
         }
       }
     }
+  }
+  .footer .logo-container__contacts .logo-container__link {
+    padding-left: 20px;
+  }
+  .footer .logo-container__contacts .logo-container__link:last-child::before {
+    width: 12px;
+    height: 12px;
+  }
+  .footer .logo-container__contacts .logo-container__link:first-child::before {
+    width: 12px;
+    height: 12px;
+  }
+  .header__menu-burger-list .header__menu-burger-li {
+    margin-bottom: 15px;
+  }
+  #modal-order,
+  #modal-order-your-version,
+  #modal-order-gates .modal__content .modal__form .modal__lable {
+    margin-bottom: 6px;
+    font-size: 3rem;
+    padding: 0px 15px;
+  }
+  .modal .modal-tab .tab__content .content__top th,
+  .modal .modal-tab .tab__content .content__top td {
+    padding: 5px 0;
+    border-bottom: 2px solid #1f1f1f;
+  }
+  .modal .modal-tab .tab__content .content__top table {
+    border-radius: 15px;
+    -webkit-box-shadow: 0 0 0 2px #1f1f1f;
+    box-shadow: 0 0 0 2px #1f1f1f;
+  }
+  .modal .modal-tab .tab__content .content__bottom .colors__container .color .color__image img {
+    height: 70px;
+  }
+  .modal .modal-tab .tab__content {
+    margin-top: 40px;
+  }
+  .modal .modal-tab .tab__content .content__top,
+  .modal .modal-tab .tab__content .content__bottom {
+    font-size: 2.6rem;
+  }
+  .modal .modal-tab .tab__content {
+    padding: 0 10px;
   }
 }
 @media (max-width: 360px) {
@@ -1891,5 +2018,63 @@ button {
   .work-cases__fences-slider,
   .work-cases__gates-slider {
     padding: 35px 0px;
+  }
+}
+@media (max-height: 680px) {
+  #modal-order,
+  #modal-order-your-version,
+  #modal-order-gates {
+    .modal__content {
+      .modal__form {
+        .modal__lable {
+          font-size: 2.5rem;
+          line-height: 3.5rem;
+          margin-bottom: 5px;
+        }
+        .modal__input {
+          padding: 10px 16px;
+          margin-bottom: 10px;
+        }
+        .modal__textarea {
+          padding: 10px 16px;
+          margin-bottom: 20px;
+        }
+        .modal__button {
+          margin-top: 0px;
+          padding: 20px;
+        }
+      }
+    }
+  }
+}
+@media (max-height: 465px) {
+  #modal-order,
+  #modal-order-your-version,
+  #modal-order-gates {
+    .modal__content {
+      width: 100%;
+      .modal__form {
+        padding: 0 20px;
+        overflow-y: auto;
+        .modal__lable {
+          font-size: 2.5rem;
+          line-height: 3.5rem;
+          margin-bottom: 5px;
+        }
+        .modal__input {
+          padding: 10px 16px;
+          margin-bottom: 10px;
+        }
+        .modal__textarea {
+          padding: 10px 16px;
+          margin-bottom: 20px;
+          min-height: 200px;
+        }
+        .modal__button {
+          margin-top: 0px;
+          padding: 20px;
+        }
+      }
+    }
   }
 }
