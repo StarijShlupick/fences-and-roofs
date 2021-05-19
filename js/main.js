@@ -1,5 +1,5 @@
 const workCasesFencesSlider = new Swiper('.work-cases__fences-slider', {
-  slidesPerView: 5,
+  slidesPerView: 4,
   simulateTouch: false,
   slideActiveClass: 'false',
   navigation: {
@@ -8,10 +8,11 @@ const workCasesFencesSlider = new Swiper('.work-cases__fences-slider', {
   },
   breakpoints: {
     1880: {
-      slidesPerView: 5,
+      slidesPerView: 4,
+      spaceBetween: 99,
     },
     1670: {
-      slidesPerView: 3.73,
+      slidesPerView: 3.8,
     },
     1580: {
       slidesPerView: 3.7,
@@ -29,12 +30,12 @@ const workCasesFencesSlider = new Swiper('.work-cases__fences-slider', {
       slidesPerView: 2.84,
     },
     880: {
-      slidesPerView: 2.5,
+      slidesPerView: 2.4,
     },
     800: {
       slidesPerView: 1.7,
     },
-    680: {
+    681: {
       slidesPerView: 1.8,
     },
     620: {

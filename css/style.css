@@ -229,13 +229,13 @@ button {
 
 .phone .phone__call {
   margin-right: 27px;
-  margin-bottom: 16px;
   font-weight: bold;
   font-size: 2.7rem;
   line-height: 3.7rem;
 }
 
 .phone .phone__recall {
+  margin-top: 16px;
   font-size: 2rem;
   line-height: 2.7rem;
   -webkit-text-decoration-line: underline;
@@ -255,12 +255,13 @@ button {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
-  -webkit-box-align: end;
-      -ms-flex-align: end;
-          align-items: flex-end;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
 .about .container .header-content {
+  margin-top: 150px;
   max-width: 698px;
 }
 
@@ -296,6 +297,7 @@ button {
 }
 
 .about .container .about__img {
+  margin-top: 100px;
   width: 938px;
   height: 1062px;
   display: block;
@@ -336,6 +338,10 @@ button {
   cursor: pointer;
 }
 
+.work-cases .nav__item:hover {
+  background-color: #ffe600;
+}
+
 .work-cases .nav__item.--active {
   color: #1f1f1f;
   font-weight: 600;
@@ -344,11 +350,13 @@ button {
           box-shadow: 5px -2px 25px rgba(255, 255, 255, 0.5);
   border: none;
   border-radius: 100px;
+  -webkit-box-shadow: -2.09231px 46.0308px 70.0923px -29.2923px rgba(255, 230, 0, 0.89), inset 1.04615px -9.41538px 12.5538px rgba(0, 0, 0, 0.13), inset 5.23077px -2.09231px 26.1538px rgba(255, 255, 255, 0.5);
+          box-shadow: -2.09231px 46.0308px 70.0923px -29.2923px rgba(255, 230, 0, 0.89), inset 1.04615px -9.41538px 12.5538px rgba(0, 0, 0, 0.13), inset 5.23077px -2.09231px 26.1538px rgba(255, 255, 255, 0.5);
 }
 
 .work-cases .nav__item.--active:hover {
-  -webkit-box-shadow: none;
-          box-shadow: none;
+  -webkit-box-shadow: -2.09231px 46.0308px 70.0923px -29.2923px rgba(255, 230, 0, 0.89), inset 1.04615px -9.41538px 12.5538px rgba(0, 0, 0, 0.13), inset 5.23077px -2.09231px 26.1538px rgba(255, 255, 255, 0.5);
+          box-shadow: -2.09231px 46.0308px 70.0923px -29.2923px rgba(255, 230, 0, 0.89), inset 1.04615px -9.41538px 12.5538px rgba(0, 0, 0, 0.13), inset 5.23077px -2.09231px 26.1538px rgba(255, 255, 255, 0.5);
 }
 
 .work-cases .tab {
@@ -376,6 +384,17 @@ button {
   transition: -webkit-transform 0.3s;
   transition: transform 0.3s;
   transition: transform 0.3s, -webkit-transform 0.3s;
+}
+
+.work-cases__card.sales::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 100px;
+  height: 100px;
+  background-image: url("../assets/images/sales.png");
+  background-size: 100%;
 }
 
 .work-cases__card::before {
@@ -516,6 +535,8 @@ button {
 .promotion .promotion__content .promotion-card__img {
   display: block;
   margin: auto;
+  width: 262px;
+  height: 262px;
   -webkit-transform: scale(1.05);
           transform: scale(1.05);
   -o-object-fit: cover;
@@ -558,6 +579,7 @@ button {
 .principles .principles__content .principles-card {
   margin-top: 120px;
   width: 279px;
+  padding: 0 20px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -587,6 +609,8 @@ button {
 
 .principles .principles__content .principles-card__img {
   display: block;
+  max-width: 215px;
+  max-height: 146px;
   -webkit-transition: ease-in-out 0.5s;
   transition: ease-in-out 0.5s;
 }
@@ -594,7 +618,7 @@ button {
 .principles .principles__content .principles-card__text {
   margin-top: 38.8px;
   text-align: center;
-  font-size: 3.6rem;
+  font-size: 3rem;
   line-height: 118.68%;
 }
 
@@ -689,16 +713,15 @@ button {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  width: 142px;
-  height: 142px;
+  width: 100px;
+  height: 100px;
   margin-right: 46px;
-  border-radius: 100%;
   overflow: hidden;
 }
 
 .feedback .slide__top .person__photo-wrapper .person__photo {
   display: block;
-  width: 142px;
+  width: 100%;
   margin: auto;
   -o-object-fit: cover;
      object-fit: cover;
@@ -1047,6 +1070,7 @@ button {
   width: 29px;
   height: 29px;
   background-image: url(../assets/icons/adress.svg);
+  background-size: 100%;
   left: 0;
   top: 5px;
 }
@@ -1057,6 +1081,7 @@ button {
   width: 31px;
   height: 31px;
   background-image: url(../assets/icons/email.svg);
+  background-size: 100%;
   left: 0;
   top: 5px;
 }
@@ -1080,11 +1105,11 @@ button {
 }
 
 .footer .phone__call {
-  margin-bottom: 8px;
   color: #000000;
 }
 
 .footer .phone__recall {
+  margin-top: 8px;
   margin-bottom: 20px;
   color: #000000;
 }
@@ -1459,14 +1484,14 @@ button {
 #modal-order .modal__content .modal__form .modal__lable {
   font-size: 2.5rem;
   line-height: 3.5rem;
-  margin-bottom: 12px;
+  margin-bottom: 5px;
 }
 
 #modal-order .modal__content .modal__form .modal__input {
   padding: 20px 26px;
   font-size: 2rem;
   line-height: 2.5rem;
-  margin-bottom: 30px;
+  margin-bottom: 15px;
 }
 
 #modal-order .modal__content .modal__form .modal__input::-webkit-input-placeholder {
@@ -1531,7 +1556,7 @@ button {
 }
 
 #modal-order .modal__content .modal__form .modal__button {
-  margin-top: 50px;
+  margin-top: 20px;
   color: #1f1f1f;
   font-weight: 600;
   background-color: #ffe600;
@@ -1573,8 +1598,8 @@ button {
   transition: -webkit-box-shadow 0.3s;
   transition: box-shadow 0.3s;
   transition: box-shadow 0.3s, -webkit-box-shadow 0.3s;
-  -webkit-animation: color 10s ease-in-out infinite;
-  animation: color 10s ease-in-out infinite;
+  -webkit-animation: color 5s infinite;
+  animation: color 5s infinite;
 }
 
 .need-help:hover {
@@ -1764,10 +1789,10 @@ button {
     background-color: #74f052;
   }
   33% {
-    background-color: #5274F0;
+    background-color: #5274f0;
   }
   67% {
-    background-color: #F05274;
+    background-color: #f05274;
   }
   100% {
     background-color: #74f052;
@@ -1779,21 +1804,13 @@ button {
     background-color: #74f052;
   }
   33% {
-    background-color: #5274F0;
+    background-color: #5274f0;
   }
   67% {
-    background-color: #F05274;
+    background-color: #f05274;
   }
   100% {
     background-color: #74f052;
-  }
-}
-
-@media (max-width: 1880px) {
-  .work-cases__fences-slider .slider-button,
-  .work-cases__gates-slider .slider-button {
-    top: 45%;
-    display: block;
   }
 }
 
@@ -1806,6 +1823,9 @@ button {
 
 @media (max-width: 1580px) {
   .about .container {
+    -webkit-box-align: end;
+        -ms-flex-align: end;
+            align-items: flex-end;
     background-image: url("../assets/images/start-bg.png");
     background-repeat: no-repeat;
     background-position-x: right;
@@ -1813,7 +1833,7 @@ button {
     background-size: 45%;
   }
   .about .container .header-content {
-    margin-top: 240px;
+    margin-top: 24%;
   }
   .about .container .about__img-wrapper {
     display: none;
@@ -1821,6 +1841,14 @@ button {
   .work-cases__fences-slider,
   .work-cases__gates-slider {
     padding: 100px 50px;
+  }
+}
+
+@media (max-width: 1400px) {
+  .work-cases__fences-slider .slider-button,
+  .work-cases__gates-slider .slider-button {
+    top: 45%;
+    display: block;
   }
 }
 
@@ -1879,7 +1907,19 @@ button {
   }
 }
 
+@media (max-width: 1000px) {
+  .header .container .header-top .messengers {
+    display: none;
+  }
+  .header-bottom .phone {
+    display: none;
+  }
+}
+
 @media (max-width: 870px) {
+  .about .container .header-content {
+    margin-top: 240px;
+  }
   .slide-card {
     height: 400px;
   }
@@ -1998,7 +2038,7 @@ button {
             align-items: center;
   }
   .footer .container .contacts .phone .phone__call {
-    margin: 8px 0px;
+    margin: 0px 0px;
   }
   .footer .container .contacts .phone .messengers {
     margin: 0;
@@ -2153,9 +2193,8 @@ button {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
-    width: 100px;
-    height: 100px;
-    border-radius: 100%;
+    width: 50px;
+    height: 50px;
     overflow: hidden;
   }
   .feedback .slide__top .person__photo-wrapper .person__photo {
@@ -2232,9 +2271,6 @@ button {
   .header .header-top .messengers {
     display: none;
   }
-  .header .header-bottom .phone {
-    display: none;
-  }
   .header .header-bottom .header__menu-burger .phone {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -2306,6 +2342,17 @@ button {
   }
   .footer {
     margin-top: 108px;
+  }
+  .footer .logo-container__contacts .logo-container__link {
+    padding-left: 30px;
+  }
+  .footer .logo-container__contacts .logo-container__link:last-child::before {
+    width: 20px;
+    height: 20px;
+  }
+  .footer .logo-container__contacts .logo-container__link:first-child::before {
+    width: 20px;
+    height: 20px;
   }
 }
 
@@ -2469,10 +2516,29 @@ button {
             align-items: center;
   }
   .footer .container .contacts .phone .phone__call {
-    margin: 8px 0px;
+    margin: 0px 0px;
   }
   .footer .container .contacts .phone .messengers {
     margin: 0;
+  }
+  .footer .logo-container__contacts .logo-container__link {
+    padding-left: 20px;
+  }
+  .footer .logo-container__contacts .logo-container__link:last-child::before {
+    width: 12px;
+    height: 12px;
+  }
+  .footer .logo-container__contacts .logo-container__link:first-child::before {
+    width: 12px;
+    height: 12px;
+  }
+  .header__menu-burger-list .header__menu-burger-li {
+    margin-bottom: 15px;
+  }
+  #modal-order .modal__content .modal__form .modal__lable {
+    margin-bottom: 6px;
+    font-size: 3rem;
+    padding: 0px 15px;
   }
 }
 
