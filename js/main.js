@@ -234,6 +234,8 @@ const toScroll = (link, tab) => {
 const openModalFencesSlides = document.querySelectorAll('[data-modal-target]');
 const closeModalButtons = document.querySelectorAll('[data-close-button]');
 const overlay = document.getElementById('overlay');
+const overlayOrder = document.getElementById('overlay-order');
+const needHelpButton = document.querySelector('.need-help');
 openModalFencesSlides.forEach(slide => {
   slide.addEventListener('click', (e) => {
     e.stopPropagation();
@@ -243,8 +245,10 @@ openModalFencesSlides.forEach(slide => {
 })
 closeModalButtons.forEach(button => {
   button.addEventListener('click', () => {
-    const modal = button.closest('.modal');
-    closeModal(modal);
+    const modals = document.querySelectorAll('.modal.--active');
+    modals.forEach(modal => {
+      closeModal(modal);
+    })
   })
 })
 overlay.addEventListener('click', () => {
@@ -253,18 +257,46 @@ overlay.addEventListener('click', () => {
     closeModal(modal);
   })
 })
+overlayOrder.addEventListener('click', () => {
+  const modals = document.querySelectorAll('.modal.--active');
+  modals.forEach(modal => {
+    closeModal(modal);
+  })
+})
 function openModal(modal) {
   if (modal == null) return;
-  modal.classList.add('--active');
-  overlay.classList.add('--active');
-  document.body.classList.add('--scroll-hiden');
+  if (modal.id === 'modal-econom' ||
+    modal.id === 'modal-standart' ||
+    modal.id === 'modal-premium') {
+    needHelpButton.classList.add('--action')
+    overlay.classList.add('--active');
+    modal.classList.add('--active');
+    document.body.classList.add('--scroll-hiden');
+  } else {
+    overlayOrder.classList.add('--active');
+    modal.classList.add('--active');
+    document.body.classList.add('--scroll-hiden');
+  }
 }
 function closeModal(modal) {
   if (modal == null) return;
-  modal.classList.remove('--active');
-  overlay.classList.remove('--active');
-  document.body.classList.remove('--scroll-hiden');
+  if (modal.id === 'modal-econom' ||
+    modal.id === 'modal-standart' ||
+    modal.id === 'modal-premium') {
+    needHelpButton.classList.remove('--action')
+    overlay.classList.remove('--active');
+    modal.classList.remove('--active');
+    document.body.classList.remove('--scroll-hiden');
+  } else {
+    overlayOrder.classList.remove('--active');
+    modal.classList.remove('--active');
+    document.body.classList.remove('--scroll-hiden');
+  }
 }
+
+needHelpButton.addEventListener('click', () => {
+  needHelpButton.classList.remove('--action')
+})
 
 const burgerMenu = document.querySelector('.header__menu-burger');
 const menuLink = document.querySelectorAll('.header__menu-burger-li');
@@ -284,7 +316,7 @@ function toggleBurger() {
 
 const colorsContainer = document.querySelectorAll('.colors__container');
 colorsContainer.forEach(container => {
-  container.addEventListener('mousewheel', function(e) {
+  container.addEventListener('mousewheel', function (e) {
     this.scrollLeft -= (e.wheelDelta);
     e.preventDefault();
   }, false);
