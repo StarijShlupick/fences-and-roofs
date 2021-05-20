@@ -378,6 +378,10 @@ button {
   }
   &:hover {
     transform: translateY(-10px);
+    box-shadow: 1.58785px 4.76354px 39.6962px rgba(255, 230, 0, 0.57);
+    &::before {
+      border: 2px solid $ellow;
+    }
   }
   .card__img-wrapper {
     width: 100%;
@@ -406,6 +410,7 @@ button {
         border-radius: 100px;
         padding: 0 5px;
         font-weight: 600;
+        font-style: italic;
         z-index: 4;
       }
     }
@@ -728,8 +733,8 @@ button {
         margin-bottom: 30px;
         &::placeholder {
           color: $unactive-gray-color;
-          font-size: 3.01538rem;
-          line-height: 3.5rem;
+          font-size: 2.5rem;
+          line-height: 2.7rem;
         }
         &:focus {
           border-radius: 0px;
@@ -1067,7 +1072,7 @@ button {
     }
   }
 }
-.modal-overlay {
+.modal-overlay, .modal-overlay-order {
   position: fixed;
   opacity: 0;
   top: 0;
@@ -1083,13 +1088,16 @@ button {
     pointer-events: all;
   }
 }
+.modal-overlay-order {
+  z-index: 11;
+}
 
 #modal-order,
 #modal-order-your-version,
 #modal-order-gates {
   left: 250%;
   transform: translate(-50%, -50%);
-  z-index: 11;
+  z-index: 12;
   transition: left 0.5s;
   &.--active {
     left: 50%;
@@ -1169,6 +1177,10 @@ button {
   -webkit-animation: color 5s infinite;
   -moz-animation: color 5s infinite;
   animation: color 5s infinite;
+  &.--action {
+    z-index: 10;
+    box-shadow: 0 0 5px 5px #fff;
+  }
   &__icon {
     @include image-wrapper();
     width: 40px;
