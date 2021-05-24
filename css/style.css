@@ -93,7 +93,7 @@ label.required {
 }
 
 label.required::after {
-  content: ' *';
+  content: " *";
   color: red;
 }
 
@@ -462,7 +462,7 @@ button {
   background: #ffe600;
   border-radius: 100px;
   padding: 0 5px;
-  font-weight: 600;
+  font-weight: 700;
   font-style: italic;
   z-index: 4;
 }
@@ -546,15 +546,7 @@ button {
           align-items: center;
 }
 
-.promotion .promotion__content .promotion-card:hover .promotion-card__img {
-  -webkit-transform: scale(1.2);
-          transform: scale(1.2);
-}
-
 .promotion .promotion__content .promotion-card__img-wrapper {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
   max-width: 262px;
   max-height: 262px;
   border-radius: 100%;
@@ -564,11 +556,8 @@ button {
 
 .promotion .promotion__content .promotion-card__img {
   display: block;
-  margin: auto;
   width: 262px;
   height: 262px;
-  -webkit-transform: scale(1.05);
-          transform: scale(1.05);
   -o-object-fit: cover;
      object-fit: cover;
   -o-object-position: center;
@@ -665,7 +654,7 @@ button {
 
 .slide-card__img {
   display: block;
-  margin: auto;
+  height: 120%;
   -o-object-fit: cover;
      object-fit: cover;
   -o-object-position: center;
@@ -1421,7 +1410,8 @@ button {
   height: 35px;
 }
 
-.modal-overlay, .modal-overlay-order {
+.modal-overlay,
+.modal-overlay-order {
   position: fixed;
   opacity: 0;
   top: 0;
@@ -1435,7 +1425,8 @@ button {
   transition: opacity 0.5s;
 }
 
-.modal-overlay.--active, .modal-overlay-order.--active {
+.modal-overlay.--active,
+.modal-overlay-order.--active {
   opacity: 1;
   pointer-events: all;
 }
