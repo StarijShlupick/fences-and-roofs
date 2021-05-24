@@ -162,10 +162,10 @@ h5 {
   text-transform: uppercase;
 }
 
-label.required{
+label.required {
   position: relative;
-  &::after{
-    content: ' *';
+  &::after {
+    content: " *";
     color: red;
   }
 }
@@ -464,11 +464,7 @@ button {
       display: flex;
       flex-direction: column;
       align-items: center;
-      &:hover .promotion-card__img {
-        transform: scale(1.2);
-      }
       &__img-wrapper {
-        display: flex;
         max-width: 262px;
         max-height: 262px;
         border-radius: 100%;
@@ -477,10 +473,8 @@ button {
       }
       &__img {
         @include image-wrapper();
-        margin: auto;
         width: 262px;
         height: 262px;
-        transform: scale(1.05);
         object-fit: cover;
         object-position: center;
         transition: ease-in-out 1s;
@@ -545,7 +539,7 @@ button {
   overflow: hidden;
   &__img {
     @include image-wrapper();
-    margin: auto;
+    height: 120%;
     object-fit: cover;
     object-position: center;
   }
@@ -1072,7 +1066,8 @@ button {
     }
   }
 }
-.modal-overlay, .modal-overlay-order {
+.modal-overlay,
+.modal-overlay-order {
   position: fixed;
   opacity: 0;
   top: 0;
